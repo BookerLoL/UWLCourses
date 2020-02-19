@@ -1,7 +1,7 @@
 # UWLCourses
 
-##CS270 - 
+## CS270 - 
 
-##CS421 - Programming Language Concepts 
+## CS421 - Programming Language Concepts 
 
-##CS442 - Compilers 
+## CS442 - Compilers 
