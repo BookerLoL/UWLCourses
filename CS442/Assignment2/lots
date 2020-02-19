@@ -1,0 +1,52 @@
+  
+int k;
+float m;
+float n;
+
+int constantInt() {
+    return 10;
+}
+
+boolean constantBool() {
+    return false;
+}
+
+float constantFloat() {
+    return 3.14;
+}
+
+int repeat() {
+    if (k < 100) {
+        k = k + 50;
+        return repeat();
+    }
+    return k;
+}
+
+int b(int i) {
+    if (i < 100) {
+        i = i + 10;
+        return b(i);
+    } else {
+        return i;
+    }
+}
+
+float swap(float & a, float & b) float temp; {
+    temp = a;
+    b = a;
+    a = temp;
+    return temp;
+}
+
+n =  1.5;
+m = 2.5;
+
+k = 10;
+print(constantInt(), constantBool(), constantFloat());
+println();
+print(b(k));
+println();
+print(k);
+print(swap(a, b));
+print(a, b);

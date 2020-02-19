@@ -1,0 +1,13 @@
+int k;
+int i;
+int add(int c) int m; {
+    c = c + 5;
+    if (c <= 30) {
+       return add(c);
+    }
+    return 5;
+}
+
+k = 20;
+i = add(k);
+print(i, k);

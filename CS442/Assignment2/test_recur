@@ -1,0 +1,13 @@
+float fib(float n) {
+    print(n <= 1);
+    println();
+    
+    if (n <= 1) {
+        printstr("in here");
+        return n;
+    }
+    return fib(n-1) + fib(n-2);
+}
+
+print(fib(1.5));
+

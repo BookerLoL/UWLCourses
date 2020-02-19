@@ -1,0 +1,12 @@
+int i;
+int b;
+int add() {
+    if (i < 10) {
+        i = i + 1;
+        return add();
+    }
+    return i;
+}
+
+i = 0;
+b = add();

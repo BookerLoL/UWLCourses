@@ -1,0 +1,2563 @@
+create_func_signature
+get_expr_type
+get_simplified_type
+
+Function Name Being Entered: 	binSearch
+create_type_attr
+create_func_param_signature
+get_expr_type
+get_size_of
+Added func param: binSearch x 40	TypeAttr: type: 6	 size: 40	 index: 1	is_addr_var: 0
+	end of instr
+do_func_params_eval
+create_func_param_signature
+get_expr_type
+Added func param: binSearch size 0	TypeAttr: type: 1	 size: 0	 index: 2	is_addr_var: 0
+	end of instr
+do_func_params_eval
+appended list
+create_func_param_signature
+get_expr_type
+Added func param: binSearch key 0	TypeAttr: type: 1	 size: 0	 index: 3	is_addr_var: 0
+	end of instr
+do_func_params_eval
+appended list
+Create_local_list
+create_var_signature
+Create_local_list_item
+get_expr_type
+create_type_attr
+Create_local_list
+create_var_signature
+Create_local_list_item
+get_expr_type
+create_type_attr
+Create_local_list
+create_var_signature
+Create_local_list_item
+get_expr_type
+create_type_attr
+Create_local_list
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+li	$t0	0		
+	end of instr
+do_assing_eval
+Looking for: 	low
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+binSearch
+Looking for: 	binSearch
+li	$t0	0		
+sw	$t0	8($sp)		
+	end of instr
+
+release and free
+FREEING REG: 0	, type: 0
+do_rval_eval
+Looking for: 	size
+RVAL: size	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t0	20($sp)		
+	end of instr
+lw	$t0	20($sp)		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+li	$t1	1		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP2
+FREEING REG: 0	, type: 0
+
+release and free
+FREEING REG: 1	, type: 0
+do_assing_eval
+Looking for: 	high
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+binSearch
+Looking for: 	binSearch
+lw	$t0	20($sp)		
+li	$t1	1		
+sub	$t2	$t0	$t1		
+sw	$t2	4($sp)		
+	end of instr
+
+release and free
+FREEING REG: 2	, type: 0
+do_rval_eval
+Looking for: 	low
+RVAL: low	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t0	8($sp)		
+	end of instr
+lw	$t0	8($sp)		
+	end of instr
+do_rval_eval
+Looking for: 	high
+RVAL: high	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t1	4($sp)		
+	end of instr
+lw	$t1	4($sp)		
+	end of instr
+do_relat_eval
+is_widening
+do_normal_relat_eval
+REGISTER GIVEN: TEMP2
+FREEING REG: 0	, type: 0
+FREEING REG: 1	, type: 0
+do_rval_eval
+Looking for: 	high
+RVAL: high	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t0	4($sp)		
+	end of instr
+lw	$t0	4($sp)		
+	end of instr
+do_rval_eval
+Looking for: 	low
+RVAL: low	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t1	8($sp)		
+	end of instr
+lw	$t1	8($sp)		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP3
+FREEING REG: 0	, type: 0
+
+release and free
+FREEING REG: 1	, type: 0
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+li	$t0	2		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP1
+FREEING REG: 3	, type: 0
+
+release and free
+FREEING REG: 0	, type: 0
+do_assing_eval
+Looking for: 	mid
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+binSearch
+Looking for: 	binSearch
+lw	$t0	4($sp)		
+lw	$t1	8($sp)		
+add	$t3	$t0	$t1		
+li	$t0	2		
+div	$t1	$t3	$t0		
+sw	$t1	12($sp)		
+	end of instr
+
+release and free
+FREEING REG: 1	, type: 0
+do_rval_eval
+Looking for: 	mid
+RVAL: mid	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t0	12($sp)		
+	end of instr
+lw	$t0	12($sp)		
+	end of instr
+do_rval_eval
+Looking for: 	x
+RVAL: x	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+gen_paren_label
+
+release and free
+FREEING REG: 0	, type: 0
+lw	$t0	12($sp)		
+sll	$t0	$t0	2		
+addi	$t1	$t0	16		
+add	$t1	$sp	$t0		
+lw	$t1	($t0)		
+	end of instr
+do_rval_eval
+Looking for: 	key
+RVAL: key	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t0	24($sp)		
+	end of instr
+lw	$t0	24($sp)		
+	end of instr
+do_relat_eval
+is_widening
+do_normal_relat_eval
+REGISTER GIVEN: TEMP3
+FREEING REG: 1	, type: 0
+FREEING REG: 0	, type: 0
+do_rval_eval
+Looking for: 	mid
+RVAL: mid	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t0	12($sp)		
+	end of instr
+lw	$t0	12($sp)		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+li	$t1	1		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP4
+FREEING REG: 0	, type: 0
+
+release and free
+FREEING REG: 1	, type: 0
+do_assing_eval
+Looking for: 	low
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+binSearch
+Looking for: 	binSearch
+lw	$t0	12($sp)		
+li	$t1	1		
+add	$t4	$t0	$t1		
+sw	$t4	8($sp)		
+	end of instr
+
+release and free
+FREEING REG: 4	, type: 0
+do_rval_eval
+Looking for: 	mid
+RVAL: mid	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t0	12($sp)		
+	end of instr
+lw	$t0	12($sp)		
+	end of instr
+do_assing_eval
+Looking for: 	high
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+binSearch
+Looking for: 	binSearch
+lw	$t0	12($sp)		
+sw	$t0	4($sp)		
+	end of instr
+
+release and free
+FREEING REG: 0	, type: 0
+do_cond_eval
+
+release and free
+FREEING REG: 3	, type: 0
+do_cond_eval
+
+release and free
+FREEING REG: 2	, type: 0
+do_rval_eval
+Looking for: 	low
+RVAL: low	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t0	8($sp)		
+	end of instr
+lw	$t0	8($sp)		
+	end of instr
+do_rval_eval
+Looking for: 	high
+RVAL: high	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t1	4($sp)		
+	end of instr
+lw	$t1	4($sp)		
+	end of instr
+do_relat_eval
+is_widening
+do_normal_relat_eval
+REGISTER GIVEN: TEMP2
+FREEING REG: 0	, type: 0
+FREEING REG: 1	, type: 0
+do_rval_eval
+Looking for: 	low
+RVAL: low	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t0	8($sp)		
+	end of instr
+lw	$t0	8($sp)		
+	end of instr
+do_rval_eval
+Looking for: 	x
+RVAL: x	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+gen_paren_label
+
+release and free
+FREEING REG: 0	, type: 0
+lw	$t0	8($sp)		
+sll	$t0	$t0	2		
+addi	$t1	$t0	16		
+add	$t1	$sp	$t0		
+lw	$t1	($t0)		
+	end of instr
+do_rval_eval
+Looking for: 	key
+RVAL: key	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+binSearch
+Looking for: 	binSearch
+temptotally got it bro
+lw	$t0	24($sp)		
+	end of instr
+lw	$t0	24($sp)		
+	end of instr
+do_relat_eval
+is_widening
+do_normal_relat_eval
+REGISTER GIVEN: TEMP3
+FREEING REG: 1	, type: 0
+FREEING REG: 0	, type: 0
+do_relat_eval
+is_widening
+do_normal_relat_eval
+REGISTER GIVEN: TEMP0
+FREEING REG: 2	, type: 0
+FREEING REG: 3	, type: 0
+do_return_eval
+WE ARE HERE
+is_widening
+is_narrowing
+offset save 12 
+
+release and free
+FREEING REG: 0	, type: 0
+do_func_eval
+Function name: binSearch	, return type: 8
+Looking for: 	binSearch
+ADD_FUNCTION
+FOUND THE FUNCTION NAME
+gen_str_name
+Var check high 4
+Var check low 5
+Var check mid 6
+TypeAttr: type: 8	 size: 0	 index: 0	is_addr_var: 0
+binSearch		
+subu	$sp	$sp	16		
+sw	$ra	($sp)		
+li	$t0	0		
+sw	$t0	8($sp)		
+lw	$t0	20($sp)		
+li	$t1	1		
+sub	$t2	$t0	$t1		
+sw	$t2	4($sp)		
+L4		
+lw	$t0	8($sp)		
+lw	$t1	4($sp)		
+slt	$t2	$t0	$t1		
+beq	$t2	0	L3		
+lw	$t0	4($sp)		
+lw	$t1	8($sp)		
+add	$t3	$t0	$t1		
+li	$t0	2		
+div	$t1	$t3	$t0		
+sw	$t1	12($sp)		
+lw	$t0	12($sp)		
+sll	$t0	$t0	2		
+addi	$t1	$t0	16		
+add	$t1	$sp	$t0		
+lw	$t1	($t0)		
+lw	$t0	24($sp)		
+slt	$t3	$t1	$t0		
+beq	$t3	0	L1		
+lw	$t0	12($sp)		
+li	$t1	1		
+add	$t4	$t0	$t1		
+sw	$t4	8($sp)		
+j	L2		
+L1		
+lw	$t0	12($sp)		
+sw	$t0	4($sp)		
+L2		
+j	L4		
+L3		
+lw	$t0	8($sp)		
+lw	$t1	4($sp)		
+seq	$t2	$t0	$t1		
+lw	$t0	8($sp)		
+sll	$t0	$t0	2		
+addi	$t1	$t0	16		
+add	$t1	$sp	$t0		
+lw	$t1	($t0)		
+lw	$t0	24($sp)		
+seq	$t3	$t1	$t0		
+sne	$t2	$t2	0		
+sne	$t3	$t3	0		
+and	$t0	$t2	$t3		
+move	$v1	$t0		
+lw	$ra	($sp)		
+addi	$sp	$sp	16		
+jr	$ra		
+	end of instr
+END OF ADD FUNCTION
+create_func_signature
+get_expr_type
+get_simplified_type
+
+Function Name Being Entered: 	bubbleSort
+create_type_attr
+create_func_param_signature
+get_expr_type
+get_size_of
+Added func param: bubbleSort x 40	TypeAttr: type: 6	 size: 40	 index: 1	is_addr_var: 1
+	end of instr
+do_func_params_eval
+create_func_param_signature
+get_expr_type
+Added func param: bubbleSort size 0	TypeAttr: type: 1	 size: 0	 index: 2	is_addr_var: 0
+	end of instr
+do_func_params_eval
+appended list
+Create_local_list
+create_var_signature
+Create_local_list_item
+get_expr_type
+create_type_attr
+Create_local_list
+create_var_signature
+Create_local_list_item
+get_expr_type
+create_type_attr
+Create_local_list
+create_var_signature
+Create_local_list_item
+get_expr_type
+create_type_attr
+Create_local_list
+create_var_signature
+Create_local_list_item
+get_expr_type
+create_type_attr
+Create_local_list
+do_rval_eval
+Looking for: 	size
+RVAL: size	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t0	24($sp)		
+	end of instr
+lw	$t0	24($sp)		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+li	$t1	1		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP2
+FREEING REG: 0	, type: 0
+
+release and free
+FREEING REG: 1	, type: 0
+do_assing_eval
+Looking for: 	k
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+bubbleSort
+Looking for: 	bubbleSort
+lw	$t0	24($sp)		
+li	$t1	1		
+sub	$t2	$t0	$t1		
+sw	$t2	12($sp)		
+	end of instr
+
+release and free
+FREEING REG: 2	, type: 0
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 0
+	end of instr
+EXPR res:0	type: 0
+li	$t0	1		
+	end of instr
+do_assing_eval
+Looking for: 	swapped
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+bubbleSort
+Looking for: 	bubbleSort
+li	$t0	1		
+sw	$t0	16($sp)		
+	end of instr
+
+release and free
+FREEING REG: 0	, type: 0
+do_rval_eval
+Looking for: 	swapped
+RVAL: swapped	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 0
+	end of instr
+EXPR res:0	type: 0
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t0	16($sp)		
+	end of instr
+lw	$t0	16($sp)		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 0
+	end of instr
+EXPR res:1	type: 0
+li	$t1	0		
+	end of instr
+do_assing_eval
+Looking for: 	swapped
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+bubbleSort
+Looking for: 	bubbleSort
+li	$t1	0		
+sw	$t1	16($sp)		
+	end of instr
+
+release and free
+FREEING REG: 1	, type: 0
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+li	$t1	0		
+	end of instr
+do_assing_eval
+Looking for: 	j
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+bubbleSort
+Looking for: 	bubbleSort
+li	$t1	0		
+sw	$t1	8($sp)		
+	end of instr
+
+release and free
+FREEING REG: 1	, type: 0
+do_rval_eval
+Looking for: 	j
+RVAL: j	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t1	8($sp)		
+	end of instr
+lw	$t1	8($sp)		
+	end of instr
+do_rval_eval
+Looking for: 	k
+RVAL: k	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t2	12($sp)		
+	end of instr
+lw	$t2	12($sp)		
+	end of instr
+do_relat_eval
+is_widening
+do_normal_relat_eval
+REGISTER GIVEN: TEMP3
+FREEING REG: 1	, type: 0
+FREEING REG: 2	, type: 0
+do_rval_eval
+Looking for: 	j
+RVAL: j	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t1	8($sp)		
+	end of instr
+lw	$t1	8($sp)		
+	end of instr
+do_rval_eval
+Looking for: 	x
+RVAL: x	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+REGISTER GIVEN: TEMP4
+gen_paren_label
+FREEING REG: 4	, type: 0
+
+release and free
+FREEING REG: 1	, type: 0
+lw	$t1	8($sp)		
+lw	$t4	20($sp)		
+sll	$t1	$t1	2		
+add	$t4	$t4	$t1		
+lw	$t2	($t4)		
+	end of instr
+do_rval_eval
+Looking for: 	j
+RVAL: j	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t1	8($sp)		
+	end of instr
+lw	$t1	8($sp)		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP4
+EXPR res:4	type: 1
+	end of instr
+EXPR res:4	type: 1
+li	$t4	1		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP5
+FREEING REG: 1	, type: 0
+
+release and free
+FREEING REG: 4	, type: 0
+do_rval_eval
+Looking for: 	x
+RVAL: x	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+REGISTER GIVEN: TEMP4
+gen_paren_label
+FREEING REG: 4	, type: 0
+
+release and free
+FREEING REG: 5	, type: 0
+lw	$t1	8($sp)		
+li	$t4	1		
+add	$t5	$t1	$t4		
+lw	$t4	20($sp)		
+sll	$t5	$t5	2		
+add	$t4	$t4	$t5		
+lw	$t1	($t4)		
+	end of instr
+do_relat_eval
+is_widening
+do_normal_relat_eval
+REGISTER GIVEN: TEMP4
+FREEING REG: 2	, type: 0
+FREEING REG: 1	, type: 0
+do_rval_eval
+Looking for: 	j
+RVAL: j	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t1	8($sp)		
+	end of instr
+lw	$t1	8($sp)		
+	end of instr
+do_rval_eval
+Looking for: 	x
+RVAL: x	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+REGISTER GIVEN: TEMP5
+gen_paren_label
+FREEING REG: 5	, type: 0
+
+release and free
+FREEING REG: 1	, type: 0
+lw	$t1	8($sp)		
+lw	$t5	20($sp)		
+sll	$t1	$t1	2		
+add	$t5	$t5	$t1		
+lw	$t2	($t5)		
+	end of instr
+do_assing_eval
+Looking for: 	temp
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+bubbleSort
+Looking for: 	bubbleSort
+lw	$t1	8($sp)		
+lw	$t5	20($sp)		
+sll	$t1	$t1	2		
+add	$t5	$t5	$t1		
+lw	$t2	($t5)		
+sw	$t2	4($sp)		
+	end of instr
+
+release and free
+FREEING REG: 2	, type: 0
+do_rval_eval
+Looking for: 	j
+RVAL: j	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t1	8($sp)		
+	end of instr
+lw	$t1	8($sp)		
+	end of instr
+do_rval_eval
+Looking for: 	j
+RVAL: j	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t2	8($sp)		
+	end of instr
+lw	$t2	8($sp)		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP5
+EXPR res:5	type: 1
+	end of instr
+EXPR res:5	type: 1
+li	$t5	1		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP6
+FREEING REG: 2	, type: 0
+
+release and free
+FREEING REG: 5	, type: 0
+do_rval_eval
+Looking for: 	x
+RVAL: x	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+REGISTER GIVEN: TEMP5
+gen_paren_label
+FREEING REG: 5	, type: 0
+
+release and free
+FREEING REG: 6	, type: 0
+lw	$t2	8($sp)		
+li	$t5	1		
+add	$t6	$t2	$t5		
+lw	$t5	20($sp)		
+sll	$t6	$t6	2		
+add	$t5	$t5	$t6		
+lw	$t2	($t5)		
+	end of instr
+do_assing_eval
+Looking for: 	x
+get_simplified_type
+is_narrowing
+is_widening
+FOUND IDX
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+REGISTER GIVEN: TEMP5
+gen_paren_label
+FREEING REG: 5	, type: 0
+lw	$t2	8($sp)		
+li	$t5	1		
+add	$t6	$t2	$t5		
+lw	$t5	20($sp)		
+sll	$t6	$t6	2		
+add	$t5	$t5	$t6		
+lw	$t2	($t5)		
+lw	$t1	8($sp)		
+lw	$t5	20($sp)		
+sll	$t1	$t1	2		
+add	$t5	$t5	$t1		
+sw	$t2	($t5)		
+	end of instr
+
+release and free
+FREEING REG: 2	, type: 0
+
+release and free
+FREEING REG: 1	, type: 0
+do_rval_eval
+Looking for: 	j
+RVAL: j	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t1	8($sp)		
+	end of instr
+lw	$t1	8($sp)		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+li	$t2	1		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP5
+FREEING REG: 1	, type: 0
+
+release and free
+FREEING REG: 2	, type: 0
+do_rval_eval
+Looking for: 	temp
+RVAL: temp	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t1	4($sp)		
+	end of instr
+lw	$t1	4($sp)		
+	end of instr
+do_assing_eval
+Looking for: 	x
+get_simplified_type
+is_narrowing
+is_widening
+FOUND IDX
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+REGISTER GIVEN: TEMP2
+gen_paren_label
+FREEING REG: 2	, type: 0
+lw	$t1	4($sp)		
+lw	$t1	8($sp)		
+li	$t2	1		
+add	$t5	$t1	$t2		
+lw	$t2	20($sp)		
+sll	$t5	$t5	2		
+add	$t2	$t2	$t5		
+sw	$t1	($t2)		
+	end of instr
+
+release and free
+FREEING REG: 1	, type: 0
+
+release and free
+FREEING REG: 5	, type: 0
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 0
+	end of instr
+EXPR res:1	type: 0
+li	$t1	1		
+	end of instr
+do_assing_eval
+Looking for: 	swapped
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+bubbleSort
+Looking for: 	bubbleSort
+li	$t1	1		
+sw	$t1	16($sp)		
+	end of instr
+
+release and free
+FREEING REG: 1	, type: 0
+do_cond_eval
+
+release and free
+FREEING REG: 4	, type: 0
+do_rval_eval
+Looking for: 	j
+RVAL: j	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t1	8($sp)		
+	end of instr
+lw	$t1	8($sp)		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+li	$t2	1		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP4
+FREEING REG: 1	, type: 0
+
+release and free
+FREEING REG: 2	, type: 0
+do_assing_eval
+Looking for: 	j
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+bubbleSort
+Looking for: 	bubbleSort
+lw	$t1	8($sp)		
+li	$t2	1		
+add	$t4	$t1	$t2		
+sw	$t4	8($sp)		
+	end of instr
+
+release and free
+FREEING REG: 4	, type: 0
+do_cond_eval
+
+release and free
+FREEING REG: 3	, type: 0
+do_rval_eval
+Looking for: 	k
+RVAL: k	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+In var flag	
+bubbleSort
+Looking for: 	bubbleSort
+temptotally got it bro
+lw	$t1	12($sp)		
+	end of instr
+lw	$t1	12($sp)		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+li	$t2	1		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP3
+FREEING REG: 1	, type: 0
+
+release and free
+FREEING REG: 2	, type: 0
+do_assing_eval
+Looking for: 	k
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXIn var flag	
+bubbleSort
+Looking for: 	bubbleSort
+lw	$t1	12($sp)		
+li	$t2	1		
+sub	$t3	$t1	$t2		
+sw	$t3	12($sp)		
+	end of instr
+
+release and free
+FREEING REG: 3	, type: 0
+do_cond_eval
+
+release and free
+FREEING REG: 0	, type: 0
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+li	$t0	1		
+	end of instr
+do_return_eval
+WE ARE HERE
+is_widening
+is_narrowing
+offset save 16 
+
+release and free
+FREEING REG: 0	, type: 0
+do_func_eval
+Function name: bubbleSort	, return type: 9
+Looking for: 	bubbleSort
+ADD_FUNCTION
+FOUND THE FUNCTION NAME
+gen_str_name
+Var check temp 3
+Var check j 4
+Var check k 5
+Var check swapped 6
+TypeAttr: type: 9	 size: 0	 index: 0	is_addr_var: 0
+bubbleSort		
+subu	$sp	$sp	20		
+sw	$ra	($sp)		
+lw	$t0	24($sp)		
+li	$t1	1		
+sub	$t2	$t0	$t1		
+sw	$t2	12($sp)		
+li	$t0	1		
+sw	$t0	16($sp)		
+L9		
+lw	$t0	16($sp)		
+beq	$t0	0	L8		
+li	$t1	0		
+sw	$t1	16($sp)		
+li	$t1	0		
+sw	$t1	8($sp)		
+L7		
+lw	$t1	8($sp)		
+lw	$t2	12($sp)		
+slt	$t3	$t1	$t2		
+beq	$t3	0	L6		
+lw	$t1	8($sp)		
+lw	$t4	20($sp)		
+sll	$t1	$t1	2		
+add	$t4	$t4	$t1		
+lw	$t2	($t4)		
+lw	$t1	8($sp)		
+li	$t4	1		
+add	$t5	$t1	$t4		
+lw	$t4	20($sp)		
+sll	$t5	$t5	2		
+add	$t4	$t4	$t5		
+lw	$t1	($t4)		
+sgt	$t4	$t2	$t1		
+beq	$t4	0	L5		
+lw	$t1	8($sp)		
+lw	$t5	20($sp)		
+sll	$t1	$t1	2		
+add	$t5	$t5	$t1		
+lw	$t2	($t5)		
+sw	$t2	4($sp)		
+lw	$t2	8($sp)		
+li	$t5	1		
+add	$t6	$t2	$t5		
+lw	$t5	20($sp)		
+sll	$t6	$t6	2		
+add	$t5	$t5	$t6		
+lw	$t2	($t5)		
+lw	$t1	8($sp)		
+lw	$t5	20($sp)		
+sll	$t1	$t1	2		
+add	$t5	$t5	$t1		
+sw	$t2	($t5)		
+lw	$t1	4($sp)		
+lw	$t1	8($sp)		
+li	$t2	1		
+add	$t5	$t1	$t2		
+lw	$t2	20($sp)		
+sll	$t5	$t5	2		
+add	$t2	$t2	$t5		
+sw	$t1	($t2)		
+li	$t1	1		
+sw	$t1	16($sp)		
+L5		
+lw	$t1	8($sp)		
+li	$t2	1		
+add	$t4	$t1	$t2		
+sw	$t4	8($sp)		
+j	L7		
+L6		
+lw	$t1	12($sp)		
+li	$t2	1		
+sub	$t3	$t1	$t2		
+sw	$t3	12($sp)		
+j	L9		
+L8		
+li	$t0	1		
+move	$v1	$t0		
+lw	$ra	($sp)		
+addi	$sp	$sp	20		
+jr	$ra		
+	end of instr
+END OF ADD FUNCTION
+create_var_signature
+do_var_eval
+get_expr_type
+get_size_of
+create_type_attr
+Adding y with size: 40 to global table of type: int
+create_var_signature
+do_var_eval
+get_expr_type
+get_size_of
+create_type_attr
+Adding size with size: 0 to global table of type: int
+create_var_signature
+do_var_eval
+get_expr_type
+get_size_of
+create_type_attr
+Adding i with size: 0 to global table of type: int
+create_var_signature
+do_var_eval
+get_expr_type
+get_size_of
+create_type_attr
+Adding k with size: 0 to global table of type: int
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 3
+	end of instr
+get_tag
+gen_str_name
+intern_symbol
+create_type_attr
+EXPR res:0	type: 3
+li	$v0	4		
+la	$a0	str_0		
+syscall		
+	end of instr
+
+Starting DoPrint
+
+li	$v0	4		
+la	$a0	str_0		
+syscall		
+	end of instr
+FREEING REG: 0	, type: 0
+create_id_item_signature
+Looking for: 	size
+do_id_item_eval
+eval_id_list
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 3
+	end of instr
+get_tag
+INFO: "Value for int size: " = "Enter an integer between 1 and 10: ", LABEL: str_0
+gen_str_name
+intern_symbol
+create_type_attr
+EXPR res:0	type: 3
+li	$v0	4		
+la	$a0	str_1		
+syscall		
+	end of instr
+
+release and free
+FREEING REG: 0	, type: 0
+get_simplified_type
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+li	$t0	0		
+	end of instr
+do_assing_eval
+Looking for: 	i
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXVariable Case
+li	$t0	0		
+sw	$t0	i		
+	end of instr
+
+release and free
+FREEING REG: 0	, type: 0
+do_rval_eval
+Looking for: 	i
+RVAL: i	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+lw	$t0	i		
+	end of instr
+do_rval_eval
+Looking for: 	size
+RVAL: size	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+lw	$t1	size		
+	end of instr
+do_relat_eval
+is_widening
+do_normal_relat_eval
+REGISTER GIVEN: TEMP2
+FREEING REG: 0	, type: 0
+FREEING REG: 1	, type: 0
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 3
+	end of instr
+get_tag
+INFO: "Enter a positive integer: " = "Enter an integer between 1 and 10: ", LABEL: str_0
+INFO: "Enter a positive integer: " = "Value for int size: ", LABEL: str_1
+gen_str_name
+intern_symbol
+create_type_attr
+EXPR res:0	type: 3
+li	$v0	4		
+la	$a0	str_2		
+syscall		
+	end of instr
+
+Starting DoPrint
+
+li	$v0	4		
+la	$a0	str_2		
+syscall		
+	end of instr
+FREEING REG: 0	, type: 0
+do_rval_eval
+Looking for: 	i
+RVAL: i	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+lw	$t0	i		
+	end of instr
+create_id_item_signature
+Looking for: 	y
+do_id_item_eval
+eval_id_list
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 3
+	end of instr
+get_tag
+INFO: "Value for int array y: " = "Enter an integer between 1 and 10: ", LABEL: str_0
+INFO: "Value for int array y: " = "Value for int size: ", LABEL: str_1
+INFO: "Value for int array y: " = "Enter a positive integer: ", LABEL: str_2
+gen_str_name
+intern_symbol
+create_type_attr
+EXPR res:1	type: 3
+li	$v0	4		
+la	$a0	str_3		
+syscall		
+	end of instr
+
+release and free
+FREEING REG: 1	, type: 0
+get_simplified_type
+REGISTER GIVEN: TEMP1
+gen_paren_label
+get_simplified_type
+get_simplified_type
+FREEING REG: 1	, type: 0
+
+release and free
+FREEING REG: 0	, type: 0
+do_rval_eval
+Looking for: 	i
+RVAL: i	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+lw	$t0	i		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+li	$t1	1		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP3
+FREEING REG: 0	, type: 0
+
+release and free
+FREEING REG: 1	, type: 0
+do_assing_eval
+Looking for: 	i
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXVariable Case
+lw	$t0	i		
+li	$t1	1		
+add	$t3	$t0	$t1		
+sw	$t3	i		
+	end of instr
+
+release and free
+FREEING REG: 3	, type: 0
+do_cond_eval
+
+release and free
+FREEING REG: 2	, type: 0
+do_rval_eval
+Looking for: 	y
+RVAL: y	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP0
+EXPR res:0	type: 1
+	end of instr
+EXPR res:0	type: 1
+	end of instr
+la	$t0	y		
+	end of instr
+do_expr_eval
+create_expr_res_list
+EXPR res:0	type: 1
+la	$t0	y		
+	end of instr
+EXPR res:0	type: 1
+la	$t0	y		
+	end of instr
+do_rval_eval
+Looking for: 	size
+RVAL: size	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP1
+EXPR res:1	type: 1
+	end of instr
+EXPR res:1	type: 1
+	end of instr
+lw	$t1	size		
+	end of instr
+do_expr_eval
+create_expr_res_list
+EXPR res:1	type: 1
+lw	$t1	size		
+	end of instr
+EXPR res:1	type: 1
+lw	$t1	size		
+	end of instr
+do_func_call_eval
+DOING FUNCTION CALL
+Looking for: 	bubbleSort
+Function_flag: 0
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+FREEING REG: 2	, type: 0
+la	$t0	y		
+	end of instr
+lw	$t1	size		
+	end of instr
+func_Call_save_seq
+Debug2
+INCORRECT TYPE FOR FUNCTION ARGUMENT
+EXPR res:0	type: 1
+la	$t0	y		
+lw	$t1	size		
+	end of instr
+EXPR res:1	type: 1
+lw	$t1	size		
+	end of instr
+func_call_restore_seq
+RESULT TYPE: 1REGISTER GIVEN: TEMP2
+do_assing_eval
+Looking for: 	i
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXVariable Case
+la	$t0	y		
+lw	$t1	size		
+subu	$sp	$sp	16		
+sw	$t0	0($sp)		
+sw	$t1	4($sp)		
+sw	$t0	8($sp)		
+sw	$t1	12($sp)		
+jal	bubbleSort		
+lw	$t0	8($sp)		
+lw	$t1	12($sp)		
+addi	$sp	$sp	16		
+move	$t2	$v1		
+sw	$t2	i		
+	end of instr
+
+release and free
+FREEING REG: 2	, type: 0
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+li	$t2	0		
+	end of instr
+do_assing_eval
+Looking for: 	i
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXVariable Case
+li	$t2	0		
+sw	$t2	i		
+	end of instr
+
+release and free
+FREEING REG: 2	, type: 0
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 3
+	end of instr
+get_tag
+INFO: "The array sorted: " = "Enter an integer between 1 and 10: ", LABEL: str_0
+INFO: "The array sorted: " = "Value for int size: ", LABEL: str_1
+INFO: "The array sorted: " = "Enter a positive integer: ", LABEL: str_2
+INFO: "The array sorted: " = "Value for int array y: ", LABEL: str_3
+gen_str_name
+intern_symbol
+create_type_attr
+EXPR res:2	type: 3
+li	$v0	4		
+la	$a0	str_4		
+syscall		
+	end of instr
+
+Starting DoPrint
+
+li	$v0	4		
+la	$a0	str_4		
+syscall		
+	end of instr
+FREEING REG: 2	, type: 0
+do_rval_eval
+Looking for: 	i
+RVAL: i	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+	end of instr
+lw	$t2	i		
+	end of instr
+do_rval_eval
+Looking for: 	size
+RVAL: size	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP3
+EXPR res:3	type: 1
+	end of instr
+EXPR res:3	type: 1
+	end of instr
+lw	$t3	size		
+	end of instr
+do_relat_eval
+is_widening
+do_normal_relat_eval
+REGISTER GIVEN: TEMP4
+FREEING REG: 2	, type: 0
+FREEING REG: 3	, type: 0
+do_rval_eval
+Looking for: 	i
+RVAL: i	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+	end of instr
+lw	$t2	i		
+	end of instr
+do_rval_eval
+Looking for: 	y
+RVAL: y	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP3
+EXPR res:3	type: 1
+	end of instr
+EXPR res:3	type: 1
+	end of instr
+IN RVAL IDX
+gen_paren_label
+
+release and free
+FREEING REG: 2	, type: 0
+lw	$t2	i		
+la	$t3	y		
+sll	$t2	$t2	2		
+add	$t3	$t3	$t2		
+lw	$t3	($t3)		
+	end of instr
+do_expr_eval
+create_expr_res_list
+
+Starting DoPrint
+
+lw	$t2	i		
+la	$t3	y		
+sll	$t2	$t2	2		
+add	$t3	$t3	$t2		
+lw	$t3	($t3)		
+	end of instr
+FREEING REG: 3	, type: 0
+EXPR res:3	type: 1
+lw	$t2	i		
+la	$t3	y		
+sll	$t2	$t2	2		
+add	$t3	$t3	$t2		
+lw	$t3	($t3)		
+li	$v0	1		
+move	$a0	$t3		
+syscall		
+li	$v0	4		
+la	$a0	_s		
+syscall		
+	end of instr
+EXPR res:3	type: 1
+lw	$t2	i		
+la	$t3	y		
+sll	$t2	$t2	2		
+add	$t3	$t3	$t2		
+lw	$t3	($t3)		
+li	$v0	1		
+move	$a0	$t3		
+syscall		
+li	$v0	4		
+la	$a0	_s		
+syscall		
+	end of instr
+eval_expr_res_list
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+li	$t2	1		
+	end of instr
+
+Starting DoPrint
+
+li	$t2	1		
+	end of instr
+REGISTER GIVEN: TEMP3
+FREEING REG: 3	, type: 0
+FREEING REG: 2	, type: 0
+do_rval_eval
+Looking for: 	i
+RVAL: i	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+	end of instr
+lw	$t2	i		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP3
+EXPR res:3	type: 1
+	end of instr
+EXPR res:3	type: 1
+li	$t3	1		
+	end of instr
+do_arith_eval
+is_widening
+do_normal_arith_eval
+REGISTER GIVEN: TEMP5
+FREEING REG: 2	, type: 0
+
+release and free
+FREEING REG: 3	, type: 0
+do_assing_eval
+Looking for: 	i
+get_simplified_type
+is_narrowing
+is_widening
+CAN'T FIND IDXVariable Case
+lw	$t2	i		
+li	$t3	1		
+add	$t5	$t2	$t3		
+sw	$t5	i		
+	end of instr
+
+release and free
+FREEING REG: 5	, type: 0
+do_cond_eval
+
+release and free
+FREEING REG: 4	, type: 0
+
+Starting DoPrint
+
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 3
+	end of instr
+get_tag
+INFO: "Enter a positive integer or 0 to quit: " = "Enter an integer between 1 and 10: ", LABEL: str_0
+INFO: "Enter a positive integer or 0 to quit: " = "Value for int size: ", LABEL: str_1
+INFO: "Enter a positive integer or 0 to quit: " = "Enter a positive integer: ", LABEL: str_2
+INFO: "Enter a positive integer or 0 to quit: " = "Value for int array y: ", LABEL: str_3
+INFO: "Enter a positive integer or 0 to quit: " = "The array sorted: ", LABEL: str_4
+gen_str_name
+intern_symbol
+create_type_attr
+EXPR res:2	type: 3
+li	$v0	4		
+la	$a0	str_5		
+syscall		
+	end of instr
+
+Starting DoPrint
+
+li	$v0	4		
+la	$a0	str_5		
+syscall		
+	end of instr
+FREEING REG: 2	, type: 0
+create_id_item_signature
+Looking for: 	k
+do_id_item_eval
+eval_id_list
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 3
+	end of instr
+get_tag
+INFO: "Value for int k: " = "Enter an integer between 1 and 10: ", LABEL: str_0
+INFO: "Value for int k: " = "Value for int size: ", LABEL: str_1
+INFO: "Value for int k: " = "Enter a positive integer: ", LABEL: str_2
+INFO: "Value for int k: " = "Value for int array y: ", LABEL: str_3
+INFO: "Value for int k: " = "The array sorted: ", LABEL: str_4
+INFO: "Value for int k: " = "Enter a positive integer or 0 to quit: ", LABEL: str_5
+gen_str_name
+intern_symbol
+create_type_attr
+EXPR res:2	type: 3
+li	$v0	4		
+la	$a0	str_6		
+syscall		
+	end of instr
+
+release and free
+FREEING REG: 2	, type: 0
+get_simplified_type
+do_rval_eval
+Looking for: 	k
+RVAL: k	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+	end of instr
+lw	$t2	k		
+	end of instr
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP3
+EXPR res:3	type: 1
+	end of instr
+EXPR res:3	type: 1
+li	$t3	0		
+	end of instr
+do_relat_eval
+is_widening
+do_normal_relat_eval
+REGISTER GIVEN: TEMP4
+FREEING REG: 2	, type: 0
+FREEING REG: 3	, type: 0
+do_rval_eval
+Looking for: 	y
+RVAL: y	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP2
+EXPR res:2	type: 1
+	end of instr
+EXPR res:2	type: 1
+	end of instr
+la	$t2	y		
+	end of instr
+do_expr_eval
+create_expr_res_list
+EXPR res:2	type: 1
+la	$t2	y		
+	end of instr
+EXPR res:2	type: 1
+la	$t2	y		
+	end of instr
+do_rval_eval
+Looking for: 	size
+RVAL: size	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP3
+EXPR res:3	type: 1
+	end of instr
+EXPR res:3	type: 1
+	end of instr
+lw	$t3	size		
+	end of instr
+do_expr_eval
+create_expr_res_list
+EXPR res:3	type: 1
+lw	$t3	size		
+	end of instr
+EXPR res:3	type: 1
+lw	$t3	size		
+	end of instr
+do_rval_eval
+Looking for: 	k
+RVAL: k	get_simplified_type
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP5
+EXPR res:5	type: 1
+	end of instr
+EXPR res:5	type: 1
+	end of instr
+lw	$t5	k		
+	end of instr
+do_expr_eval
+create_expr_res_list
+EXPR res:5	type: 1
+lw	$t5	k		
+	end of instr
+EXPR res:5	type: 1
+lw	$t5	k		
+	end of instr
+do_func_call_eval
+DOING FUNCTION CALL
+Looking for: 	binSearch
+Function_flag: 0
+get_simplified_type
+create_expr_res
+REGISTER GIVEN: TEMP6
+EXPR res:6	type: 0
+	end of instr
+FREEING REG: 6	, type: 0
+la	$t2	y		
+	end of instr
+lw	$t3	size		
+	end of instr
+lw	$t5	k		
+	end of instr
+func_Call_save_seq
+Debug2
+INCORRECT TYPE FOR FUNCTION ARGUMENT
+EXPR res:2	type: 1
+la	$t2	y		
+lw	$t3	size		
+lw	$t5	k		
+	end of instr
+REGISTER GIVEN: TEMP6
+REGISTER GIVEN: TEMP7
+get_simplified_type
+REGISTER GIVEN: TEMP8
+gen_paren_label
+FREEING REG: 8	, type: 0
+REGISTER GIVEN: TEMP8
+gen_paren_label
+FREEING REG: 8	, type: 0
+REGISTER GIVEN: TEMP8
+gen_paren_label
+FREEING REG: 8	, type: 0
+REGISTER GIVEN: TEMP8
+gen_paren_label
+FREEING REG: 8	, type: 0
+REGISTER GIVEN: TEMP8
+gen_paren_label
+FREEING REG: 8	, type: 0
+REGISTER GIVEN: TEMP8
+gen_paren_label
+FREEING REG: 8	, type: 0
+REGISTER GIVEN: TEMP8
+gen_paren_label
+FREEING REG: 8	, type: 0
+REGISTER GIVEN: TEMP8
+gen_paren_label
+FREEING REG: 8	, type: 0
+REGISTER GIVEN: TEMP8
+gen_paren_label
+FREEING REG: 8	, type: 0
+REGISTER GIVEN: TEMP8
+gen_paren_label
+FREEING REG: 8	, type: 0
+EXPR res:3	type: 1
+lw	$t3	size		
+lw	$t5	k		
+	end of instr
+EXPR res:5	type: 1
+lw	$t5	k		
+	end of instr
+func_call_restore_seq
+RESULT TYPE: 0REGISTER GIVEN: TEMP8
+do_expr_eval
+create_expr_res_list
+
+Starting DoPrint
+
+la	$t2	y		
+lw	$t3	size		
+lw	$t5	k		
+subu	$sp	$sp	84		
+sw	$t3	44($sp)		
+sw	$t5	48($sp)		
+sw	$t0	52($sp)		
+sw	$t1	56($sp)		
+sw	$t2	60($sp)		
+sw	$t3	64($sp)		
+sw	$t4	68($sp)		
+sw	$t5	72($sp)		
+sw	$t6	76($sp)		
+sw	$t7	80($sp)		
+jal	binSearch		
+lw	$t0	52($sp)		
+lw	$t1	56($sp)		
+lw	$t2	60($sp)		
+lw	$t3	64($sp)		
+lw	$t4	68($sp)		
+lw	$t5	72($sp)		
+lw	$t6	76($sp)		
+lw	$t7	80($sp)		
+addi	$sp	$sp	84		
+move	$t8	$v1		
+	end of instr
+FREEING REG: 8	, type: 0
+EXPR res:8	type: 0
+la	$t2	y		
+lw	$t3	size		
+lw	$t5	k		
+subu	$sp	$sp	84		
+sw	$t3	44($sp)		
+sw	$t5	48($sp)		
+sw	$t0	52($sp)		
+sw	$t1	56($sp)		
+sw	$t2	60($sp)		
+sw	$t3	64($sp)		
+sw	$t4	68($sp)		
+sw	$t5	72($sp)		
+sw	$t6	76($sp)		
+sw	$t7	80($sp)		
+jal	binSearch		
+lw	$t0	52($sp)		
+lw	$t1	56($sp)		
+lw	$t2	60($sp)		
+lw	$t3	64($sp)		
+lw	$t4	68($sp)		
+lw	$t5	72($sp)		
+lw	$t6	76($sp)		
+lw	$t7	80($sp)		
+addi	$sp	$sp	84		
+move	$t8	$v1		
+li	$v0	4		
+beq	$t8	$zero	L16		
+la	$a0	_t		
+j	L17		
+L16	la	$a0	_f		
+L17	syscall		
+li	$v0	4		
+la	$a0	_s		
+syscall		
+	end of instr
+EXPR res:8	type: 0
+la	$t2	y		
+lw	$t3	size		
+lw	$t5	k		
+subu	$sp	$sp	84		
+sw	$t3	44($sp)		
+sw	$t5	48($sp)		
+sw	$t0	52($sp)		
+sw	$t1	56($sp)		
+sw	$t2	60($sp)		
+sw	$t3	64($sp)		
+sw	$t4	68($sp)		
+sw	$t5	72($sp)		
+sw	$t6	76($sp)		
+sw	$t7	80($sp)		
+jal	binSearch		
+lw	$t0	52($sp)		
+lw	$t1	56($sp)		
+lw	$t2	60($sp)		
+lw	$t3	64($sp)		
+lw	$t4	68($sp)		
+lw	$t5	72($sp)		
+lw	$t6	76($sp)		
+lw	$t7	80($sp)		
+addi	$sp	$sp	84		
+move	$t8	$v1		
+li	$v0	4		
+beq	$t8	$zero	L16		
+la	$a0	_t		
+j	L17		
+L16	la	$a0	_f		
+L17	syscall		
+li	$v0	4		
+la	$a0	_s		
+syscall		
+	end of instr
+eval_expr_res_list
+
+Starting DoPrint
+
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP8
+EXPR res:8	type: 3
+	end of instr
+get_tag
+INFO: "Enter a positive integer or 0 to quit: " = "Enter an integer between 1 and 10: ", LABEL: str_0
+INFO: "Enter a positive integer or 0 to quit: " = "Value for int size: ", LABEL: str_1
+INFO: "Enter a positive integer or 0 to quit: " = "Enter a positive integer: ", LABEL: str_2
+INFO: "Enter a positive integer or 0 to quit: " = "Value for int array y: ", LABEL: str_3
+INFO: "Enter a positive integer or 0 to quit: " = "The array sorted: ", LABEL: str_4
+INFO: "Enter a positive integer or 0 to quit: " = "Enter a positive integer or 0 to quit: ", LABEL: str_5
+Invalid literal value!
+EXPR res:8	type: 3
+li	$v0	4		
+la	$a0	str_5		
+syscall		
+	end of instr
+
+Starting DoPrint
+
+li	$v0	4		
+la	$a0	str_5		
+syscall		
+	end of instr
+FREEING REG: 8	, type: 0
+create_id_item_signature
+Looking for: 	k
+do_id_item_eval
+eval_id_list
+do_lit_eval
+create_expr_res
+REGISTER GIVEN: TEMP8
+EXPR res:8	type: 3
+	end of instr
+get_tag
+INFO: "Value for int k: " = "Enter an integer between 1 and 10: ", LABEL: str_0
+INFO: "Value for int k: " = "Value for int size: ", LABEL: str_1
+INFO: "Value for int k: " = "Enter a positive integer: ", LABEL: str_2
+INFO: "Value for int k: " = "Value for int array y: ", LABEL: str_3
+INFO: "Value for int k: " = "The array sorted: ", LABEL: str_4
+INFO: "Value for int k: " = "Enter a positive integer or 0 to quit: ", LABEL: str_5
+INFO: "Value for int k: " = "Value for int k: ", LABEL: str_6
+Invalid literal value!
+EXPR res:8	type: 3
+li	$v0	4		
+la	$a0	str_6		
+syscall		
+	end of instr
+
+release and free
+FREEING REG: 8	, type: 0
+get_simplified_type
+do_cond_eval
+
+release and free
+FREEING REG: 4	, type: 0
+finish
+
+get_data
+get_functions
+get_data
+get_space_data
+TypeAttr: type: 1	 size: 0	 index: 0	is_addr_var: 0
+	end of instr
+TypeAttr: type: 8	 size: 0	 index: 0	is_addr_var: 0
+binSearch		
+subu	$sp	$sp	16		
+sw	$ra	($sp)		
+li	$t0	0		
+sw	$t0	8($sp)		
+lw	$t0	20($sp)		
+li	$t1	1		
+sub	$t2	$t0	$t1		
+sw	$t2	4($sp)		
+L4		
+lw	$t0	8($sp)		
+lw	$t1	4($sp)		
+slt	$t2	$t0	$t1		
+beq	$t2	0	L3		
+lw	$t0	4($sp)		
+lw	$t1	8($sp)		
+add	$t3	$t0	$t1		
+li	$t0	2		
+div	$t1	$t3	$t0		
+sw	$t1	12($sp)		
+lw	$t0	12($sp)		
+sll	$t0	$t0	2		
+addi	$t1	$t0	16		
+add	$t1	$sp	$t0		
+lw	$t1	($t0)		
+lw	$t0	24($sp)		
+slt	$t3	$t1	$t0		
+beq	$t3	0	L1		
+lw	$t0	12($sp)		
+li	$t1	1		
+add	$t4	$t0	$t1		
+sw	$t4	8($sp)		
+j	L2		
+L1		
+lw	$t0	12($sp)		
+sw	$t0	4($sp)		
+L2		
+j	L4		
+L3		
+lw	$t0	8($sp)		
+lw	$t1	4($sp)		
+seq	$t2	$t0	$t1		
+lw	$t0	8($sp)		
+sll	$t0	$t0	2		
+addi	$t1	$t0	16		
+add	$t1	$sp	$t0		
+lw	$t1	($t0)		
+lw	$t0	24($sp)		
+seq	$t3	$t1	$t0		
+sne	$t2	$t2	0		
+sne	$t3	$t3	0		
+and	$t0	$t2	$t3		
+move	$v1	$t0		
+lw	$ra	($sp)		
+addi	$sp	$sp	16		
+jr	$ra		
+bubbleSort		
+subu	$sp	$sp	20		
+sw	$ra	($sp)		
+lw	$t0	24($sp)		
+li	$t1	1		
+sub	$t2	$t0	$t1		
+sw	$t2	12($sp)		
+li	$t0	1		
+sw	$t0	16($sp)		
+L9		
+lw	$t0	16($sp)		
+beq	$t0	0	L8		
+li	$t1	0		
+sw	$t1	16($sp)		
+li	$t1	0		
+sw	$t1	8($sp)		
+L7		
+lw	$t1	8($sp)		
+lw	$t2	12($sp)		
+slt	$t3	$t1	$t2		
+beq	$t3	0	L6		
+lw	$t1	8($sp)		
+lw	$t4	20($sp)		
+sll	$t1	$t1	2		
+add	$t4	$t4	$t1		
+lw	$t2	($t4)		
+lw	$t1	8($sp)		
+li	$t4	1		
+add	$t5	$t1	$t4		
+lw	$t4	20($sp)		
+sll	$t5	$t5	2		
+add	$t4	$t4	$t5		
+lw	$t1	($t4)		
+sgt	$t4	$t2	$t1		
+beq	$t4	0	L5		
+lw	$t1	8($sp)		
+lw	$t5	20($sp)		
+sll	$t1	$t1	2		
+add	$t5	$t5	$t1		
+lw	$t2	($t5)		
+sw	$t2	4($sp)		
+lw	$t2	8($sp)		
+li	$t5	1		
+add	$t6	$t2	$t5		
+lw	$t5	20($sp)		
+sll	$t6	$t6	2		
+add	$t5	$t5	$t6		
+lw	$t2	($t5)		
+lw	$t1	8($sp)		
+lw	$t5	20($sp)		
+sll	$t1	$t1	2		
+add	$t5	$t5	$t1		
+sw	$t2	($t5)		
+lw	$t1	4($sp)		
+lw	$t1	8($sp)		
+li	$t2	1		
+add	$t5	$t1	$t2		
+lw	$t2	20($sp)		
+sll	$t5	$t5	2		
+add	$t2	$t2	$t5		
+sw	$t1	($t2)		
+li	$t1	1		
+sw	$t1	16($sp)		
+L5		
+lw	$t1	8($sp)		
+li	$t2	1		
+add	$t4	$t1	$t2		
+sw	$t4	8($sp)		
+j	L7		
+L6		
+lw	$t1	12($sp)		
+li	$t2	1		
+sub	$t3	$t1	$t2		
+sw	$t3	12($sp)		
+j	L9		
+L8		
+li	$t0	1		
+move	$v1	$t0		
+lw	$ra	($sp)		
+addi	$sp	$sp	20		
+jr	$ra		
+.data		
+.align	4		
+	end of instr
+TypeAttr: type: 1	 size: 0	 index: 0	is_addr_var: 0
+	end of instr
+TypeAttr: type: 1	 size: 0	 index: 0	is_addr_var: 0
+	end of instr
+TypeAttr: type: 3	 size: 0	 index: 0	is_addr_var: 0
+	end of instr
+TypeAttr: type: 3	 size: 0	 index: 0	is_addr_var: 0
+	end of instr
+TypeAttr: type: 9	 size: 0	 index: 0	is_addr_var: 0
+bubbleSort		
+subu	$sp	$sp	20		
+sw	$ra	($sp)		
+lw	$t0	24($sp)		
+li	$t1	1		
+sub	$t2	$t0	$t1		
+sw	$t2	12($sp)		
+li	$t0	1		
+sw	$t0	16($sp)		
+L9		
+lw	$t0	16($sp)		
+beq	$t0	0	L8		
+li	$t1	0		
+sw	$t1	16($sp)		
+li	$t1	0		
+sw	$t1	8($sp)		
+L7		
+lw	$t1	8($sp)		
+lw	$t2	12($sp)		
+slt	$t3	$t1	$t2		
+beq	$t3	0	L6		
+lw	$t1	8($sp)		
+lw	$t4	20($sp)		
+sll	$t1	$t1	2		
+add	$t4	$t4	$t1		
+lw	$t2	($t4)		
+lw	$t1	8($sp)		
+li	$t4	1		
+add	$t5	$t1	$t4		
+lw	$t4	20($sp)		
+sll	$t5	$t5	2		
+add	$t4	$t4	$t5		
+lw	$t1	($t4)		
+sgt	$t4	$t2	$t1		
+beq	$t4	0	L5		
+lw	$t1	8($sp)		
+lw	$t5	20($sp)		
+sll	$t1	$t1	2		
+add	$t5	$t5	$t1		
+lw	$t2	($t5)		
+sw	$t2	4($sp)		
+lw	$t2	8($sp)		
+li	$t5	1		
+add	$t6	$t2	$t5		
+lw	$t5	20($sp)		
+sll	$t6	$t6	2		
+add	$t5	$t5	$t6		
+lw	$t2	($t5)		
+lw	$t1	8($sp)		
+lw	$t5	20($sp)		
+sll	$t1	$t1	2		
+add	$t5	$t5	$t1		
+sw	$t2	($t5)		
+lw	$t1	4($sp)		
+lw	$t1	8($sp)		
+li	$t2	1		
+add	$t5	$t1	$t2		
+lw	$t2	20($sp)		
+sll	$t5	$t5	2		
+add	$t2	$t2	$t5		
+sw	$t1	($t2)		
+li	$t1	1		
+sw	$t1	16($sp)		
+L5		
+lw	$t1	8($sp)		
+li	$t2	1		
+add	$t4	$t1	$t2		
+sw	$t4	8($sp)		
+j	L7		
+L6		
+lw	$t1	12($sp)		
+li	$t2	1		
+sub	$t3	$t1	$t2		
+sw	$t3	12($sp)		
+j	L9		
+L8		
+li	$t0	1		
+move	$v1	$t0		
+lw	$ra	($sp)		
+addi	$sp	$sp	20		
+jr	$ra		
+.data		
+.align	4		
+	end of instr
+TypeAttr: type: 3	 size: 0	 index: 0	is_addr_var: 0
+	end of instr
+TypeAttr: type: 3	 size: 0	 index: 0	is_addr_var: 0
+	end of instr
+TypeAttr: type: 3	 size: 0	 index: 0	is_addr_var: 0
+	end of instr
+TypeAttr: type: 3	 size: 0	 index: 0	is_addr_var: 0
+	end of instr
+TypeAttr: type: 3	 size: 0	 index: 0	is_addr_var: 0
+	end of instr
+TypeAttr: type: 6	 size: 40	 index: 0	is_addr_var: 0
+	end of instr
+get_data
+get_word_data
+get_data
+get_float_data
+get_data
+get_asciiz_data

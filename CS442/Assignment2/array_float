@@ -1,0 +1,25 @@
+int i;
+bool n;
+float f[100];
+float b[100];
+i = 0;
+n = 0;
+
+i = 0;
+while (i != 100) {
+    b[i] = !n;
+    n = !n;
+    i = i + 1;
+}
+i = 0;
+while (i != 100) {
+    f[i] = b[i];
+    i = i + 1;
+}
+
+i = 0;
+while (i != 100) {
+    print(f[i]);
+    println();
+    i = i + 1;
+}

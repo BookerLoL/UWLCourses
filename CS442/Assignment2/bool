@@ -1,0 +1,9 @@
+bool i;
+bool j; 
+bool m;
+i = true;
+j = false;
+print(i);
+m = 10;
+print(i, j, m);
+print(30, 20, 10, true);

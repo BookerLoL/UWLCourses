@@ -1,0 +1,32 @@
+public Class Tester {
+	public static void main(String[] args) {
+		302
+		int intint = 1;
+		float float2 = 0.2;
+		
+		int invalid = 0.;
+		float invalid2 = .0;
+		
+		char ch = 'c';
+		char c2h = ' ';
+		char c3h = '/';
+		char cFail = 'as';
+		char cFail2 = '2a';
+		
+		string value = "pass";
+		string value2 = "Testing! This []()[]}/la;wjiqo1e29";
+		testKeywords();
+		
+		Did you pass ? 
+	}
+
+	private static function testKeywords(){
+		while if else int float char boolean{][}!
+		   true false print println
+		printstr printsp read 
+		readprintstr //should be a 
+		&&&|||!!<=>=<<>>!===:=,;
+
+		=-+_+_)(*&^%$#@!!@#$%^&*()_+=-0987654321!  Should get some errors and a number!
+	}
+}

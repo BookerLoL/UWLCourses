@@ -1,0 +1,7 @@
+printstr("hello");
+printstr("World");
+print(1, 2, 3);
+printsp(true);
+printstr("yo");
+println();
+print(true, false, 0 || 1, 1 == 1, 10 || 0, true && false, !true, !false);

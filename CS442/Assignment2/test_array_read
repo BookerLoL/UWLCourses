@@ -1,0 +1,7 @@
+int a; 
+boolean b;
+float c;
+
+float m[10];
+
+read(10);

@@ -1,0 +1,34 @@
+int k;
+
+int constantInt() {
+    return 10;
+}
+
+bool constantBool() {
+    return false;
+}
+
+float constantFloat() {
+    return 3.14;
+}
+
+int repeat() {
+    if (k < 100) {
+        k + 50;
+        return repeat();
+    }
+    return k;
+}
+
+int b(int i) {
+    if (i < 100) {
+        i = i + 10;
+    } else {
+        return i;
+    }
+}
+
+k = 10;
+
+print(b(k));
+print(k);

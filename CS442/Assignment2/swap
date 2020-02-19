@@ -1,0 +1,17 @@
+int m;
+int n;
+int w;
+
+int func(int & a, int & b) int k; {
+    k = a;
+    a = b;
+    b = k;
+    return k;
+}
+
+m = 1.5;
+n = 2.5;
+
+print(m, n);
+w = func(m, n);
+print(m, n);

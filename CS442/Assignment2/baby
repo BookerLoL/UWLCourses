@@ -1,0 +1,13 @@
+int k;
+
+int b(int i) {
+    i = 5;
+    print(i);
+    println();
+    return i;
+}
+
+k = 10;
+
+print(b(k));
+print(k);

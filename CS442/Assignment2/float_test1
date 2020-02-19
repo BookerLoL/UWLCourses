@@ -1,0 +1,39 @@
+float a;
+float b;
+boolean c;
+int d;
+int i;
+float m[10];
+a = 1.4;
+b = 0.5;
+c = true;
+d = -1;
+print(a, b);
+println();
+read(a, b);
+print(a, b);
+println();
+print(a + b, a - b, a + (c - d));
+println();
+printstr("changing variable values");
+a = 10.43;
+b = 1.74;
+println();
+print(a + b, a - b, a * b, a / b, a % b, -a - -b, a ^ 2, a ^ 0, a ^ 3);
+println();
+print(3 + 10.43 ^ 3 - (2 * 4.5 * 3 - 5.52 * 3.4) / (1.2 - 0.6) );
+printstr("floats now");
+i = 0;
+while (i < 10) {
+    read(m[i]);
+    i = i + 1;
+}
+read(a);
+i = 0;
+while (i < 10) {
+    if (m[i] > a) {
+        print(m[i]);
+    }
+    i = i + 1;
+}
+

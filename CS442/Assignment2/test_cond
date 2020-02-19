@@ -1,0 +1,34 @@
+int i;
+int j;
+int k;
+
+i = 0;
+j = 50;
+k = 25;
+
+while (i != j) {
+    if (i % 2 == 0) {
+        print(i);
+    } else {
+        printstr("i is not even");
+    }
+
+    printsp(2);
+
+    if (j % 2 == 0) {
+        print(j);
+    }
+
+    i = i + 5;
+    println();
+}
+
+while (k) {
+    if (k == 100) {
+        k = false;
+    } else {
+        print(k);
+        printsp(true);
+        k = k + 25;
+    }
+}

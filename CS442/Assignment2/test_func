@@ -1,0 +1,10 @@
+int f(int y[5], int o) boolean x; int a[20]; {
+    x = true;
+    o = 5;
+    a[2] = 9 + x;
+    y[0] = 20;
+    return a[2];
+}
+
+int z[5];
+print(f(z, 3));

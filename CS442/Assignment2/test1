@@ -1,0 +1,17 @@
+int k;
+int func(int & a, int & b) {
+    return 10;  //return func(a, b);
+}
+
+
+k = func(1, 10);
+
+//pass by value
+/*
+
+saveseq, save for  on parameter
+
+after function tag
+addr, and local vars 
+
+*/

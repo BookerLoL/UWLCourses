@@ -1,0 +1,31 @@
+int i;
+float f;
+bool b;
+
+int literal() {
+    return i;
+}
+
+float literal2() {
+    return f;
+}
+
+bool literal3() {
+    return b;
+}
+
+i = 69;
+f = 6.9;
+b = true;
+
+i = literal();
+f = literal2();
+b = literal3();
+print(i, f, b);
+println();
+print(literal(), literal2(), literal3());
+println();
+b = literal2();
+i = literal2();
+print(literal() + literal2(), b, i);
+

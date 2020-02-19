@@ -1,0 +1,204 @@
+/*
+ * SymTab.c
+ *
+ *  Created on: Sep 6, 2019
+ *      Author: Ethan
+ */
+#include "SymTab.h"
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define true 1
+#define false 0
+
+// !ptr  == (ptr == NULL)
+/*
+ * DJB hash code
+ */
+int hash(const char *Name, int tableSize) 
+{
+	unsigned long hash = 5381;
+	int ch;
+	while ((ch = *Name), *Name++) {
+		//hash = hash * 33 + ch
+		hash = ((hash << 5) + hash) + ch;
+	}
+	return hash % tableSize;
+}
+
+int isTableInvalid(struct SymTab *ATable) 
+{
+	if (!ATable || !ATable->Contents || ATable->Size < 1) {
+		return true;
+	}
+	return false;
+}
+
+int isEntryInvalid(struct SymEntry *Entry) 
+{
+	if (!Entry || !Entry->Name) {
+		return true;
+	}
+	return false;
+}
+
+void* isMallocInvalid(void *ptr) 
+{
+	if (!ptr) {
+		perror("malloc failed");
+		exit(true);
+	}
+	return ptr;
+}
+
+struct SymTab* CreateSymTab(int Size) 
+{
+	struct SymTab *table = NULL;
+
+	table = (struct SymTab*) isMallocInvalid(malloc(sizeof(struct SymTab)));
+	table->Contents = (struct SymEntry**) isMallocInvalid(
+			calloc(Size, sizeof(struct SymEntry*)));
+	table->Size = Size;
+	return table;
+}
+
+void DestroySymTab(struct SymTab *ATable) 
+{
+	int row;
+	int tableRows = ATable->Size;
+	struct SymEntry *current;
+	struct SymEntry *next;
+	for (row = 0; row < tableRows; row++) {
+		current = (ATable->Contents)[row];
+		while (current != NULL) {
+			next = current->Next;
+			free(current->Name);
+			free(current);
+			current = next;
+		}
+		ATable->Contents[row] = NULL;
+	}
+	free(ATable->Contents);
+	free(ATable);
+}
+
+struct SymEntry* createEntry(const char *Name) 
+{
+	struct SymEntry *entry = NULL;
+
+	entry = (struct SymEntry*) isMallocInvalid(malloc(sizeof(struct SymEntry)));
+
+	int length = strlen(Name);
+	entry->Name = (char*) isMallocInvalid(malloc((length + 1) * sizeof(char)));
+	strcpy(entry->Name, Name);
+
+	entry->Next = NULL;
+	entry->Attributes = NULL;
+
+	return entry;
+}
+
+int EnterName(struct SymTab *ATable, const char *Name,
+		struct SymEntry **AnEntry) 
+{
+	int row = hash(Name, ATable->Size);
+
+	struct SymEntry *entry = ATable->Contents[row];
+
+	while (entry) {
+		//If the entry is found
+		if (strcmp(entry->Name, Name) == 0) {
+			if (AnEntry) {
+				*AnEntry = entry;
+			}
+			return 0;
+		}
+		entry = entry->Next;
+	}
+
+	//Failed to find entry, put at head
+	entry = createEntry(Name);
+
+	//Adding into row
+	entry->Next = ATable->Contents[row];
+	ATable->Contents[row] = entry;
+
+	if (AnEntry) {
+		*AnEntry = ATable->Contents[row];
+	}
+	return 1;
+}
+
+struct SymEntry* FindName(struct SymTab *ATable, const char *Name) 
+{
+	struct SymEntry *entry = NULL;
+	if (isTableInvalid(ATable)) {
+		return entry;
+	}
+	int row = hash(Name, ATable->Size);
+	entry = ATable->Contents[row];
+	while (entry) {
+		if (strcmp(entry->Name, Name) == 0) {
+			return entry;
+		}
+		entry = entry->Next;
+	}
+	return entry;
+}
+
+void SetAttr(struct SymEntry *AnEntry, void *Attributes) {
+	AnEntry->Attributes = Attributes;
+}
+void* GetAttr(struct SymEntry *AnEntry) {
+	return AnEntry->Attributes;
+}
+const char* GetName(struct SymEntry *AnEntry) {
+	return AnEntry->Name;
+}
+
+struct SymEntry* FirstEntry(struct SymTab *ATable) {
+	struct SymEntry *entry = NULL;
+	if (isTableInvalid(ATable)) {
+		return entry;
+	}
+	int row = 0, maxRow = ATable->Size;
+	while (row < maxRow) {
+		if ((ATable->Contents)[row]) {
+			entry = ATable->Contents[row];
+			break;
+		}
+		row++;
+	}
+	return entry;
+}
+
+struct SymEntry* NextEntry(struct SymTab *ATable, struct SymEntry *AnEntry) {
+	struct SymEntry *nextEntry = NULL;
+	if (isTableInvalid(ATable) || isEntryInvalid(AnEntry)) {
+		return nextEntry;
+	}
+	if (AnEntry->Next) {
+		nextEntry = AnEntry->Next;
+	} else {
+		int row = hash(AnEntry->Name, ATable->Size) + 1; // no next, check next row
+		int maxRow = ATable->Size;
+		while (row < maxRow) {
+			if (ATable->Contents[row]) {
+				nextEntry = ATable->Contents[row];
+				break;
+			}
+			row++;
+		}
+	}
+	return nextEntry;
+}
+
+void printEntry(struct SymEntry *AnEntry, int size) {
+	if (isEntryInvalid(AnEntry)) {
+		printf("ENTRY IS EMPTY");
+		return;
+	}
+	printf("NAME:\t%s\t%d\n", AnEntry->Name, hash(AnEntry->Name, size));
+}

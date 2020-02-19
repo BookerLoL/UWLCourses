@@ -1,0 +1,30 @@
+int i; 
+int k; 
+boolean b; 
+boolean c; 
+boolean d; 
+
+i = 0;
+k = 1;
+b = true;
+c = -1;
+d = 0;
+
+
+printstr("Testing");
+print(i, k, b, c, d, 3*3);
+println();
+printstr("Hello World");
+printsp(4);
+printstr("Hello");
+printsp(3);
+printstr("Hello World");
+printsp(0);
+printstr("Hello World");
+printsp(-1);
+printstr("Hello World");
+
+println();
+println();
+
+printstr("Program has finished");

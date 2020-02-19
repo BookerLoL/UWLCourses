@@ -1,0 +1,13 @@
+int func(int i, int j) int m; {
+    i = 5;
+    j = 10;
+    m = i + j;
+    if (m > j) {
+        return j;
+    } else {
+        return i;
+    }
+}
+
+print(func(0, 0));
+

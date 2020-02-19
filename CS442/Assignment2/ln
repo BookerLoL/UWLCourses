@@ -1,0 +1,13 @@
+int i;
+int k;
+bool j;
+j = 10;
+i = 2;
+k = -1;
+print(j,i,k);
+println();
+print(j);
+printsp(5);
+print(k);
+printsp(5);
+print(i);

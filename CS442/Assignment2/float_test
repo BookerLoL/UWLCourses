@@ -1,0 +1,20 @@
+float a;
+float z;
+float b[10];
+int c; 
+int d;
+boolean f;
+boolean g;
+
+a = 3.14;
+c = 2;
+d = 3;
+f = true;
+g = -1;
+
+print(a, c, d, f, g);
+println();
+print(a + a, a - a, a / a, a * a, a % a, a ^ 2, -a);
+z = 3.14;
+print(a > z, a < z, a >= z, a <= z, 0 || z, z || 0, 0 && z, z && 0, !z);
+println();

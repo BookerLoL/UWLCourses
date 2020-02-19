@@ -1,0 +1,11 @@
+int k;
+int f1() {
+    if (k < 50) {
+        k = k + 5;
+        print(k);
+        return f1();
+    } 
+    return k;
+}
+k = 5;
+print(f1());

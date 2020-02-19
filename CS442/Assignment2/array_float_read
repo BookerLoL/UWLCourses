@@ -1,0 +1,8 @@
+bool b;
+float k;
+int i[100];
+float m[200];
+bool j[1];
+
+read(i[10], b, m[30], k, c, d[100], b, j[0]);
+print(i[10], b, m[30], k, j[0]);

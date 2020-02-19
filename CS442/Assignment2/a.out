@@ -1,0 +1,51 @@
+1. float c;
+2. int i;
+3. int f;
+4. int a[10];
+5. int b[10];
+6. int func(int &f[10], int e[10]) {
+7.     while(i < 10) {
+8.         e[i] = e[i] * 2;
+9.         f[i] = f[i] * 2;
+10.         i = i + 1;
+11.     }
+12. 
+13.     i = 0;
+14.     while(i < 10) {
+15.         print(f[i], e[i]);
+16.         println();
+17.         i = i + 1;
+18.     }
+19.     
+20.     println();
+21.     return 1;
+22. }
+23. 
+24. 
+25. read(c);
+26. read(f);
+           ^
+Invalid Value!
+           ^
+Invalid Value!
+27. i = 0;
+28. while(i < 10) {
+29.     a[i] = c;
+30.     b[i] = f;
+31.     i = i + 1;
+32.     print(a[i], b[i]);
+33.     println();
+34. }
+35. 
+36. i = 0;
+37. print(func(b, a));
+                   ^
+TYPE MISMATCH FOR ARGUMENT
+                   ^
+TYPE MISMATCH FOR ARGUMENT
+38. i = 0;
+39. while(i < 10) {
+40.     print(a[i], b[i]);
+41.     println();
+42.     i = i + 1;
+43. }

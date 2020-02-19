@@ -1,0 +1,5 @@
+1. int a;
+2. int e;
+3. bool b;
+         ^
+Illegal Character in YACC
