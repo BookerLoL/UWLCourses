@@ -9,3 +9,9 @@
 ## CS421 - Programming Language Concepts 
 
 ## CS442 - Compilers 
+
+## CS743 - Software Testing 
+
+## CS 744 - 
+
+## CS 746 - 
