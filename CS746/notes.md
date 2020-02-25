@@ -143,8 +143,113 @@ Software
 
 ![Data centric](./img/data-centric.png)
 
+Pros
+- Uniform data acess via common interface
+- non-duplicated and sharable data
+
+Difficulties
+- hard to maintain, esp when data changed since other sys need to update that data value
+- new daya needs meta data and interface
+
+Ex
+- Airline reservation sys, hotels, online application sys by UW-System
+
+### **Data Flow / Pipe-and-Filter** 
+- set of heterogeneous sys connected via data flow 
+    - may change data when passes through
+    - each sys indepedent in handling the data
+- process data via stages to final output 
+
+![Pipe and Filter](./img/pipe-and-filter.png)
+
+Pros
+- easy to impl, each sys indepen
+- each sys determines the format of input and output
+
+Difficultues
+- most apps use diff sys at diff stages of data flow making connection harder
 
 
+Ex
+- compilers, computer graphics, order processing (Boeing, Airbus)
 
+### **Layered/n-tier Architecture**
+- Several layers, each with componenets/modules, 1 ore fewer task
+
+![n-tier](./img/n-tier.png)
+
+Pros
+- easy to assign work to diff groups of devs
+- easy to maintain
+
+Difficulties
+- slow performance, services go through several layers
+
+Ex
+- 3 tier: GUI/presentation, app, db
+- 4 tier: GUI/presentation, business, app, db
+- ISO OSI network: 7 layesrs
+
+### **Client Server** 
+- server provides set of services
+- comm via network (distributed systems)
+    - client interface service reqs
+    - comm synchronous/asynchronous (don't wait)
+
+- Client, Communication network, Server
+Pros
+- each sys indepdent 
+- several clients servered capability same time
+
+Difficulties
+- severs must be reliable
+- changing interface -> probs for clients
+
+Ex
+- Online banking, shopping, J RMI
+
+
+### **Service Oriented Architecture**
+- Distributed sys with multiple services
+    - services provided by diff servers (diff platforms, langs, etc)
+- Providers comm via protocols
+    - excahnge info, uniformity of services, consistency in data and services
+
+- Clients look for service
+- Clients register with node (broker, provide list of services) before asking for service
+- Service providers publish services via broker
+- sign contract before formally interacting
+
+![Service Oriented](./img/soa.png)
+
+Pros
+- Decoulping clients and servers -> indepedence
+- Services independent of platofrms and langs
+
+Difficulties
+- broker and contracts
+- security important concern
+
+Ex
+- WWW, CORBA, COM/DCOM
+
+
+### **MVC**
+- Model: entities
+- View: services to display
+- Controller: coordinate model and view
+
+Pro
+- Easy to impl
+- Easy to divide work among devs
+- clearly defined comm patterns
+
+Difficulties
+- layer/grp may be bigger than two -> uneven work allocation
+
+![MVC](./img/mvc.png)
+
+Ex 
+- Javascript, Python, Ruby uses MVC for web/mobile app dev
 
 
