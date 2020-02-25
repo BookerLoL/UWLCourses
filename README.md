@@ -12,6 +12,6 @@
 
 ## CS743 - Software Testing 
 
-## CS 744 - 
+## CS 744 - Project Managment
 
-## CS 746 - 
+## CS 746 - Software Modeling and Analysis
