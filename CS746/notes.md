@@ -131,6 +131,20 @@ Software
 
 --- 
 
-## Styles of Software Architectures
+## **Styles of Software Architectures**
+
+### **Data Centric Software Architecture** 
+- data store contains major data elements 
+- data store: **data, meta data, common interface**
+- heterogenous sys share data via data store
+- each sys impl interface to access data store data
+- large db, data mine, data repo
+
+
+![Data centric](./img/data-centric.png)
+
+
+
+
 
 
