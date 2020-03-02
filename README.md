@@ -6,6 +6,8 @@
 
 ## CS340 - Software Design III: Abstract Data Types
 
+## CS370 - Computer Architecture
+
 ## CS421 - Programming Language Concepts 
 
 ## CS442 - Compilers 
