@@ -49,5 +49,17 @@
    
    - Sign-extend: based on sign bit and if 2C then fill with upper-bit position value 
    
-  
-  
+---
+## Chapter 2
+- gcc -E <hll-src>    
+      -S <hll-src>
+      -c <assmbly>
+      <object file>
+- PC indicate current exe instruction [incr by 4]
+  - .data don't count
+- RISC vs CISC 
+  - RISC:
+        - simple instrs, fixed bits, handful addressing modes, only operate on reg/immed vals
+  - CISC:
+        - operate on mem, variable length, many addressing modes
+   
