@@ -51,15 +51,42 @@
    
 ---
 ## Chapter 2
-- gcc -E <hll-src>    
-      -S <hll-src>
-      -c <assmbly>
-      <object file>
+    gcc -E <hll-src>
+
+        -S <hll-src>
+
+        -c <assmbly>
+
+        <object file>
+
 - PC indicate current exe instruction [incr by 4]
   - .data don't count
+
 - RISC vs CISC 
   - RISC:
         - simple instrs, fixed bits, handful addressing modes, only operate on reg/immed vals
   - CISC:
         - operate on mem, variable length, many addressing modes
-   
+
+- Static Instr, from source code without run-time info
+    - mnemomic, reg names, immed values, PC, addr of jump/branch
+- Dynamic Instr, instr as they execute, with all info needed to determine outcome of prog
+
+- Mips Format
+    - R-type: 3 reg op / shift amt 
+    - I-type: immed val
+    - J-type: jump offset
+
+- First instruction always at 0x00400000
+
+
+- Two-Pass Assembler (scans code twice)
+    - labels -> need to know target address
+
+- Symbol Table
+    - Label-Address pair
+
+---
+## Chapter 3
+- Digital Logic Circuits 
+    - 
