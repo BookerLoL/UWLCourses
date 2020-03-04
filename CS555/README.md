@@ -460,6 +460,7 @@
             - 1 list per row in access matrix, revoking capabilities can be inefficient 
 --- 
 ## Authentication 1
+- ** first line of defense **
 - process of verifying an identity claimed 
 - 2 steps: identification and verification
 - str needs to match value of assets protected
