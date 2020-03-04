@@ -459,3 +459,251 @@
             - list of objs & operations
             - 1 list per row in access matrix, revoking capabilities can be inefficient 
 --- 
+## Authentication 1
+- process of verifying an identity claimed 
+- 2 steps: identification and verification
+- str needs to match value of assets protected
+
+- E-Authentication Architectural Model (NIST SP 800-63-2)
+
+- 4 means of authenticating user identity 
+    - 1)  knows 
+        - password, pin..
+    - 2) owns (token)
+        - smartcard, physical key..
+    - 3) is (static biometrics)
+        - fingerprint, retina, face..
+    - 4) does (dynamic biometrics)
+        - voice pattern, handwriting, typing rhythm
+- Passwords (12+ chars)
+    - use diff pw
+    - pw manager [Lastpass, 1password, splashID]
+
+- Password Authentication
+    - login & pw
+    - user id -> authorize access, privleges
+
+- Password Brute Force Attacks
+    - Offline dictionary atk
+        - pw file -> common pw checks
+        - prev unauth access to pw file, intrusion detection
+    - Specific Account atk
+        - pick user & guess until finds one
+        - limit access after X attempts
+    - Popular password atk
+        - common pw
+        - enforce good pw / authentication reqs from same IP addr
+    - Electronic monitoring 
+        - encrypted pw
+    
+- Password Social Engineering Atks
+    - guessing against single user
+        - knowledge to guess
+        - pw training & resetting
+    - Workstation hijacking
+        - unattended 
+        - automatic locking after period of inactivity, or diff user behavior
+    - user mistakse
+        - written down / shared
+    - multiple pw use
+        - same pw for many 
+        - enforce unique pw 
+
+- Unix PW Scheme
+    - Salting (randomly generated)
+        - duplicates not detectable
+        - incr difficult of offline dict atks
+        - same user use same pw? difficult
+    - impl
+        - MD5 
+        - **most secure: Blowfish**
+
+- Pw Cracking
+    - dict atks
+        - large dict of possible pws -> each pw hashed using salt & compared to stored hash values
+    - rainbow table atks
+        - pre-computer hash values for all salts
+        - counter using large salt value and hash length
+    - exploit easy pw
+        - shorter pw easier to crack
+    - John the Ripper
+        - open source -> brute-force + dict 
+
+- Approaches 
+    - complex pw policy, but cracking has improv
+
+- storing encrypted pw
+    - deny access -> blocks offline guessing
+        - shadow pw file
+        - avil to privledged users
+- password selection strategies
+    - user edu
+    - gen pw
+    - reactive pw checking
+        - sys periodicaly runs pw checker to find guessable pws
+    - complex pw policy 
+        - user select but not guessable pw
+
+- password checking
+    - rule enforcement 
+    - pw cracker [can't use these]
+    - blook filter [check if pw is member of set]
+- PW
+    - Pro
+        -  cheap to impl, change, reset, stolen pw affects 1 sys, convenient, privacy
+    - Con
+        - easy to hack, choose bad pw
+    - sol
+        - edu, better pw, pw file protection, 2-factor auth, pw mngr
+
+- Memory Cards
+    - store, not process data 
+    - physical acess to things 
+    - req special reader, loss of token, dissasfaction
+
+- Smart Tokens
+    - embedded microprocessor
+    - keypad and display, compatible reader/writer
+    - Authen protocol
+        - static
+        - dynamic pw gen
+        - challenge-response
+- Smart Cards
+    - credit-card like, electronic itnerface, any smart token protocol
+    - 3 types of mem
+        - Read-only mem [only stores data]
+        - electrically erasable programmable ROM [hold app data & prog]
+        - Random access mem [hold temp data when exe]
+
+- Electronic ID cards
+    - national id for citizens, verified by gov 
+
+- Biometric Authentication
+    - unique physical characteristics 
+    - complex & expensive vs pw & tokens
+
+- Remote User Auth
+    - auth over network/internet/comm link complex
+    - threats -> use challenge-response protocol
+
+- Auth Security Issues
+    - eavesdropping
+    - host atks
+        - atk user file hosting pw
+    - replay
+        - repeat captured user response
+    - client atks
+        - attempt user auth w/o remote hose
+    - trojan horse
+        - pretents to be sth to capture pw
+    - dos
+        - disable service -> flood with numerous auth attempts
+
+- Eval Auth
+    - impl cost, convenience, ability to impersonate, risk associated
+
+    - Risk Assessment 
+        - Assurance lvl
+        - potential impact 
+        - areas of risk
+- Assurance lvl
+    - deg confidence credential refer to identity
+    - Levels
+        - 1. little/no confid in asserted identity validity
+        - 2. some 
+        - 3. high 
+        - 4. very high
+
+- Potential Impact 
+    - Low: limited adverse effects
+    - Moderate: serious adverse effects
+    - HIgh: severe adverse effects
+
+- Cards, Tokens, etc
+    - pros
+        - strong than bad pw, auth with humans, multiple types of data stored & presented in diff format 
+    - cons
+        - reader for device (expensive), can lose
+    - sol
+        - software tokens (one time codes)
+        - two-factor auth
+
+- Biometrics comparing
+    - accuracy, reliability, long term stability, ease of use, speed, universality, hygienic lvl, cost
+
+    - FAR: false accept ratio
+    - FRR: false reject ratio
+    - Goal: accurate to FAR and FRR within patience lvl 
+
+    - Incr security == decr convenience 
+
+    - pro: easy to remember, convenient, fast, more secure than pop pw, unq/indvd
+    - con: biofactors change, hacked/stolen-> can't change bio features, comput expensive, accurancy not great, convenience and social acceptance
+    - sol: multifactor -> mitigate downsides 
+
+- Multifactor Auth
+    - pro: security of both mechanisms, solve many issues with pw & biometrics 
+    - cons: inconvenience, complx to mng & impl
+
+--- 
+## Access Control
+- Access Control Policies
+    - Discretionary access control (DAC)
+        - based on identity of req & access rules
+        - gran entity access
+    - Mandatory (MAC)
+        - comparing security labels with clearances
+    - Role-based (RBAC)
+        - roles uses have 
+    - Attribute-based (ABAC)
+        - attr of user, resource accessed, environmental conds
+
+- Subject, Objects, Access Rights 
+    - subject: entity capable of accessing objs [owner, group, world]
+    - object: rsc 
+    - access right: what sbj may access obj
+
+    - Access Matrix
+        - Y, subjects 
+        - X, objects
+        - inside are access rights (own, read, write..)
+- Protection domains
+    - ability ot group subjects and sets of objs and rights
+        - access right = <obj name, rights set>
+        - rights-set 
+        - domain 
+- UNIX File Access Control
+    - SetUID
+    - SetGID
+    - Sticky bit (only owner can modify file)
+    - superuser (sys-wide access)
+
+- MULTICS, lower-lvl = more privileges
+
+- DAC
+    - pro
+        - straight forward, familar, popular
+    - con
+        - not scalable, error prone and vulnerable, difficult to change many permissions,
+        takes up a lot of space
+- RBAC
+    - role assignment, role authorization, permission authorization
+    - pros
+        - grouping sbjs, obs, & access rights more efficient 
+    - cons
+        - tied to user identity, diff to scale to new role types, diff to manage permissions for obj across many roles
+- ABAC
+    - sbj, obj, and enviro attrs
+    - pros
+        - define auths -> express conds on properties of both rsc & sbj
+        - flexible and expressive power 
+        - scalable to unknown types & objs (cloud)
+        - quickly react to security events
+    - cons
+        - slow when many predicates & gather data from many srcs 
+        - tool support not mature 
+        - diff to setup and understand coming from other models
+- XACML
+    - eXtensible Access Control Markup Language
+        - standard defines declarative attr-based access contorl policy lang
+        - PAP, PDP, PEP, PIP, PRP
