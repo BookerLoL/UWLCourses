@@ -252,4 +252,83 @@ Difficulties
 Ex 
 - Javascript, Python, Ruby uses MVC for web/mobile app dev
 
+--- 
+## **Data Centric Software Architecture Case Study** 
+- 3 levels of detail
 
+![Notations](./img/notation.png)
+![Level 1 details](./img/lvlone.png)
+![Level 2 details](./img/lvltwo.png)
+![Level 3 details](./img/lvlthree.png)
+
+---
+## **Design Patterns**
+- reusable microarchitecture, best & suitable design for problema and supports reuse
+
+### Components
+- Pattern name
+- Problem descr
+- Solution
+- Consequences 
+
+### Toolkits & Frameworks
+- Toolkits: low-lvl classes & lib for spec apps
+    - code reuse, specific [GUI toolkits in Java]
+- Frameworks: set of classes make up app
+    - higher abstr than toolkits
+    - emphasize design
+
+### Design Patterns Abstraction
+- more abstract & smaller than frameworks
+- generally no code
+
+### Interface
+- descr abstract behavior only, not state vars
+
+### Design Patterns
+- Iterator 
+    - want to iterate over diff collections
+    - hasNext(), next()
+    - pros:
+        - traverse w/o impl
+        - separate maintence of collect from traversal
+        - several traversals
+    - cons: 
+        - if several iterators work, may be inconsistent
+    - ![iterator](./img/iterator.png)
+- Adapter 
+    - interface same name as service expected 
+        - define adapter class 
+    - convert interface C to interface which expects C
+    - wrapper 
+    - pros:
+        - client use adaptee with minimal modifications to either classes
+    - cons: 
+        - 1 more lvl of indirection before actual data
+    - ![adapter](./img/adapter.png)
+- Observer 
+    - subject notify objservers 
+    - pros: 
+        - plenty of observers
+        - sbj & observers decoupled
+    - cons:
+        - too many state changes, notify might be inefficient
+    - ![observer](./img/observer.png)
+- Factory 
+    - product objs of varying types/classes using a selector
+    - pros: 
+        - client code doesn't need to know specific impl
+    - cons: 
+        - not much code saving, same set of cond
+    - ![factory](./img/factory.png)
+- Abstract Factory
+    - interface for creating families of related/dependent objs w/o specifcying concrete classes
+    - pros:
+        - consistency among products
+        - doesn't know concrete class details
+    - cons: 
+        - adding new products difficult since interacts wiht abstract factory interface
+            - updated when new product added
+    - ![abstractfactory](./img/abstractfactory.png)
+--- 
+    
