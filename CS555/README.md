@@ -708,3 +708,169 @@
     - eXtensible Access Control Markup Language
         - standard defines declarative attr-based access contorl policy lang
         - PAP, PDP, PEP, PIP, PRP
+## Cryptography
+- Encryption 
+    - way to maintain confidentiality  [entities to access data]
+- str lies in the key
+
+- terminology
+    - message
+        - data to be encrypted
+    - key
+        - info for encrypt
+    - encryption 
+        - substitutions and transformation
+    - decryption
+        - reverse of encryption
+    - cipher text
+        - encrpyted message 
+
+- Independent dimensions
+    - type of operation
+        - substitution (new mapping)
+        - transposition (rearrange)
+    - num of keys
+        - symmetric (same key)
+        - assymmetric (diff key)
+    - plaintext is processed
+        - block vs stream cipher
+
+- Symmetric Encryption
+    - DES
+    - 3DES (DES 3x, longer key)
+    - AES 
+
+- DES
+    - 64 bit plaintext block, 56 bit key -> 64 bit ciphertext block
+
+- Triple DES (3DES)
+    - pro: 168-bit key length
+    - con: sluggish and 64-bit block size
+
+- key size 
+    - more key combinations, more time to decrpyt
+
+- Encrpytion ideas
+    - Confusion: substitution
+    - Diffusion: transposition
+    - secrecy only in the key
+
+- Know how AES works
+
+- Block Cipher
+    - 1 input of block eles
+    - output block each input 
+    - reuse keys
+    - more common
+
+- Stream Cipher 
+    - input eles continuously
+    - 1 output ele at a time
+    - generally faster & use less code
+    - encrypters plaintext 1 byte at a time
+    - pseudorandom, unpredictable without key
+- Random vs Pseudorandom
+    - seq of numbers satisfy statistical randomness tests
+
+    - True random number generator (TRNG)
+        - nondeterministic, unpredictable natural prcoesses (gas)
+    
+- RC4 Cipher (Stream)
+    - permutation of data based key
+    - pros: faster than most block ciphers, strong if good key
+    - cons: long term key makes cipher text vulnerable, modern approaches refresh/change keys (RC4 doesn't)
+    - widely used (WEP, WPA, SSL, SSH, PDF, Skype, etc)
+
+- Block Ciphers
+    - ECB, Electronic Codebook
+        - each block with same key, simple & fast, not great for long msgs/images
+    - CBC, Cipher Block Chaining
+        - XOR of current plaintext block & prev block
+    - CFB, Cipher Feedback 
+        - sim to CBC, ciphertext used as key for next block
+    - OFB, Output Feedback 
+        - sim to CFB
+        - encryption & decryption same
+        - block -> stream cipher
+    - CTR, Counter 
+        - block -> stream
+        - combine with a nonce
+        - not good alone
+
+## Public-Key Cryptosystems 
+- Key distribution 
+    - 1) key selected by A, physically delivered to B
+    - 2) third party select key & deliver
+    - 3) use recent key, transmit new key to other encrypted by old key
+    - 4) encrpyted connection to C, C deliver encrypted links 
+
+- reqs for public-key cryptosystems 
+    - easy to create key pairs
+    - sender knowing pub key to encrpyt
+    -  receiver knowing key to decrypt, 
+    - infeasible for opponent to det prv key
+    - infeasible for oppon to recover org msg 
+
+- Asymmetric Encryption Algos
+    - RSA
+        - plaintext & ciphertext are ints
+    - Diffie-Hellman key exchange 
+        - reach agreement abt shared secret as secret key
+    - DSS, digitial signature standard
+        - only for digital signature with SHA-1
+    - ECC, elliptic curve cryptography
+        - like RSA, but smaller keys
+
+- Man-in-the-middle attack
+    - intercepts msg, pretends to be other people
+
+- RSA 
+    - Encrypt: C = Me mod n
+    - Decrpy: M = Cd mod n = Med mod n 
+    - both sender & receiver know n & e
+    - only receiver knows d
+
+- Security of RSA
+    - bruther force, mathematical atks, timing atks, ciphertext atks, matter of time 
+
+- ECC
+    - pro: smller keys, newer -> less methods of hacking
+    0 256-bit key is 20x fsater than RSA 2048 signature
+    - consL str depends on elliptic curve
+
+- Msg Digest & Hashes
+    - 1-ways funcs, can't recover input [hard to reverse]
+    - 2^bit digest
+
+- **MAC** Message Authentication Code
+
+- Secure Hash Algo
+    - SHA 
+        - uses bitwise XOR
+        - collision: 2^ n/2
+    - SHA-3 
+        - hash values lengths: 224, 256, 384, 512 bits
+        - process small blocks 
+    
+- HMAC
+    - dev MAX from hashcode 
+    - mandator-to-impl MAC for IP security
+    - Objectives
+        - use avail hash funcs w/o modifications
+        - easy replaceability of hash
+        - preserve org performance of hash 
+        - use & handle keys in simple way
+    - Security 
+        - depends n cryptographic str of hash func
+        - lvl of effort
+            - brute force key 
+                - O(2^n) 
+            - finds collision
+                - O(2n/2)
+- Digital Signatures
+    - auth both src & data integrit
+    - encrpyting hash code with prv key
+    - no confidentiality [not safe from eavesdropping]
+--- 
+## Cryptanalysis
+- measure str of cryptographic algo & how vulrnerable
