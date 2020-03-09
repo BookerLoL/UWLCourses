@@ -86,7 +86,173 @@
 - Symbol Table
     - Label-Address pair
 
+- program executable
+    - file with all encoded instrs (seq order)
 ---
 ## Chapter 3
 - Digital Logic Circuits 
-    - 
+    - voltage should be either 0 / 1
+
+- Logically Complete
+    - min set of logic funcs -> descr any other logic func
+  
+- logical functions 
+    - use truth tables & logic equations
+  
+- Truth Table
+    - all combinations on left, output on right
+    - A B | AB
+
+- Logic Eq Symbols
+    - boolean 
+        - black circle -> AND
+        - '+' -> OR
+        - '-' (bar on top) -> NOT
+    
+    diagrams
+    ![logic](./img/logic_circuit_diagram.png)
+
+    ![circuit_shortcuts](./img/circuit_diagram_shortcuts.png)
+
+- Combinational logic: output depends on only curr set inputs
+
+- Sequential logic: output depends on both inputs (& past)
+
+- Sum Of Products
+    - impl combinational logic 
+    - AND gate to impl minterms with 1 in output
+    
+    - Minterms: 1 row of truth tables
+    ![sop](./img/sop.png)
+
+- Circuit performance
+    - speed based on
+        - critical-path delay: longest seq gates
+        - wire delay: length of wire between gates
+        - fan-out: avg # gates driven / gate
+  
+- Combinational Logic
+    - Full Adder
+        - input: A, B, Ci (prev carry bit)
+        - Output: S (sum bit), Co (carry over)
+        - S = A xor B xor Ci
+        - Co = AB + BCi + ACi
+
+    - Subtraction
+        - negate subtrahend and add to addend 
+        - use full adder
+
+    - Ripple Carry Adder 
+        - multiple full-adders that feed each other
+            - most significant bit if carried over is overflow 
+        - recursive  
+      
+      - Arithmetic Logic Unit 
+          - ALU
+          - select which function you want
+          ![alu](./img/alu.png)
+
+      - Multiplexer 
+          - Mux, data input values -> single output "select"
+          - always a single output
+          - based on input bits to select operation
+          ![multiplexer](./img/multiplexer.png)
+
+
+  - Sequential Logic
+      - RS Latch (most basic)
+          - R 
+          - S 
+          - Q
+          - Q (bar)
+          - Create truth table for logic gates
+                1)  use R and S values
+                2) find Q and bar Q value
+                3) save those values for next inputs
+                4) use new input values and see if Q and bar Q remain the same.
+                    - if Q and bar Q are the same there is a problem and don't use that 
+      - Gated SR Latch
+          - S, E, R
+          - E if 1, enables latch Q
+          - but there is a race condition 
+      - Gated D Latch
+          - Remove R, rename S to D, add a not gate to D 
+          - 1 inputed gated latch
+          - Q will reflect D as long as W is high
+          ![dateddlatch](./img/gateddlatch.png)
+      
+      - D Flip-Flop
+          - avoids races
+          - signal transition twice
+              - h -> l -> h
+              - l -> h -> l
+          - edge triggered, final Q only change on rising/falling edge
+          ![dflipflop](./img/dflipflop.png)
+          ![timingdiagram](./img/timingdiagram.png)
+          - if aperiodic, need to add clock input to coordinate movement 
+      - Clock
+          - 1 bit signal that alternates as chip is powered 
+          - heartbeat (most important)
+          - cycle: complete transition from h->l->h
+          - period (T) in seconds for 1 cycle
+          - frequencey (f): # cycles / second, Hertz (Hz, 1/s)
+          ![clock](./img/clock.png)
+      - Multibit Register
+          - register: multiple D flip-flops, all sharing same clock signal
+          - saves multiple bits 
+      - Random Access Memory (RAM)
+          - rows: location / words
+          - cols: bits for each word
+          - each word: iden by addr
+          - needs: one-hot decoder
+          - read & write operations
+          - inputs: 
+              - (A) Address: (iden 1 loc)
+                  - **bits: log2(# locations)**
+              - (W) Write-enable: R / W
+                  - **bits: 1**
+              - (D) Data-in: 
+                  - if W, D-input should have value
+                  - else ignore
+                  - **bits: by wordsize**
+          - output
+              - Data-out (D)
+                  - if R, output prev saved data for spec loc
+                  - **bits: by wordsize**
+          - Write
+              - set addr input to bin loc to write to
+              - set input D value to write
+              - set write-enable (W)to 1
+               - **loc must be written before read, otherwise indeterminate**
+          - Read
+              - set addr input to loc to read
+              - set write enable to 0
+              - output Q read prev saved data val
+          - ![readwritetable](./img/readwritetable.png)
+          - ![memaccess](./img/memaccess.png)
+          - One-Hot Decoder (Row Decoder)
+              - n bits, addr
+              - 2^n output (wordlines)
+              - 1 output of 1, others will be 0
+          - RAM with 32-bit words, total capacity of 1024 bytes, how many locations will RAM have?
+          - ![shortcuts](./img/circuitshorthand.png)
+
+        - Read/Write Ports
+            - Read port
+                - addr input & data-out output
+            - Write port
+                - addr input & data-in input (write enable)
+            
+            - allows simultaneous reads/write in cylce with ports
+                - addr totally diff
+                - new addr input 
+                      - **one-hot decode** for write ports
+                      - **muxes** for read ports
+                      - no additional flip-flops
+            - ![tworeadports](./img/tworeadport.png)
+--- 
+## Chapter 4 
+- Single Cycle Mips Processor
+
+
+                
