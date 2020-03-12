@@ -874,3 +874,42 @@
 --- 
 ## Cryptanalysis
 - measure str of cryptographic algo & how vulrnerable
+
+### Intrusion 
+- Security Intrusion: security event(s), intruder gain/attempts/access sys w/o authorization
+- Intrusion Detection: monitor & analze events to find attempt access rsc in unauth manner.
+- Intrusion Dection System (IDS)
+    - requirements
+        - run continually, fault tolerant, resist subversion, min overhead on sys, adapt to changes, scale monitor large num sys, reconfig
+    - Host-based (HIDS)
+        - single host for sus activity
+    - Network-based (NIDS)
+        - network traffic analyzes protocols, network
+    - Distributed/hybrid IDS
+        - host & network using sensors
+
+    - Comprises of 3 logical components
+        - Sensors: collect data
+        - Analyzers determine if intrusion occurred
+        - User interface: view output or control sys behavior
+- Analysis Approaches
+    - Anomaly detection
+        - data abt behavior of legitimate users over period of time
+    - Signature/Heuristic detection
+        - set of known malicious atk rules
+        - misuse detection
+        - only notify known atks for a pattern
+- Anomaly Detection Classification Approaches
+    - Statistical
+    - Knowledge 
+    - Machine learning
+- Signature Approach
+    - large coll of patterns 
+    - minimize false alarm rate & detect mal data
+- Rule-based Heuristic
+    - rules for iden penetrations
+
+- Host-based intrusion detection
+    - specialized lay of security
+    - use either anaomaly/sig/heuristic 
+    - monitor activity to detect sus behav

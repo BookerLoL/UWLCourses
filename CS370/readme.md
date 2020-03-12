@@ -253,6 +253,15 @@
 --- 
 ## Chapter 4 
 - Single Cycle Mips Processor
-
+- Processor Design
+    - run prog, OS copy instr -> main mem loc
+        - uses **loader** to do this
+- Executing Instructions (High-level)
+    - instr read from main mem
+        - read op, main mem RAM
+        - instr addr -> PC reg
+        - called: **Fetch / Instruction Fetch**
+    - Decode: grab opcode/funct 
+    - 
 
                 

@@ -331,4 +331,43 @@ Ex
             - updated when new product added
     - ![abstractfactory](./img/abstractfactory.png)
 --- 
+## Modeling Software Behavior
+### Structural vs Behavioral
+- structural: what is sys / sys composed of?
+    - class diagrams, software architectures
+- Behavioral: what sys does/perform
+    - FSM, UML State diagram
+![bmdfd](./img/bmdfd.png)
+![bmex](./img/bmex.png)
+![bmumldiagram](./img/bmumldiagram.png)
+![bmumlseq](./img/bmumlseq.png)
+---
+## State Diagrams
+### State Machines
+- descr dynamic behavior of objs over time
+- one diagram corresponds to each class
+- 1 init state, 1+ final states
+    - unq name
+    - has entry, action, do action
+- State
+    - coll of attr & corresponding vals
+    - remains finite time
+    - can have AND and OR relationships with sub-states
+- Event: noteworthy occurrence
+    - 4 types of events
+        - Signal: obj sends signal to another
+        - Call: methodd is invoked
+        - Change: bool cond changed
+        - Time: time limit reached
     
+    - change event labels preceded by "when"
+    - time events are preceded by "after"
+    - may have precedence relationships among them
+- Transition
+    - change of states 
+    - finite & signiticant op
+    - triggered by occurrence of event
+- Simplified representation
+    - ONly keep attributes that define change of state
+![statediagram](./img/statediagram.png)
+![statediagramdescr](./img/statediagramdescr.png)
