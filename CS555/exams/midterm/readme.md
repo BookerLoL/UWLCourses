@@ -174,7 +174,7 @@
     - encrpytion is two way where you can get back to the original state after modifications
 
 - Digital Signature
-    ![digitalsig](./img/digitalsig.jpg)
+    - ![digitalsig](./img/digitalsig.jpg)
     - assymetric algo
     - plain text -> hash  -> digest ->  key encrypt digest -> dig signature + plaintext
     - decrypt dig sig with pub key -> digest (if not decrypted, it's not that sender) -> hash memo -> see if digest are the same
