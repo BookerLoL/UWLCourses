@@ -371,3 +371,17 @@ Ex
     - ONly keep attributes that define change of state
 ![statediagram](./img/statediagram.png)
 ![statediagramdescr](./img/statediagramdescr.png)
+--- 
+## UML Seq Diagram
+- seq order of interactions
+- Lifelines
+    - instance name: class name
+- Figure
+    - portray internal sys obj
+- Message 
+    - comm betweenm objs
+    - Synchronous msg
+        - solid line arrow forward
+        - dashed line arrow back
+    - Asynchronous 
+        - backwward solid line arrow
