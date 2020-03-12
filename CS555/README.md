@@ -13,11 +13,11 @@
 
 - Secure if maintains
     - **confidentiality**
-        - proctect access and disclosure of info
+        - proctect access and disclosure of info from unauthorized parties
     - **integrity**
-        - protect improper edit/destruction, authentic
+        - protect improper edit/destruction, ensures authenticity
     - **availability**
-        - timely and reliable acess to and use of info
+        - timely and reliable acessibility to and use of info
 
 - Terminology
     - asset: enetity to protect
