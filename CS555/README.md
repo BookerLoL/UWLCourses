@@ -648,6 +648,7 @@
 
 --- 
 ## Access Control
+- method of gaurenteeing people who say they are will have approparitate access to info
 - Access Control Policies
     - Discretionary access control (DAC)
         - based on identity of req & access rules
@@ -874,6 +875,8 @@
 --- 
 ## Cryptanalysis
 - measure str of cryptographic algo & how vulrnerable
+
+## PKI
 
 ### Intrusion 
 - Security Intrusion: security event(s), intruder gain/attempts/access sys w/o authorization
