@@ -257,11 +257,107 @@
     - run prog, OS copy instr -> main mem loc
         - uses **loader** to do this
 - Executing Instructions (High-level)
-    - instr read from main mem
-        - read op, main mem RAM
-        - instr addr -> PC reg
-        - called: **Fetch / Instruction Fetch**
-    - Decode: grab opcode/funct 
-    - 
-
+    - **Fetch** 
+        - read op from main mem 
+        - instr addr held in reg PC
+    - **Decode**
+        - grab opcode/funct 
+    - **Register Read**
+        - read register file RAM to get reg values
+    - **Execute**
+        - arithemetic: set select op input of ALU
+        - load: **read mem**, addr calc (add calc)
+        - store: **write mem**, need to do addr calc
+        - branch: check cond then set PC
+        - jump: change PC
                 
+    - **Write Back** 
+        - Dest reg operands, vals written
+            - load, arithmetic, rt/rd
+        - PC written
+            - if branc / jump, PC written with computed next PC
+            - if load/store/arithemtic, PC writtenw ith PC+4
+    - **Change PC to new PC**
+    - ![blockdiagram](./img/processorblock.png)
+    - Control Path vs Data Path
+        - Control path: changing select bits of muxes, write-enable bits for RAM, op selection bits for ALU 
+            - it's in blue from the picture
+        - Data path: 
+            - data and addr used by prog
+            - it's in black 
+
+- Executing Instructions (Low Level)
+    - **Instruction Fetch**
+        - use addr in PC, 32 bit addr
+        - add 4 to PC to get next seq addr
+        - must use flip-flops since feedback of prev computed PC value
+        - ![fetch](./img/fetch.png)
+    - **Decode and Register Read**
+        - read what type of instr was read
+        - read any source register ops
+
+        - Decoding
+            - split up bits from the instruction
+        - Register read
+            - register file
+        
+        - Immediate operands
+            - sign extend immediate field
+    - **Execute**
+        - ALUSrc
+            - select input to mux
+        - ALU Control
+            -  ALU depends on instr
+                - opcode and funct
+    - Accessing Memory
+        - store instr: sb, sh, sw -> rs used to access reg file
+    - Memory
+        - 2^32 locations
+        - each location = 1 byte
+    
+    - **Writeback**
+        - arith and loads write back to reg file 
+    - Branch Computation
+        - reg 1 - reg 2 == 0 ? 
+            - PC not PC+4 if 
+                - beq, and ALU 0
+                - bne, and ALU !0
+                - PC + 4  + (SignExtImm <<2 )
+    - Jump
+        - jump=1 for j & jal
+--- 
+## Chapter 5
+- Processor Performance Measurement
+- Metrics
+    - Total Execution Time
+        - *Exe Time B / Exe Time A = X**
+            - **speed-up** is x
+            -  A is X times faster than B
+    - Cycles per Instr
+        - lower is better
+        - **CPI = total cycles to exe / total # instructions**
+    
+    - Execution Time = num cycles * clock period 
+        - num cycles 
+            - num # exe * num clock cycles per instr
+    - Frequency = 1 / clock period
+    - Energy: capacity to do work, Joules, battery life
+    - Power: rate of consuming energy, Joules/second (Watts)
+        - more perf = higher power
+    - Energy more meaningful to compare
+    - Instruction per cycle
+        - IPC = 1 / CPI
+    - *Instructions per Second (IPS)**
+        - takes frequency into account
+    - IPS / W 
+        - performance and power into single metric
+- Benchmark
+    - standard utilities
+    - standarized 
+    - **Phase**: small subset of benchmark execution
+- Perf Improvements
+    - longest circuit path / critical path
+    - single-cycle processor limited by clock freq
+    - main mem extremely slow
+- Make sure ISA satisfied
+    - look for patterns, add circuits to make efficient
