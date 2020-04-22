@@ -1,6 +1,6 @@
 # CS 744 Notes Software Project Managmement
 ## Agile Development
-### Focuses
+### Focuses (agile manifesto)
 - coding, testing
 - early releases (usable products)
 - customer interaction
@@ -12,14 +12,16 @@
 -  Right side is agile, **reqs can change**
 
 ### Examples (not important)
-- XP, extreme programming
-- FDD, feature driven development
+- extreme programming (XP)
+- Feature driven development (FDD)
 - Dynamic Systems DEvelopment Method (DSDM)
 - Lean Software Development 
 - Kanban method
 - Scrum
 
 ### Scrum Life Cycle 
+- Keny Schwaber 1995
+- deliverables during planning & sprint phases can be changed at any time
 ![scrum](./img/scrum.png)
 - Product Owner 
     - **creates reqs & maintain priority of reqs (product backlog)**
@@ -31,9 +33,9 @@
     - knowledge of appl domain and vision of end product
     - **acts as the stakeholders** 
 - Scrum Master (product/prj manager, but any other person could be)
-    - coordinate all activites, work with product owner
+    - coordinate all activites, coordinator
     - resolve conflicts
-    - coordinator
+    - ensure principles followed
 
 - Dev Team
     - experts, small (5-9)
@@ -44,9 +46,9 @@
     - self-organize, highly talented (T-shaped, use specialty, but try to help others)
     - good communication, focus on task
 
-- Product Backlog 
-    - features, changes, defect to be impl 
-    - user stories form
+- Product Backlog  (list of PBI's)
+    - PBI include: features, changes, defect to be impl 
+    - user stories form (As a .., I want so.. )
     - **prioritized**
     - categorizable, can revise
     - size of PBI (item)
@@ -55,7 +57,7 @@
         - create, refine, estimate, reorder PBI's
     
 - Sprint
-    - cycle of seq activities 
+    - cycle of seq activities (planning, exe, review, retrospective)
     - fixed start and end dates (short, week - month)
     - no goal altering changes in scope, exceptions
     - shippable product delivered
@@ -151,6 +153,7 @@
 - Sprint burndown chart  (downward slope)
     - X axis: days within a sprint
     - Y axis: est effort-hours remaining 
+
 -  Sprint burnup chart (upward slope)
     - X axis: days within sprint
     - Y axis: story points
@@ -220,9 +223,253 @@
 
         Two parties argue on using two different sets of libraries to improve the GUI. Project manager studies the two support provided by both libraries, ease of training for those who are not familiar with those libraries, steps necessary to adapt them with the product and so on, and then chooses the best among the two. He/she then explains the reasons to both parties.
 
+### SPeople Capability Maturity Model (P-CMM)
+- P-CMM roadmap -> continuously improv capability of org workforce
+- practice performance decay if no P-CMM
+- improvements
+    - repeatable practices
+    - competency based practices
+    - measure and empowered practices
+    - continuously improving practices
+- 5 Levels
+    - 1, intial maturity level
+        - no proper mgmt practices enforced
+        - ad hoc, inconsistent mgmt practices
+        - diff to retain talented individuals
+    - 2, managed maturity level
+        - mgmt practices at unit lvl
+        - perf of units, may not be consistent with org practices
+        - unit level, foundation for upper levels
+    - 3, defined level 
+        - org-wide infrastructure, add practices to units
+        - capability of workforce to strategic business objs
+        - dev competencies -> combined -> accomplish business objectives
+    - 4, predictable level
+        - mng & exploit capability 
+        - mentoring, quanitative evals, trust and delgate work
+        - predict future capability 
+    - 5, optimizing level
+        - continual improvement, improv individ & group work
+        - supports cultural of performance excellence
+            - award talents and achievements
+- Competencies
+    - core, workforce, individual: knowledge/skills/prcoess abilities
+        - workforce
+            - knowledge + skills + process abilities (capacity to perf individual skills in method used in org)
+- P-CMM Process Areas
+    - each maturity level has related practicies to achieve goals 
+    - ![pcmm_process_area](./img/pcmm_process.png)
 
+### Software Quality Management
+- ISO/IEC 9126-1 def
+    - Functionality
+        - functions that satisfy needs
+    - Reliability
+        - capability to maintain level of perf under stated conditions for stated period of time
+    - Usability
+        - effort needed for use
+    - Efficiency 
+        - level of perf and amt resrcs used
+    - Maintainability 
+        - make specified modifications
+    - Portability
+        - transferred from 1 environment to another
 
+- Classification of software quality
+    - product quality
+        - quality of end product
+    - process quality
+        - process involved in dev product
+        - correct processes followed & outcome expected
+    - customer expected qualities
+        - efficiency, reliability
+    - dev expected qualities
+        - maintainability, reusability
 
+- Management Acitvities
+    - quality assurance
+        - procedures & standards for quality
+    - quality planning
+        - procedures & standards for org
+    - quality control
+        - measure quality & maintain them
+- Procedures and standards
+    - prevetion over inspection
+    - org > individual projects  (cheaper)
 
-    
+- Software quality standards
+    - guard against not repeating prev mistakes
+    - avaiable extensive documentation -> easy to train
+
+- Quality Management Processes
+    - define quality, plan activities to achieve quality, eval quality & monitor control processes
+- ISO 9000, ISO 9001 (product quality)
+    - audits
+- Six Sigma
+    - cust focused business improvment process
+    - defect reduction
+    - measurement: Sigma capatability / Z
+        - 6 sigma capatability = 99.9996% efficiency
+        - uses standard deviation (sigma)
+            - X is sigma
+            - Y is defects found 
+    - Application
+        - 1) Collect data relevant to problem
+        - 2) calculate 
+            - mean 
+            - standard deviation
+            - methods for medians and deviations
+        - 3) Six Sigma analysis
+            - LSL (lower sepc limit) 
+            - HSL (higher spec limit)
+    - Software Dev Usage
+        - collect # defects per million lines of code
+        - bell curve
+        - quality model (3sig / 6sig)
+        - minimize defect to maintain product at chosen quality level
+    - Support for productivity
+- DMAIC Methodology
+    - define
+        - factors/parameters to be considered
+    - measurement 
+        - factors/parameters to be measured 
+            - how will be measured 
+            - additional things needed  (ex: time frame, number of X, etc)
+    - Analysis
+        - mechanism to carry out measurements and which to be improved first (prioritizing based on measurement)
+            - ex: records of timings
+    - Improvement 
+        - high-priority factors to be improved 
+    - Control 
+        - improvement mechanisms properly employed & maintained
+
+### Risk Management 
+-  action/event may/may not occur
+    - if occur, harmful effect 
+    - definite uncertainity in occurence of risk
+    - if handle risks, plan well ahead  
+- Risk (prebabalistic event)
+    - 0.1 - 0.9 probability of occurrence 
+    - examples
+        - incompatibility with external tools
+        - unexpected reduction in staff during dev
+        - sys crash due to hardware 
+        - not completed due to shedule changes   
+- Risk categories
+    - schedule
+        - memeber quits 
+        - memeber reassigned
+        - budget cut
+        - resource unavail
+        - scope extended unexpectedly
+    - technical
+        - changing reqs
+        - design errors
+        - failure of tool used in dev
+    - operational
+        - fail to prioritize functionalities
+        - inadequate training
+    - Business 
+        - market slip
+        - doesn't fit business strategy
+        - marketing not trained to sell
+        - change management, not support
+        - change org structure, staff/budget re-allocation
+        - unrealistic delivery date
+- Handle risks even with additional cost
+    - minimize negative impact of risks
+    - focus on unique threats to spec project 
+- Risk Management
+    - Risk Assessment
+        - identification
+            - identified by 
+                - look at events in prev projects
+                - what if's
+                - some are evident
+                - look at diff sources 
+            - Risk Categorization
+                - req, design, programming, schedule, cost levels
+        - analysis
+            - probability of occurrence of each risk 
+                - prob(r)
+            - cost of consequence of each risk  
+                - loss(r)
+            - risk exposure factor of each risk 
+                - re(r) = RiskFunction (prob(r), loss(r))
+        - prioritization
+            - risk exposure val, loss, probability of occurrence, category
+            - only risks within budget limit for consideration
+                - top X risks 
+            - may decide based on past exp / other factors
+    - Risk Control
+        - management plan
+            - top X risks, design solutions to solve risk problems
+                - additional resources
+                - cost analysis
+                - intermediate checking of risk factors (monitoring / tracking)
+                - re-eval
+                - record activities
+                - suggested plans
+                    - extra project time (10-20%)
+                    - extra resources
+                    - training any time
+                    - rotate teams with diff tasks
+                    - perform simulations & analyze solutions
+                    - additional testing & review sessions
+                - Example
+                    - Risk | Prob | Loss | Exposure | Plan
+        - resolution
+        - monitoring
+            - risks might not be risks anymore
+            - continuously monitored
+                - reass risk exposure
+            - record all info for future use
+- Scrum Risk Management
+    - identification
+        - planning/review/retrospective
+        - while adding product backlog items
+    - analyze
+        - planning / retrospective
+    - prioritziing
+        - sprint / grooming
+    - planning
+        - planning / grooming
+    - mitigation
+        - execution
+    - monitoring & control
+        - outside of sprint
+
+### Technical Writing
+- 5 steps
+    - preparation
+        - purpose(s), scope, audience background, formal structure, timeline
+    - research
+        - solid info, reliable sources, write notes while gather info
+    - organization
+        - type of report
+        - outline 
+            - eval & modify outline
+            - discuss with peers/advisers
+            - compare with other reports
+            - formal structure & scope to determine size
+    - writing
+        - elaborate contents from outline
+        - materials from research 
+        - apprpriate writing style
+        - no spelling & grammatical mistakes
+        - tables cautiously 
+            - don't overuse
+            - use figures when necessary instead of explaining
+            - visible & readable
+            - fit within margins
+            - avoid colors if possible
+            - captions & figures 
+        - use references
+            - only valid, reliable, accessible sources 
+            - avoid websites, unstable
+            - bibliography vs references    
+        - acknowledge sources of info if include material from any source
+    - revision
+        - needs revision
+        - 
 
