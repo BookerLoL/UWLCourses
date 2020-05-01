@@ -385,3 +385,105 @@ Ex
         - dashed line arrow back
     - Asynchronous 
         - backwward solid line arrow
+
+
+## Object-Z
+- must define first to use
+- predefined types
+    - Z, Ints
+    - N, Ints, N >= 0
+    - N1, Ints, N > 0
+    - R, real 
+    - B, Boolean
+
+- Class definition (optional components, but if show then must be in order)
+    - Classname
+        - Visiblity list (not public then all attr & op is public)
+            - attributes & ops that are public 
+        - inherited class names
+        - type & constant defs
+        - State Schema  (req, attributes)
+        - Init
+            - var = val
+        - Operation schemas
+            - unq name
+            - decl & predicate
+            - input?  ,   output!
+            - delta() == declaration part
+            - name` , val before operation 
+            - name  , val after operation
+- Global types
+    - [IDNUMBER, NAME]
+        - basic types
+    - Status ::== Active|Inactive|Dismissed  
+        - enum 
+    - students : P Student 
+        - set of Student objects  
+- Composite operations to use functions to call another function
+
+- Predicate Logic 
+    - Z, set of ints
+    - N, N >= 0
+    - N1, N > 0
+    - R, set of reals
+    - mod
+    - div
+    - E, set membership
+
+- Predicate
+    - ensure type compatability at all times
+    - < quantifier > < declaration >  dot  < predicate >
+        - ex: V n : N  dot n E Z
+        - ex: V n : Z; s : String  dot n = s.length => n >= 0 
+    - < quantifier > < declaration > | < constraint > dot  < predicate >
+        - ∃ bus : Bus | runsBetween(Minneapolis, Madison) • stopsAtLaCrosse(bus)
+    - ex
+        - n mod 2 = 0, n E Z
+        - patientVisited(doctor, patient, date)
+    - ∧ logical AND (conjunction)
+    - ∨ logical OR (disjunction)
+    - ¬ logical NOT (negation)
+    - ⇒ implication (if . . . then)
+    - ⇔ equivalence (if and only if)
+
+- Set
+    - unordered, collection of distinct elements
+    - types
+        - untyped set
+        - typed set
+    - defining
+        - as type
+            - frits: P Fruit
+        - set enumeration 
+            - X == {10, 23, -1}
+        - set comprehension 
+            - Even == { n: Z | n mods 2 = 0 }
+            - evenSet1 : P Even
+            - evenSet1 = { -10, -4, 4, 10}
+    - extended syntax
+        - EvenSquare == {n : Z | n mode 2 = 0 dot n * n }
+            - evenSquareSet1 : P EvenSquare
+            - evenSquareSet1 = {100, 64, 16, 4, 0}
+
+        - apply dot first then check predicate 
+        - if multiple variables used then must use dot 
+    - operators
+        - ∅     |    ∅   |       empty set
+        - {}     |    {}  |       empty set
+        - ∈     |   x ∈ S    |   set membership
+        - U     |    S1 U S2   |       set union
+        - N     |    S1 N S2   |       set intersection
+        - \     |    S1 \ S2   |       set difference
+        - `#`     |    `#S`   |       cadinality of set  (# ele in set)
+        - ⊆     |    S1 ⊆ S2   |       subset
+        - ⊂     |    S1 ⊂ S2   |       proper subset
+        - =     |    S1 = S2   |       set equality 
+        - U     |    ∪ SS    |      generalized union of sets 
+        - N     |   ∩ SS   |       generalized intersection of sets
+        - P     |    P S   |       power set 
+        - F     |    F S   |       finite subset
+        - =/
+
+    - Consistency check of operations
+        - every op respects "state invaraint"
+            - state invariant true before and after
