@@ -361,3 +361,224 @@
     - main mem extremely slow
 - Make sure ISA satisfied
     - look for patterns, add circuits to make efficient
+
+## Chapter 7 
+- **Caches**
+- Size of RAM increases latency
+    - larger RAM, incr wire lengths, larger row decoders
+- Main Mem (hundreds of nanoseconds)
+    - Needs: Large, cheap, dense
+        - density through **bitcells**
+            - flip-flop =  atleast 6 transitors
+            - mem bitcell = 1 transitor & 1 capacitor (Dynamic RAM)
+- problem: pipeline clock down to meet 1 cylce mem access
+    - pipeline clock period = 1ns
+    - mem latency = 300ns
+    - multiple cycles -> stall instructions & insert bubbles -> lose performance of pipelining
+    - main mem usually not on same chip -> adds latency
+
+- Memory access patterns
+    - working set
+        - prog only uses small subset of main mem at any given time 
+    - Spatial locality
+        - access nearby locations of access mem loc (like arrays)
+    - temporal locality
+        - acess mem loc -> access again  (incrment var)
+
+- Cache (due to working set small, temporal & spatial common)
+    - mem vals -> small RAMs with shorter latencies
+        - best if keep working set in RAMS accessed in 1 cycle
+- mem hierarchy ![mem_hier](./img/mem_hier.png)
+    - higher up is smaller mem but faster
+- Cache Hierarchy
+    - between process & main mem
+    - L1: small RAMS for accesses in 1 processor cycle
+        - split instruction cache & data cache 
+    - L2: larger, accessed in 5-6 processor cycle
+        - both instruction & data
+    - L3: 20-30 processor cycles
+        - multi-core ships share
+    - L4
+
+- Mem Hierarchy Management
+    - processor regs: explicity ref
+        - ISA
+    - mem: loc based on address 
+        - mem loc ISA, mem regions ABI
+    - caches: by cache controller
+        - invisible
+        - influence program perf by changing algorithm to work in working set within size of caches
+    - Disk drive: os write mem vals to hard drive (less mem < max possible addr range)
+
+- Basic Cache Operation
+    - subset of main mem
+        - keep track of addr currently being held
+    - referenced (read / write)
+        - hit if can read / hold write data
+        - miss, else
+    - if no cache contains, then DRAM must have the address
+    - only has values when process req mem locs
+
+- Cache specific metrics
+    - hit rate: % hit
+    - hit time: # cycles to determine if addr within cache
+    - miss rate:  1- hit rate
+    - miss penalty: # cycles to service mem access (assumming next level has addr)
+        - miss penalty >> hit time 
+
+- Alignment
+    - mem access aligned based on size of access
+        - important to check alignment 
+        - lbu, sb -> byte -> any 32-bit addr
+        - lhu, sh -> 2 byte -> addr must end with 0(2)
+        - lw, sw -> 4 byte -> addr must end with 00(2)
+    - unaliged would increse checking addresses at diff rows
+        - & changes numbering order of the column 
+    -  0 1 2 3 4 5 6 7 8...
+        - 3 2 1 0
+        - 7 6 5 4
+            - word address: 0 1 1 0 --> 0 1 = row, 1 0 = col
+
+- Cache Organization
+    - cache block / cache line: min amt mem held in cache
+        - seq locations, bytes retrieved aligned to cache block
+        - only read/write within block
+    - large blocks benefit if lots of spatial locatlity 
+    - **total capacity (bytes)** = # blocks x block size
+        - k = 2^10
+        - M = 2^20
+        - G = 2^30
+        - T = 2^40
+    - Need to mapping of addr & avail cache space
+        - 2D matrix of cache blocks 
+            - cache **sets**
+            - cache **ways**
+        - 3 types of mappings
+            - **Direct-mapped**: only 1 way, addr map to 1 set
+            - **n-way set associative**: n ways, addr map to any way within set
+            - **fully associative**: 1 set, addr map to any way within set
+    - **block offset**: lowest bits of addr -> identify which bytes
+        - 3 bits --> 8 byte cache block
+- Powers of Twos
+    - b = bits
+        - bytes -> bits, multiply by 8
+    - B = bytes
+        - bits -> bytes, div by 8
+    
+    - 1 cache block, 8 byte block 
+- Mem acess if aligned properly
+    - 32 byte cache block
+        - lw: 0x00405518, must be multiple of 4
+        - lhu: 0x1000f832, must be multiple of 2
+        - sw: 0x7fff20e5, not aligned, hardware exception
+        - sw: 0x0050a7f4
+    - which bytes will bve accessed
+        - 1) 110000, col 24 -> 24, 25, 26, 27 (since lw)
+        - 2) 10010, col 18 -> 18, 19 (lhu)
+        - 4) 10100, col 20, 21, 22, 23 (sw)
+- Direct-mapped
+    - 1D array of cache blocks
+    - block offset (select byte in block) -> **index** (select block)
+        - Addr [31 | index | offset 0]
+    - map to only 1 specific set
+
+    - 32 byte block 
+        - how many bits in each block? 32 bytes x 8 bits / byte = 256 bits
+        - bits for addr offset = log2(32) = 5
+    - 128 sets
+        - bits for index = log2(128) = 7
+
+    - total capacity: block size x # sets
+
+    - **tag**: upper-most bits of addr are unique in set
+        - only save upper-most bits to compare for hits
+    - **important**
+        - offset bits = log2(block size) [column of set]
+        - index bits = log2(# sets) [select row of set]
+        - tag = 32 - offest bits - index bits
+        - [tag | index | offset]
+    - 16 byte block & 16 sets
+        - bits for tag: 
+        - total capacity: 16 x 16 
+
+    - add **valid** bit to mark if cache block adn tag has been previously filled
+        - before running prog -> zero out valid bits
+        - while running -> new cache block valid bit = 1's until next prog starts
+    
+    - hit if valid & tags match
+    - **Allocation policy**: when bring cache block into cache
+        - assumming missed in cache
+        - reads
+            - always bring cache block into cache
+                - Load instructions from data cache in MEM stage
+                - all instruction reads from instruction mem in IF stage
+        - Writes
+            - store write to mem hier during MEM
+            - **allocated on write**: store misses, bock of data -> cache, write to necessary bytes
+            - **write no allocate**: store misses, write data to mem, don't bring block of data into cache
+    - bring block -> cache, but cache has valid block at given set
+        - **replace** old block
+    - **Write policy**
+        1) **write through**, redundantly write val to next lvl in mem hier
+            - Accessing next level incurs cycle penalty
+                - store instruction -> **write buffer**, copy value into -> autonomously written to next without any intervention -> latency hidden as long as it doesn't fill
+        2) **Write back**, wait to write to next lvl until block is replaced
+            - lots of writes before to main mem -> write to higher lvl of cache & write to next lvl when block is replaced
+                - if multiple same addr -> only most recent is written
+            - **write back cache set**
+                - data block (payload), tag, valid bit, dirty bit
+                    - dirty bit 0 when cache block alloc
+                    - dirty bit 1 when any bytes were written in block
+                    - if dirty bit 1 when block replaced, write block to next lvl
+- Misses
+    - 3 classifications
+        - cold miss / compulsory miss: addr never been used prev
+        - conflict miss: addr used but replaced by another block mapped to same set
+        - capacity miss: working set of prog > avail cache
+    - multi-processor miss
+        - coherence miss: proc A writes to addr -> invalidate cache block -> proc B miss cache next time access addr
+- n-way set associative
+    - 16 byte block (offset is 4 bits)
+    - 256 sets (index is 8 bits)
+    - if both addr have same index bit, direct mapp miss every acess
+        - each set has multiple blocks 
+        - given addr only ever occur 1 way of a single set
+            - make sure tag/valid bits match for 1 way 
+    - has all of direct-mapp policies
+    - **Replacement Policy**
+        - FIFO (first in, first out)
+        - LRU (least recently used)
+        - randomly select way to replace
+    - **capacity** = (byte block) x (sets) x  (n way set associative)
+        - offset = 6 bits of addr
+        - inedx = 8 bits of addr
+- Fully Associative
+    - 1 set, # ways = # blocks
+    - gets rid of all conflict misses
+    - lots of tag comparisons, cycle time penalty
+    - used for other circuits, content addressable memories
+    - no need for index bit
+    - **total capacity** = (# blocks) x (block size)
+    - replacement policy is critical, determines hit rate 
+- Cache Parameters
+    - options: block size, sets, associativity, alloc/write/replacement policy
+    - fair comparison
+        - equal cache capacity: access latency remain constant
+        - same access pattern: eliminate diff bewtween programs
+    - lower miss rate always better if access latency is same
+    - incr block size
+        - good if lots of spatial locality
+        - fixed capacity & associativity -> decr # sets -> incr conflict misses
+    - incr associativity
+        - adding ways incr hit rate by reducing # conflict misses
+        - for constant capacity & block size, reduce # sets
+    - alloc policy
+        - write-allocate is benefiicial if later accesses occur to same block
+        - alloc blocks on writes mean replace blocks that might be accessed
+    - write policy
+        - only determine when write values propagated to next level in cache hier
+        - write buffer -> dont need to wait to be written to next level
+        - write buffer may need to be checked if cache miss occurs
+    - conclusion
+        - hit rate & perf depends on cache params & mem access pattern
+        - 
