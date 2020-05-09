@@ -916,3 +916,85 @@
     - specialized lay of security
     - use either anaomaly/sig/heuristic 
     - monitor activity to detect sus behav
+
+## SQLI
+- how to perform, common mitigations, rsrc to handle for websites
+- php website works
+    - user -> php req -> server -> send query -> query result -> parse -> html doc
+- relational db
+    - fields / cols
+    - row / tuple (entity)
+    - pk & fk
+    - query statement
+- basics
+    - vulnerable 
+        - SQL db with poor code
+            - enter: quote mark -> cause error -> see if SQL
+            - ' OR =1 -- , mypass1  -> evals to true 
+            - SELECT * FROM UESRS where ... Tom"; DROP ALL DATABASES;
+                - quotes cause a crash, but tries to recover afterwards by executing statements after
+
+        - Attack avenues
+            - user input (SQL comamnds)
+            - sever variables (forge values in HTTP & network headers directly)
+            - second-order injection (data already in sys/db -> attack occurs -> within sys)
+            - cookies (server build SQL query based on cookie -> structure & function of query modified)
+            - physical user input (outside realm of web reqs)
+    - prevention
+        - string check for sql special characters
+            - prepared statements, send query -> treat as data not as command
+            - slash in front of quote marks 
+        - automated software for vulnerability 
+
+- Mitigating resources
+    - https://owasp.org/www-project-top-ten/
+    - https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+    - https://bobby-tables.com/
+- Summary of Countermeasures
+    - Primary defenses:
+        - Use of prepared statements (with parameterized queries)
+        - Goal: attacker can’t change the intent of the query
+        - Method: bind variables to parameters in the query.
+        - Why does it work?
+            - Separation of data and code.
+            - Usually allows the database to optimize the query
+        - When does it not work well?
+            - When the optimization suffers. Use an alternative approach in those cases.
+    - Use of stored procedures
+        - Goal: attacker can’t change the intent of the query
+        - Method: bind variables to parameters in the query
+        - Why does it work?
+            - Separation of data and code
+            - Query is stored in the database (unlike prepare statements)
+        - When does it not work well?
+            - Works as well as prepare statements in practice, but one approach over the other may be dictated or influenced by the language you are using or the applications.
+    - White list input validation
+        - Goal: handle cases when parts of the SQL queries that are determined dynamically can’t be bound to variables (e.g., names of tables or columns, and sort indicators). In these cases, there is a small set of legal values that can be checked against (the white list).
+        - Method: Each value that needs to be checked is checked against valid values, if not one of those an error is thrown.
+        - Why it works?
+            - Only valid SQL queries are constructed and executed preventing special characters or other types of attacks from succeeding.
+            - Recommended as a secondary defense in ALL cases.
+            - Also, a good time to convert string data into appropriate types for query
+        - When does it not work well?
+            - Really better to redesign database to avoid needing to do this as the only defense.
+    - Escaping all user-supplied input
+        - Goal: Make sure no special characters or other control structures are inserted and executed in the query.
+        - Method: encode special characters in the database language-specific manner
+        - Why does it work?
+            - Converts the malicious string into data
+        - When does it not work well?
+            - Other approaches are stronger, but this is often used for legacy applications when there isn’t enough time to make the entire codebase secure.
+            - Not recommended for new development.
+    - Additional defenses:
+        - Enforcing least privilege
+            - Identify who really needs access to the data and only fetch and display it if needed.
+            - Access control on databases enforces this. Make sure the access control policies and procedure storage are compatible.
+            - Views can be used to store less sensitive data and access to sensitive data revoked from web access, thus only the less sensitive could be stolen.
+        - white list input validation as secondary defense
+- Internet Basics
+    - Internet as service view
+        - infrastructure provides service to applications
+        - provide programming itnerface to apps
+    - connected computing devices 
+        - hosts = end systems 
+        - running network apps
