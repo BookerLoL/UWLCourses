@@ -581,4 +581,248 @@
         - write buffer may need to be checked if cache miss occurs
     - conclusion
         - hit rate & perf depends on cache params & mem access pattern
-        - 
+
+## Interrupts & Exceptions
+- Interrupts: signals from events outside of processor
+- Exceptions: events within processor
+- offending instruction: instruction causes exception
+- handling
+    - stop prog, track PC
+    - set PC -> OS
+    - OS handle exception
+    - if recover, OS restart at offending instruction
+        - else: prog killed & error message displayed
+- Pipeline
+    - precise exceptions: all instructions prior to offending instruct are available (written to reg file & mem)
+    - imprecise exceptions: reg file & mem may have incomplete results or instrs after offending instr
+- MIPS Mem Layout
+    - kernel: instrs & data needed by OS
+    - stack: runtime stack, args, local vars
+    - heap: dynamic alloc mem
+    - static data: glob vars
+    - text: prog instructions
+    - reserved
+- Exception PC (EPC)
+    - special purpose reg added to execute stage
+    - EX stage detects --> copies PC to EPC
+- Cause Register (EX stage)
+    - exception occur -> reg set with exception code
+    - 31 branch delay, 15-8 pending interupts, 6-2 exception code
+- Exception Handling Hardware
+    - referred as: **co-processor 0**
+    - **co-processor 1** handles floats
+- Result val of Offending Inst
+    - could overwrite useful info 
+        - add $t0, $s1, $t0
+        - overflow
+    - OS may want old val of $t0 for error reporting
+- ISA support 
+    - mfc0 instr, to access cause reg
+        - copy cause reg to general purpose reg
+    - mfc0, r-type, R[rd] = CR[rs], Opcode/funct: 0x10/0x00
+    - if recoverable, user prog resume when OS exe "eret" instr
+        - eret, r-type, PC = EPC, Opcode/funct:0x10/0x18
+    - OS does not overwrite any user prog reg vals
+        - OS uses $k0 & $k1 (gen purpose reg file)
+
+## Virtual Memory
+- motivation
+    - pros all have same mem map
+    - os supps running multiple progs simul
+    - virtual mem
+        - extend mem hierarchy to lager (slower) hard disks
+        - mem values to be shared by 2 progs
+- Virtual mem
+    - mem slow (need cache), hard disks much slower (100,000x)
+    - **virtual addresses** addresses used by prog
+        - 0x00000000 - 0x7fffffff
+    - **physical addresses** addr to access main mem
+- Mem Value Placement
+    - **pages**: contig chunks of V-mem
+        - place anywhere in main mem or hard disk 
+- Addr Translation
+    - translation of virtual addr --> physical addr
+        - page table, held mem
+        - each prog has page table
+    - virtual addr = virtual page number | page offset
+        - virtual page number = 32 - log2 (page size)
+        - page offset = log2 (page size)
+    - physical addr = physical page number | page offset
+        - physical page number = log2 (mem size) - log2 (page size)
+        - page offset = same as virtual addr page offset
+- Page Table    
+    - array in mem
+    - Page Table Entry (PTE): each entry in page table
+    - meta data
+        - valid bit, dirty bit, access protection bits, replacement bits
+    - Page Table Register: starting addr of page table
+    - each prog has own page table
+- valid bit 
+    - if 1, page in physical mem
+    - 0, page on hard disk
+- Simplified Virtual Memory
+    - prog attempts access mem --> virtual addr & raise signal to MMU
+    - find PTE, check valid bit
+        - if invalid, phyiscal on hard disk, **page fault**
+            - puts page into physical mem, validate PTE
+    - physical page num + page offset concatenated 
+- Implications of Virtual Memory
+    - page table consumes physical mem
+    - 2 physical mem access for each access done by processor
+        - page table entry, actual read/write
+    - latency on hard disk is millions of cycles
+        - locality important
+- Improving Virtual Mem Performance
+    - translation (virtual to physical) could take lots of cycles
+    - caches improv access for instrs & data accesses
+    - **Translation Look-aside Buffers** (TLBs): "cache" translations  
+        - payload is physical page number
+        - no need to pollute reg data cache
+        - tlb small to maintain single cycle translation
+        - if TLB miss, need to access page table for translation
+        - must access page table to fill TLB
+        - structure
+            - valid|dirty|ref|tag|physical page addr
+- Coexisting with caches
+    - (Caches) no distinction between physical and virtual addr
+    - accessing caches 
+        - Physically addressed cache
+        - Virtually addressed cache
+        - Virtually Indexed Physically Tagged cache
+            - page offset bits from V-addr but tagged with pyhsical page number
+                - safe, page offset bits same 
+- Implications for cache types
+    - physically indxed physically tagged
+        - addr translation before accessing cache, add cache latency
+    - Virtually indxed, virtually tagged
+        - conflicts when cache running multiple programs
+    - Virtually indexed, physically tagged
+        - addr translation parallel with indexing into cache
+            - translation done, tags compared with cache block read out of cache
+        - restriction on shape of cache
+            - index & offset bits to access cache must be same as page offset bits
+- Virtual Memory Summary
+<table>
+    <thead>
+        <tr>
+            <th>TLB</th>
+            <th>Page Table</th>
+            <th>Cache</th>
+            <th>Possible?</th>
+            <th>Events</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Hit</td>
+            <td>Hit</td>
+            <td>Hit</td>
+            <td>Yes</td>
+            <td>This is what we want to happen as much as possible.</td>
+        </tr>
+         <tr>
+            <td>Hit</td>
+            <td>Hit</td>
+            <td>Miss</td>
+            <td>Yes</td>
+            <td>Page is available in memory, but missed in the cache. The page table does not need to be checked, since the TLB hit.</td>
+        </tr>
+         <tr>
+            <td>Miss</td>
+            <td>Hit</td>
+            <td>HIt</td>
+            <td>Yes</td>
+            <td>TLB missed. If cache is physically addressed, then a translation must take place before accessing the cache.</td>
+        </tr>
+         <tr>
+            <td>Miss</td>
+            <td>Hit</td>
+            <td>Miss</td>
+            <td>Yes</td>
+            <td>Address translation must occur, then the cache can be filled (allocation or replacement).</td>
+        </tr>
+         <tr>
+            <td>Miss</td>
+            <td>Miss</td>
+            <td>Miss</td>
+            <td>Yes</td>
+            <td>A page fault occurs, the operating system must read the page from the hard disk.</td>
+        </tr>
+         <tr>
+            <td>Hit</td>
+            <td>Miss</td>
+            <td>Hit/Miss</td>
+            <td>No</td>
+            <td>The TLB can hit only if the page table has a mapping for the virtual to physical address.</td>
+        </tr>
+         <tr>
+            <td>Miss</td>
+            <td>Miss</td>
+            <td>Hit</td>
+            <td>No</td>
+            <td>Data is not allowed into the cache if the page is not in memory.</td>
+        </tr>
+    </tbody>
+</table>
+
+## Performance Analysis
+- Execution time = # instr x CPI (cycle/instr) x clock period
+- instrs determined by assembly programmer / compiler
+- clock period by architect
+    - how many stages in pipeline
+    - how digital logic circuits impl 
+- num cylces per instr impro by arhcitect & programmer
+- CPI: avg over all instrs
+- analytical models: eqs used to est perofrmance
+- simulator: mimic behavior of sys & accumlates perf metrics
+- CPI
+    - unpipelined processor
+        - each instr complete before next
+        - CPI = 1
+    - pipelined with 1 cycle mem accesses
+        - taken branches -> buble
+        - Load instr read -> buble
+        - add extra cycle 
+- improv CPI
+    - instrs to fill load-use bubble
+    - avoid taken branches
+- Realistic CPI
+    - mem access latency is single cycle when addr hit L1 cache
+    - take misses into account
+        - if write buffer, don't wait to store miss (unelss filled)
+        - if load, check cache & buffer
+- CPI
+    - CPI =  num cycles / num instrs
+    - unpipelined processor with perfect mem hierarchy = num cycles = num instrs
+    - pipelined, no hzards, perfect mem = num cycles = num instrs + (pipeline - 1)
+    - Pipelined, program does have hazards, and perfect memory hierarchy: #cycles = instructions + (pipline depth – 1) + (#instructions)(%taken-branches) + (#instructions)(%load-use)
+    - Pipelined, with 1 level of hierarchy and memory: # cycles = # instructions + (pipeline depth – 1) + (#instructions)(%taken-branches) + (#instructions)(%(hit && load-use)) + (#instructions)(%misses)(miss penalty)
+    - Pipelined, with 2 levels of hierarchy and memory: # cycles = # instructions + (pipeline depth – 1) + (#instructions)(%taken-branches) +(#instructions)(%(hit && load-use)) + (#instructions)(%missesL1)(miss penaltyL1) + (#instructions)(%missesL2)(miss penaltyL2)
+- Analytical Models 
+    - closed-form solution
+    - help us focus which terms for potential improvments
+- Performance 
+    - speed-up = Tbase / Tenhanced
+    - multiply instructions account for 10% of prog
+    - 1 - f time that cannot be improved
+    - s is speed-up of f 
+- Amdahls Law
+    - overall speed-up limited by part of sys that is not improved
+    - speed-up = Tbase / Tenhanced
+        - Tbase/Tbase(1-f) + Tbase f/s
+        - 1/(1-f) + f/s
+    - ex
+        - baseline: 6
+        - enhance 5
+        - 10% benchmark is mulytiply 
+        - 1 / (1 - 0.1) + 0.1/1.2
+        
+
+
+
+    
+
+
+
+
+        
