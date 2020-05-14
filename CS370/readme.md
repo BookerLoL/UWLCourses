@@ -764,6 +764,40 @@
         </tr>
     </tbody>
 </table>
+- Example
+    - page size: 4k bytes
+    - page table entry size: 4 bytes
+    - physical mem capaicty: 2G bytes
+    - (virtual page number * 4) + page table register 
+        - valid bit is uppermost physical addr (check that if page fault)
+        - lower bit positions of physical page number: page numbers
+    - physical addr: physical page number concat page offset
+    - answer
+        - page offset bits: 12 
+        - num bits for v-page num: 20
+        - num bits for physical page number: 19
+        <table>
+            <thead>
+                <tr>
+                    <th>Virtual Addr</th>
+                    <th>Virtual Page NUmber</th>
+                    <th>Page offset</th>
+                    <th>physical page number</th>
+                    <th>Physical addr</th>
+                    <th>page fault</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0x1008f458</td>
+                    <td>0x1008f</td>
+                    <td>0x458</td>
+                    <td>0x253f1</td>
+                    <td>0x253f1438</td>
+                    <td>no</td>
+                </tr>
+            </tbody>
+        </table>
 
 ## Performance Analysis
 - Execution time = # instr x CPI (cycle/instr) x clock period
@@ -816,7 +850,7 @@
         - enhance 5
         - 10% benchmark is mulytiply 
         - 1 / (1 - 0.1) + 0.1/1.2
-        
+
 
 
 
