@@ -9,9 +9,7 @@ public class CheckerBoard implements CheckerBoardMethods
 {
     
     
-    CheckerBoard()
-    {
-    }
+    CheckerBoard(){}
     
     public boolean isEmpty(final int row, final int column)
     {

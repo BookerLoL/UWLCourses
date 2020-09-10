@@ -998,3 +998,15 @@
     - connected computing devices 
         - hosts = end systems 
         - running network apps
+    
+## Network Security 
+- network sensors: observe and record traffic patterns in network
+- firewalls: observe and block incoming and outgoing traffic
+- network-based intrusion detection: signature detection and anomaly detection
+- hybrid IDS: host-based and network-based IDS to create a whole system based IDS
+- Business network structure
+    - public internet
+    - DMZ (demilitarized zone): public facing websites, behind firewall 
+    - Host network:  access internal and external websites
+        - stops worms & DDOS by blocking any traffic that would look like an employee hosting a web service
+    - internal servers: more security, sensitive data, 
