@@ -75,8 +75,7 @@
     - sprint task cost est based on programmers ability, current task, and available resources
         - time-boxed with fixed durations
         - **cost** is using estimated time for each sprint task
-
-
+        
 - Sprint Planning
     - product owner approve PBI's
     - scrum msater ensure resources avail
