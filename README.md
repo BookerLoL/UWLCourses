@@ -8,11 +8,15 @@
 
 ## CS370 - Computer Architecture
 
-## CS421 - Programming Language Concepts 
+## CS421 - Programming Language Concepts
 
-## CS442 - Compilers 
+## CS442 - Compilers
 
-## CS743 - Software Testing 
+## CS531 - Intro to Robotics
+
+## CS571 - Computer Networks
+
+## CS743 - Software Testing
 
 ## CS 744 - Project Managment
 
