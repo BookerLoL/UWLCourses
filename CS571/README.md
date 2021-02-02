@@ -1,1 +1,21 @@
 # CS 571 Computer Networks
+
+- Case study topics
+  - Cloud computer/mobile cloud computing
+  - Cellular networks
+  - IoT
+  - Localization and location-based services
+  - Mobile sensing and applications
+  - Network security and privacy
+  - Vehicular networks
+  - WLAN, WPAN, RFID, NFC
+  - Connected unmanned aerial/terrestial/underwater systems
+  - AI Applications for Networking and IoT
+- Case Study
+  - Write proposal
+  - Write literature review
+    - IEEE paper format
+  - Presentation for class
+    - 10-15 mins
+    - background might be explained?
+    - topic should tie to Computer Networks
