@@ -17,7 +17,7 @@
     - Anhui, Fujian, Gansu, Guangdong, Guizhou, Hainan, Hebei, HeilongJiang, Henen, Hubei, Jilin, Jiangsu, Jiangxi, Liaoning, Qinghai, Shaanxi, Shandong, Shanxi, Sichuan, Yunnan, Zhejian
   - 5 autonomous regions
     - Guangxi, Inner mongolia, Ningxia, Tibet, Xinjiang
-  - 4 Minicipalities
+  - 4 Municipalities
     - Beijing, Shanghai, Chongqin, Tianjin
   - 2 Special Administrative Regions
     - HK, Macao
@@ -25,14 +25,18 @@
     - Beijing
   - Shanghai
     - most population in central china
-  - China Proper (changed a lot), Outer China
+  - Lots of borders isolating the country from other countries
+  - China Proper, Outer China
 
 - China Proper
 
   - Yellow River (N), Yangzi River (central S)
     - Yellow second longest, cradle of Chinese civilization
-    - Yangzi is longest
-  - Xi river (far south), Huai River
+      - mineral in soil, mostly from loess plataeu
+      - river of sorrow, lots of floods
+        - lots of good land for crops
+    - Yangzi is longest (changjiang)
+  - Xi river / Pearl River (far south), Huai River
   - North China
     - alluvial plain, flat, by river -> agriculture
       - wheat, corn, sorghum, millet, soybeans
@@ -53,6 +57,7 @@
     - Mount Everest
     - Himalayan MOuntains
       - "roof of the world"
+  - lots of green below because of all the rain stopping before the mountains
 
 - People
 
