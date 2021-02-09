@@ -236,6 +236,110 @@
       - influenced by modern art in West
         - more modern paintings than calligraphy
 
+## Origins of CHinese Civilization
+
+- "great man" theory
+  - humans as invention to advance people (not gods)
+    - Fu Xi, ox-tamer, domesticated animals and invented family
+    - Huang Di, Yellow Lord, invented bow and arrow, boats, carts, ceramics, writing, and silk
+    - Shen Nong, divine farmer, invented plough and hoe
+- North
+  - colder, flatter, drier
+  - short growing season
+    - wheater, millet
+  - floods and droughts
+    - yellow river, loess region collect silt
+  - food / cart / animal travel
+- South
+  - warmer, wetter
+  - rice, double-cropping
+  - boat travel
+- Inner Asia
+
+  - nomadic pastoralists: Xiognu and Mongols
+    - Chinese enemies
+
+- Homo erectus (Ice Age)
+- Homo Sapiens (paleolithic period)
+- Chinese HIstory (10,000 BC)
+  - 5000 BC neolithic, River Valleys (South)
+    - warmer weather -> agriculture -> more settlement/people
+    - potery and textiles -> life easier
+    - Yangzi Valley
+      - fish, rice, lotus, caltrop, water chestnut
+    - Water buffalo, Cattle
+  - North
+    - Cold and dry
+    - Millet
+    - Sheep, Cattle
+  - Dogs and Pigs 5000 BC (North and South)
+  - West
+    - Yongshao, painted pottery
+  - East
+    - formed pottery, rituals of feasting/sacrifice
+    - Jade
+      - neolithic: Hongshan Liaoning, Liangzhu Jiangsu
+        - bi (disks), cong (columns) found at rituals
+  - 3000-2000 BC Late neolithic
+    - increased contact
+    - Conflict
+      - metal weapons, walls, human sacrifices
+    - social differentiation
+      - different burials
+  - **Shang Dynasty** after 2000 BC
+    - **Xia Dynasty** came before but no written documents to prove it
+    - palaces, temples, altars, industrial area (bronze/potters/carvers/artisians), below ground level small houses, then burial grounds
+    - oracle bones (earliest evidence of full sentence), war booty -> lots of slaves/sacrificial people, chariots
+      - **written script --> standard Chinese logographic writing system**
+        - elite literates could understand each other -> cultural expansion and assimilation
+          - phonetic script -> people couldn't understand each other (big difference)
+    - Kingship
+      - military supremacy
+      - priestly role
+        - worship god Di and royal ancestors -> made predictions, made sacrifices
+          - animals and humans sacrificed -> reciprocity and feeding -> get help and keep god strong
+    - mobilize human and material resources
+      - massive walls and burial chambers
+    - sequencing system
+      - 10, 12 -> 10-day week and 60-day cycle
+    - **Bronzes**
+      - 1700-1600 BC, Erlitou, Xia Dynasty
+      - cupes, goblets, steamers, cualdrons, tripods
+      - mine, transport, refine, tools, casting
+      - cultural change
+        - animal mask -> popular -> not anymore
+      - silk woven, carved wood and ivory
+      - infleunced areas outside of Shang reign
+    - **Zhous Conquest**
+      - 1050 BC defeated Shang
+      - 1st time texts transmitted
+        - Book of Documents (Shujing)
+      - religious changes
+        - less human sacrifices at burials, less voluntary accompaning in death
+        - Classic of Changes (Yijing) more popular, concept of heaven (can rule if have heavens favor)
+        - comology propaganda to win over Shang people
+      - Establishing state
+        - 3 rulers
+          - King Wen, formed alliances with states and tribes to attack Shang
+          - King Wu, new capital and expedition to capital
+          - Duke of Zhou, new territories, made new city (at modern Luoyang)
+        - Relatives and subdorinates to garrisons
+        - Local chiefs as representatives
+        - Central proto-bureaucratic administration
+          - used written records
+        - King as "son of heaven", can sacrifices to heaven at capital
+        - Noble people had to marry with each other patrilineal / affineal kinship
+        - **Hierarchy**
+          - Son of Heaven, lords, great ministers, officers, knights and court attendants, farmers
+        - Outsiders
+          - Yi, Man, Di, Rong
+        - no more motif, animal mask/taotie
+          - more birdlike imagery, ornamental decorations (spikes and ribs)
+            - vessels seen as family heirlooms
+        - Chinese poerty
+          - Book of Songs
+            - some state distrust in women, praise solemnity, celebrate explort of early zhou rulers, normal people life
+
 # whatever
 
 - Dynasties
