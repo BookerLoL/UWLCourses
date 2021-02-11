@@ -238,6 +238,20 @@
 
 ## Origins of CHinese Civilization
 
+- Neolithic cultures
+
+  - Pei li gang
+  - Xing Long wa
+  - Ci Shan
+  - He Mu Du
+  - Ma jia bang
+  - Yong Shao
+  - Hong Shan
+  - Da Wen Kou
+  - Liang Zhu
+  - Ma Jia Yao
+  - Long Shan
+
 - "great man" theory
   - humans as invention to advance people (not gods)
     - Fu Xi, ox-tamer, domesticated animals and invented family
@@ -278,7 +292,7 @@
   - East
     - formed pottery, rituals of feasting/sacrifice
     - Jade
-      - neolithic: Hongshan Liaoning, Liangzhu Jiangsu
+      - neolithic: Hongshan and Liangzhu
         - bi (disks), cong (columns) found at rituals
   - 3000-2000 BC Late neolithic
     - increased contact
@@ -339,6 +353,23 @@
         - Chinese poerty
           - Book of Songs
             - some state distrust in women, praise solemnity, celebrate explort of early zhou rulers, normal people life
+
+# Language
+
+- spoken before written
+  - written same but spoken different
+    - created on meaning
+  - pros
+    - can read the same way
+  - cons
+    - need to be educated
+- varieties
+  - dialects
+    - sub-dialects
+
+# Tombs
+
+- Da wen kou, tombs
 
 # whatever
 
