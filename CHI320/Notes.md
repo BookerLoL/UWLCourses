@@ -367,9 +367,50 @@
   - dialects
     - sub-dialects
 
-# Tombs
+# Ancient Tombs
 
-- Da wen kou, tombs
+- Earlier the period the most important
+- artifacts are more accurate than early texts
+- Ruling class mostly in tombs
+
+- Neolithic Period (10,000 BC)
+
+  - Lots of independent cultures in different regions that influenced each other
+  - yangshao (middle of yellow river) painted pottery, longshan (east) black pottery,
+  - Hongshan (NE), Liangzhu (Yangzi river delta), Shijiahe (middle Yangzi river)
+
+- Dawenkou (4300-2500 BC)
+
+  - Shandong province
+  - overlapped with Yongshao
+  - Precursors to Longshan
+
+- Neolithic Tomb (Dawenkou)
+
+  - 2300 BC
+  - rectangular pits
+    - head towards east, most bodies have deer teeth in hands
+    - Most had 10 or 20 items, few with 1 or 2
+  - Tomb 10
+    - pit: 4.2m length, 3.2m width, 0.36m deep
+      - wooden chamber containing coffin
+    - women (50-55 yrs old, 1.6m)
+      - stone necklace, jade ring, stone jewel on chest
+      - ivory comb, jade ax, bone tube, stone hammer
+      - Most burial items placed on second level of tomb
+    - 94 pieces
+  - Tomb differences
+    - richest had 50/60/180+ pieces
+    - larger graves
+    - May be due to age / achievement (not rank)
+  - Jade objects indicate high fine crafts skills
+    - slow, labor intensive process with abrasive sand
+  - carved ivory, bone fishhooks, combs, hairpairs also high skill
+  - pottery
+    - pigs
+      - wealth symbol, domesticated pigs
+    - fish
+      - may have fished
 
 # whatever
 

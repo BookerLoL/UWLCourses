@@ -22,26 +22,68 @@
 
 ## Notes
 
+- Computer Networks
+  - collection of computers interconnected by single technology
+    - exchange info
+    - **Internet**
+  - Connections
+    - copper wire, fiber optics, microwaves, infrared, satellites
+- Distributed System
+
+  - Collection of computers appears as single coherent system
+    - **World Wide Web**
+  - Built on top of a network
+
+- Network Uses
+
+  - Business application -> **resource sharing (info)**
+  - **Communication medium**
+    - email
+    - IP Telephone / Voice of IP (VoIP)
+      - calls via network
+    - **Desktop sharing**
+  - **e-commerce**
+    - business via electronically
+  - Home Applications
+    - **connectivity**
+  - Entertainment
+    - TV via IPTV (IP TeleVision)
+  - Ubiquitous computing
+    - power-line networks
+    - Radio Frequency IDentification (RFID)
+      - chips on cards and etc
+  - Mobile Users
+    - Wireless hotspots (802.11 standard)
+      - fixed wireless vs mobile wireless
+
+- **Client Server Model**
+  - Network as middleman
+  - Client on simple machiens
+  - Servers are powerful computers
+  - Client sends request, server sends back response/reply
+- **Peer-to-peer (P2P)**
+  - find nearby people to communicate with
+
 ### Broadcast/Point-to-Point Networks, PAN, LAN
 
 - Communication model
 
+  - Basic Model
+    - Source, Transmission, Receiver
   - exchange of data between 2 parties
 
   1. Source (computers / telephones / etc)
-     - produce digit bit stream
+     - produce data stream
   2. Transmitter
-     - Encodes data into electromagnetic signals
-     - ex: bit stream -> analog signal
+     - encode data -> signals
   3. Transmission System
   4. Receiver
-     - transform signal and convert it to something understandable
+     - decode signal -> data
   5. Destination
-     - takes incoming data
 
 - Network Taxonomy (classifying networks by)
 
-  - Transmission Technology
+  - Types of Transmission Technology
     - broadcast networks
     - point-to-point networks
   - Scale (Distance)
@@ -62,8 +104,18 @@
       - if not recipient, discard packet
   - Broadcasting
     - packet received and processed by every machine on network
+    - can address packet to all destinations
   - Multicasting
+
     - packet transmitted to subset of machines
+
+- q1: 1, 2, 3
+- q2: source, transmission, destination
+
+- LAN connects devices over the range of a person.
+
+  - router
+  - A network service provider is a subnet operator which is also known as ISP (Internet Service Provider).
 
 - Scale (Distance)
 
@@ -76,14 +128,13 @@
 
 - Personal Area Network (PAN)
   - connect devices over range of a person
-  - ex: computer components + bluetooth
+  - Bluetooth
     - Master-slave paradigm
       - PC is master
         - what addresses to use, when can broadcast, how long can transmit, freq
       - mouse, keyboard, headphones are slaves
 - Local Area Network (LAN)
-  - Wireless LAN
-    - 802.11
+  - Wireless LAN (802.11 - WiFi)
     - Access point (wired to network)
       - relays packets
   - Switched LAN
@@ -93,19 +144,23 @@
       - Ethernet Switch
         - has multiple ports computer can connect wire into
         - at most 1 machine can successful transmit at a time
+  - Enterprise networks
+    - companies using LAN
 - Wide Area Network (WAN)
 
   - ex: connect 3 branch offices
   - Subnet
     - collection of routers and communication lines owned by network operator
     - components
-      - transmission line
+      - **transmission line**
         - moves bits
         - copper wire / optical wire / radio waves
         - usually leased from telecom company
-      - router
+      - **router**
         - 2 routers connected by transmission line
     - Internet Service Provider (ISP)
+      - network service provider (NSP, also considered ISP)
+        - connects networks
       - buy connectivity from ISP to use it
       - no shared transmission line, share indirectly via intermediary routers
         - use routing algorithm
@@ -118,7 +173,7 @@
       - lack of control of underlying resource (varies by company)
 
   - Implementations
-    - Circuit Switching
+    - **Circuit Switching**
       - dedicated communication path
         - seq of physical links between nodes
           - logical channel on each link
@@ -126,24 +181,24 @@
       - rapid transmission
         - fixed data rate
       - ex: telephone network
-    - Packet Switching
+    - **Packet Switching**
       - send small chunks called packets
         - node to node, source to destinatino
       - usage
         - terminal-to-terminal computer, computer-to-computer communications
       - Lots of overhead to prevent errors
         - extra bits on packets to reduce redundancy and additional processing at nodes
-    - Frame Relay
+    - **Frame Relay**
       - Take advantage of high data rates and low error rates
         - strip out overheadinvolved with error control
       - up to 2 Mbps
       - variable length packets called frames
-    - Asynchronous Transfer Mode (ATM) / Cell Relay
+    - **Asynchronous Transfer Mode (ATM) / Cell Relay**
       - circuit switching + packet switching
       - fixed-length packets called cells
         - 10-100s Mbps and in Gbps
       - allow multiple channels with data rate dynamically set on demand
 
 - Metropolitan Area Network (MAN)
-  - middle ground of LAN and WAN
-    - centralized topology
+  - middle ground of LAN and WAN - centralized topology
+    WAN connects devices over a country.
