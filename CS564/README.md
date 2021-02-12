@@ -107,3 +107,43 @@
   - union
   - except
 - update, delete, insert, grant, revoke
+
+### Postgres
+
+- ORDMS, implements most SQL standard
+
+- db server
+- pgAdmin (Managment tool)
+
+#### Postgres Commands
+
+- psql (open terminal)
+- \connect (db)
+  - **\c**
+    - connect to db
+- \list
+  - **\l**
+    - lists available db
+- **\i** (file)
+  - execute commands from file
+- **\d**
+  - show available tables
+- **\conninfo**
+  - current db info
+- **\cd**
+- **\h**
+  - help sql command
+- **\?**
+  - help meta commands
+- **\!**
+  - execute command in shell
+- **\q**
+
+  - quit
+
+- Loading tables from file
+  - **copy table_name from 'file_path' delimiter '|';**
+
+#### Postgres operations
+
+- create database db_name
