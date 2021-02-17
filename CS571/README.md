@@ -200,5 +200,86 @@
       - allow multiple channels with data rate dynamically set on demand
 
 - Metropolitan Area Network (MAN)
+
   - middle ground of LAN and WAN - centralized topology
     WAN connects devices over a country.
+
+- Summation
+  - Sum of Arithmetic Sequence (ex: n = 4, 0 + 1 + 2 + 3 + 4)
+    <img src="https://latex.codecogs.com/gif.latex?\sum_{i=0}^{n}i&space;=&space;\frac{n(n&plus;1)}{2}" title="\sum_{i=0}^{n}i = \frac{n(n+1)}{2}" />
+  - Sum of Proportional Sequence
+    - <img src="https://latex.codecogs.com/gif.latex?\sum_{i=0}^{n}a^{i}&space;=&space;\frac{1&space;-&space;a^{n&plus;1}}{1-a}" title="\sum_{i=0}^{n}a^{i} = \frac{1 - a^{n+1}}{1-a}" />
+- Binary Tree
+
+  - Complete full binary Tree
+    - height, h starts at 0 index
+    - **total nodes, <img src="https://latex.codecogs.com/gif.latex?n&space;=&space;2^{h&plus;1}&space;-&space;1" title="n = 2^{h+1} - 1" />**
+      - sum of proportional sequence, a = 2
+    - given nodes, height, <img src="https://latex.codecogs.com/gif.latex?h&space;=&space;lg(n&plus;1)&space;-&space;1" title="h = lg(n+1) - 1" />
+  - Balanced binary tree
+    - Balanced if
+      - left and right subtrees height differ by at most 1
+      - left subtree is balanced and right subtree is balanced
+        - check each subtree
+    - Balanced full binary tree
+      - **height, <img src="https://latex.codecogs.com/gif.latex?h&space;=&space;\left&space;\lceil&space;lh(l)&space;\right&space;\rceil" title="h = \left \lceil lh(l) \right \rceil" />**
+        - l is number of total leaves
+        - number of nodes on Kth level = m <= 2^k
+          - number of leaves = l <= 2^h
+      - **Number of leaves In full binary tree**
+        - <img src="https://latex.codecogs.com/gif.latex?l&space;=&space;(n&space;&plus;&space;1)&space;/&space;2" title="l = (n + 1) / 2" />
+
+- Basic Probability
+
+  - Event A is subset of S
+  - Probability is a function which associates A with number between 0 and 1
+  - measure change/likelihood A will happen
+  - Properties
+
+    - P() is probability function, event A
+      - P({}) = 0
+      - P(A) <= 1
+      - P(A') = 1 - P(A)
+        - A' is complement of A
+      - P(S) = 1
+    - If outcomes S are equally likely
+      - P(A) = #A / #S
+        - #A is total elements in A
+
+  - Product Rule
+    - job consisting of K seperate tasks
+      - ith job can be done in ni ways for 1 = 1, ...k
+      - job can be done in n1 x n2 ... nx nk ways
+  - Expectation / Expected Winnings
+    <img src="https://latex.codecogs.com/gif.latex?E\left&space;[&space;X&space;\right&space;]&space;=&space;\sum_{i=1}^{k}&space;x_{i}p_{i}" title="E\left [ X \right ] = \sum_{i=1}^{k} x_{i}p_{i}" />
+    - x are outcomes
+    - p are probabilities
+    - ex:
+      - Roll die
+        - 1, 2, 3 then you win $2
+          - 3/6 chance for 2
+        - 4, 5, 6 then you lose $1
+          - 3/6 chance for -1
+        - (.5 \* 2) + (.5 \* -1) = expected winnings
+  - Permutation
+    - Choose k subjects out of n subjects **without replacement, order matters**
+      <img src="https://latex.codecogs.com/gif.latex?P_{k,&space;n}&space;=&space;\frac{n!}{(n-k)!}" title="P_{k, n} = \frac{n!}{(n-k)!}" />
+  - Combination
+    - Choose k subjects out of n subjects **without replacement, order does NOT matter**
+      <img src="https://latex.codecogs.com/gif.latex?C_{k,&space;n}&space;=&space;\binom{n}{k}&space;=&space;\frac{n!}{(n-k)!k!}" title="C_{k, n} = \binom{n}{k} = \frac{n!}{(n-k)!k!}" />
+  - Binomial distribution
+    - n, total number of independent experiments
+    - p is discrete probaility distribution of number of successes in sequence of independent experiments
+    - propability of p
+      - failure: 1 - p
+    - Bernoulli trial / experiment
+      - single success/failure experiment
+    - Bernoulli distribution
+      - n = 1, k = 0 or 1
+    - Equation
+      <img src="https://latex.codecogs.com/gif.latex?Pr(X&space;=&space;k)&space;=&space;\binom{n}{k}&space;p^{k}(1-p)^{n-k}" title="Pr(X = k) = \binom{n}{k} p^{k}(1-p)^{n-k}" />
+      - combination x success x failure
+
+- Quick review
+  - broadcast subnet capacity wasted when multiple hosts attempt to access channel at same time
+  - Fraction of slots wasted to collision given each time slot divided into discrete slots, with each n hosts attempting to use channel with probability p

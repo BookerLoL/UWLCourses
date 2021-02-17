@@ -412,6 +412,172 @@
     - fish
       - may have fished
 
+# Philosophical Foundations
+
+- Intellectual foundation
+  - Eastern Zhou Dynasty (770-256 BC)
+    - Spring and Autumn period (722-481 BC)
+    - Warring States period (403-221 BC)
+      - Zhou falls, larger states take over
+  - Advances
+    - iron casting, infantry armies, coinage, private ownership of land, socail mobility
+    - question established assumptions and values -> written down
+- Rival States
+  - regional lords too powerful
+    - 771 BC, Zhou king killed
+      - by alliance of Rong tribesman and Zhou vassals
+    - 335 BC, calling themselves kings
+- Spring and Autumn period
+
+  - sportsman like regulated warfare
+    - don't attack when mourning for it's ruler
+    - wait until both sides lined up
+    - leave 1 successor to continue sacrifices
+      - avoid wrath of ancestors of defeated rulers
+  - Alliances of States
+    - Duke Huan of Qi (Chielf of alliance of state)
+      - Qi state
+      - casting coins, controlling prices, regulating prodution salt & iron tools
+    - rulers children married other states rulers childrens
+      - allow stakes at disputes
+        - due to concubinage
+      - Succession
+        - ruler select son of concubine to be heir
+          - treason if not serving true heir
+        - sons not assigned heirs, assigned posts
+          - could build local power base and challenge succession by rescourse to arms
+  - Walls for protection
+    - Inner for more important people and places
+    - Maybe outerwall for less important
+  - Calvary and infantry army increase, cross bow,
+    - beats chariots
+  - Need more manpower and money
+    - Marshes drained, irrigation works established
+    - Rewarded farmers to get labor power
+    - casting coins, bolts of silk as exchange unit
+    - iron tools and weapons
+    - Sent own officials, allowed social advancedment on lower end people
+      - created competitive men who were willing
+  - States (300 BC)
+    - Only 7 state survived
+    - Jin, north
+    - Qi, east
+    - Chu, south
+    - Qin, west
+    - "a hundred schools of thought", states wanted to survive
+      - asked for input and butted ideas from different people
+
+- **Confucius (551 - 479 BC)**
+  - **government benefited the people, can make governemnt work well if involve people**
+  - rulers had selfish views -> **inspire people to do good, China's first moral philosopher**
+  - linked moral behavior to traditional roles and hierarchies
+  - **views**
+    - acts towards other men important as towards god
+    - filial piety (children reverent respect elders)
+      - actions + feelings
+    - ren, deepconcern for well-beings of others (extendable to everyone)
+  - Learned man (court expert assited rules in rituals and ceremonies) -> teacher
+    - students learn **Book of Songs, Book of Documents, ritual texts**
+      - **Mencius, first important student**
+        - talk to rulers
+          - wanted people had enough to eat at every meal in good years, avoid starvation in bad years
+          - reduce taxes, lighter punishments
+          - cared about commoners and officials to be treated better
+        - Moral philosphy debates
+          - human potential for goodness
+        - **Mencius**, philosophers conversations
+      - **Xunzi / Master Xun**
+        - rule through ritual and virtue
+        - HUmanistic and rationalistic view
+          - HUman affair results from human efforts
+        - Traditional rituals
+          - provide orderly way to express feelings and satisfy desires while maintaining distinction of rank, title, and honour
+        - ritual and ettique shape understanding of duty and create social differentiation
+        - inborn in people and learnt with effort
+          - not because of goodness from Mencius
+  - The Great Learning, Doctrine of the Mean
+    - more self-improvement, must change oneself before change others or the world
+- **Daoism**
+
+  - **private life, rulers leave people alone**
+  - humans are not the center
+    - affected the **Dao / Way**
+      - energy that is source of all that exists
+  - Laozi and Zhuangzi books
+    - Laozi
+      - rulers allow natural state where people are ignorant and content
+      - if people gave up stuff, would be satisfied with own life and not envy neighbors
+      - focused on protecting each person's life
+    - Zhuangzi
+      - similar to laozi, usefulness of useless and relativity of ordinary dinstinctions
+      - focused on reconcile him to death
+        - views of life and death coloured political views
+
+- Confucianism vs Doaism
+
+  - Confucianism
+    - ethically correct way for humankind
+    - focus on human affairs
+  - Daoism
+    - way of nature
+    - human society a small part of reality
+    - freedom and power, people see continuity of natural world
+
+- **Legalism**
+  - not morals, but **institutional structures**
+  - focus on laws, political solutions to disorder and techniques to accumlate power
+  - Qin state, Lord Shang
+    - mostly Legalistt policies
+    - no more aristocracy
+    - hiearchy of military titles (with privileges)
+      - based on number of heads
+    - Offered land and houses to new settlers
+    - private serfdom abolished, farmers can buy and sell land
+      - but Qin has direct control
+    - Mutual responsibility groups
+      - liable for others in group wrongdoings
+    - Lots of labor
+  - Han Feizi
+    - ruler is influenced by who he trusts
+      - avoid influence by manipulating competition among those he trust
+    - Laws and prohibitions should be clear, rewards and punishment automatic
+    - No room for right or wrong, diversity leads to weakness and disorder
+    - laws for the interest of the state
+- Other school of thoughts
+  - ideas
+    - logical puzzles
+    - withdrawal from public life
+    - noe one should eat who does not plough
+    - forces of nature
+    - battle tactics
+    - **yin and yang** important to process of natural order
+      - yin, feminine, dark, negative, and weak
+      - yang, masuline, bright, creative, positive, strong
+  - **Mozi**
+    - used entire population as yardstick
+    - territorial gain not worth for lost of lives
+    - mutual concern for all, no favoritism
+    - Mourning interrupts work and injures health
+    - Promoting the able and worthy
+- Music
+  - role in court life
+  - entertainment, but great influence on how people think
+- Silk
+
+  - symbol of wealth
+  - most valued textile
+  - silk worms
+  - women weave
+
+- States and Ethnic Identities
+  - who considered as "one of us"
+  - lots of moving, innovations, art motifcs spreading region to region
+  - outsides held to be deficient
+  - sophisicated understanding of customs
+    - people think whatever done in past is right
+    - culture is by-product of environment / accretion of custom
+      - can transform barbaian into civilized beings
+
 # whatever
 
 - Dynasties
