@@ -559,6 +559,7 @@
     - mutual concern for all, no favoritism
     - Mourning interrupts work and injures health
     - Promoting the able and worthy
+    - Sunzi (The Art of War)
 - Music
   - role in court life
   - entertainment, but great influence on how people think
@@ -577,6 +578,157 @@
     - people think whatever done in past is right
     - culture is by-product of environment / accretion of custom
       - can transform barbaian into civilized beings
+
+# Bureaucratic Empire
+
+- Qin (256 BC - 206 BC)
+  - Most west Zhou state
+  - Lord shang -> leaglist measures
+    - law-abiding, agricultural, direct tax
+  - King Zheng
+    - united China
+    - All-Under-Heaven
+      - Emperor (Shi huangdi)
+    - control over currency and land
+      - land -> 36 commanderies -> counties
+        - officials to admin land, prevent local leaders organizing
+      - private arms illegal to own
+      - education only for officials
+        - collected and burned everything that was not a manual
+      - reward reporting crimes, severe punishment (execution, labor, mutilation)
+      - people forced labor
+        - buildings, crows, tombs, etc
+        - Great Wall
+      - avoid 3 assinations, wanted to find immortality
+        - in Sea, mythical immortality land, Peng Lai
+    - Terracotta warriors to protect his tomb
+  - After King Zheng's death, lots of revolts, uprisings, assinations, etc
+- Han (202 BC - AD 220)
+
+  - Liu Bang (aka Gaozu)
+    - defeated Xiang Yu (rival)
+    - Chang'an as capital
+    - officials own localities via merit (not birth)
+      - subject to dismissal, transfer, and discipline
+    - perfects and magistrates
+      - taxes, lawsuits, ceremonies, commanded troops, eye on local eco and edu
+  - Wudi (141-87 BC) emperor
+    - lords land -> heirs land
+    - monopolies and commerical taxes
+    - instituited imperial rituals
+    - lured writers and scholars to his court, surpress rival cultural centers
+    - Superior-subordinate relation (confuscious beliefs)
+      - helped reach goals and eco
+      - morals: loyalty and responsibility
+  - (206 BC - AD 9) Former / Western Han
+  - Wang Mang (AD 9, Xin Dyntasty, short lived)
+    - political programmes described in classics (Confucian scholar)
+    - new coins and nationalization of gold -> economic turmoil
+  - After Wang Mang, Later / Eastern Han (25 - 220)
+
+- Sima Qian (History Records)
+  - pg 67
+- The Steppe and Silk Road
+  - Silk and lacquerware
+  - outsiders raided
+    - since Shang time and nomadism of China proper in mid Zhou
+  - farmers think badly of herders/nomads (bullies, robbing for living)
+  - Xiaongnu, 3rd century BC, first great confderation of nomadic tribes in Inner Asia
+  - Wudi sent big expeditions to wipe out Xiongnu
+    - Zhang Qian (Wudi's official)
+      - 115 BC, 2nd journey west (Ferghana, Parthia)
+      - **china first learned other civilized states comparable to China existed**
+    - 101 BC, defeated Ferghana, gained control over trade routes across Central Asia
+  - 55 BC, Xiongnu -> broke up -> 5 contending groups
+    - Tribute system
+      - vassal states -> send prince to capital as hostage -> give Chinese education for many gifts
+      - opportunity for trade, avoided war, confirmed China is center of world
+    - Silk went far west
+      - for gold, horses, luxury goods (beads and cups)
+    - AD 97, Ban Chao and Ban Yong secured silk road
+      - city-states protected by Chinese garrisons, avoids rival tribes raiding
+  - Chu region
+    - Han founder, han art and literature rich of spirits, portents, myths
+    - **Huainanzi**, compilation of texts
+      - magic realm of immortality
+      - Wudi interested in
+    - fate of the dead
+      - lighter heavenly part, earhtly part near grave (food and goods)
+        - if no food/goods then might anger ghosts
+    - Queen mother of god
+      - everyone expressed devotion to her
+- Agrarian economy (Han dynasty)
+  - new improvements
+    - two crops in alternate rows
+    - succession of carefully timed crops
+    - ploughs had adjustable struts
+    - oxen to draw ploughs
+    - canal projects
+    - brick-faced wells to ordinary farmers
+    - donkeys as pack animal
+    - wheelbarrow
+  - fragile economy
+    - land tenure, inheritance practices, gov fiscal policies
+      - small family farms and large landed states, rapid mobililty between wealthy and poverty
+    - famers worked very hard all year round
+      - labor service for gov
+      - needed funds for guests, burying dead, visiting sick, caring and raising kids
+      - ruined by floods/droughts, taxes, changes to orders
+      - may have to sell land, houses, child, grandchildren to survive
+      - **equal division of property among all sons**
+        - need survival of male heir to continue sacrifices
+        - needed enough property to allow all sons to marry and support a family
+    - Poor peasants forced to migrate to new lands
+    - Taxes were big part of the economy
+    - gov monopolies established in iron, salt, liquor, and enterprises
+      - This caused bussiness life to suffer
+    - grain dealing
+- Confucianism in Han
+  - didn't eliminate other schools of thought
+  - confucianism gained privleged position at court
+    - Wudi built state educational system to train officials in confucianism
+      - **Five classics**
+        - Book of Changes
+        - Book of Documents
+        - Book of Song
+        - Book of Rites
+        - Spring and Autumn Annals
+      - man didn't have to come from official family to enter civil service
+        - Imperial academy
+        - Lots of students wanted to learn to gain power and prestige
+    - Tried to revive books that were destroyed by Qin gov and traditions around them
+      - new texts
+        - han period, oral recitation of elder scholars who memorized the classics before destroyed
+      - old texts
+        - zhou period, discovered hidden in wall in home of descendants of Confucius
+  - scholars
+    - opposed activist policies
+      - monopolies, questioning morality, effect on livelihood
+    - reduce imperial extravagance spending
+    - oppose eunuchs in court
+      - resulting in inner vs outer court
+  - local officials
+    - promoting education, promosing young men to advance study at capital
+  - **paper** invention helped education spread
+    - more books
+- Colonizing the South
+  - Lots of conolization in South
+  - full assimilation or dealth with military force
+  - adventureres contributed to Chinese expansion
+    - **Chao Tuo**
+      - controlled Guangdong, allied with Yue
+        - King of Southern Yue
+      - used local warriors as generals and officers
+      - died 93 years old
+- Fall of Han
+  - enuchs vs empresses for control of court
+  - AD 124, coup, manipulate child at throne
+    - AD 159, emperor turned to eunuchs for actions -> lots of deaths from opposition
+  - fiscal resources gettign worse, can't support bad harvests
+    - 153, locusts and flood
+  - 184, Way of Great Peace, daoist inspired religious cult
+    - zealots -> simulatenously attacked many government offices
+  - Warlord gained control of Luoyang capital
 
 # whatever
 
