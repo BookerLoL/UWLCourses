@@ -229,57 +229,241 @@
       - **Number of leaves In full binary tree**
         - <img src="https://latex.codecogs.com/gif.latex?l&space;=&space;(n&space;&plus;&space;1)&space;/&space;2" title="l = (n + 1) / 2" />
 
-- Basic Probability
+## Basic Probability
 
-  - Event A is subset of S
-  - Probability is a function which associates A with number between 0 and 1
-  - measure change/likelihood A will happen
-  - Properties
+- Event A is subset of S
+- Probability is a function which associates A with number between 0 and 1
+- measure change/likelihood A will happen
+- Properties
 
-    - P() is probability function, event A
-      - P({}) = 0
-      - P(A) <= 1
-      - P(A') = 1 - P(A)
-        - A' is complement of A
-      - P(S) = 1
-    - If outcomes S are equally likely
-      - P(A) = #A / #S
-        - #A is total elements in A
+  - P() is probability function, event A
+    - P({}) = 0
+    - P(A) <= 1
+    - P(A') = 1 - P(A)
+      - A' is complement of A
+    - P(S) = 1
+  - If outcomes S are equally likely
+    - P(A) = #A / #S
+      - #A is total elements in A
 
-  - Product Rule
-    - job consisting of K seperate tasks
-      - ith job can be done in ni ways for 1 = 1, ...k
-      - job can be done in n1 x n2 ... nx nk ways
-  - Expectation / Expected Winnings
-    <img src="https://latex.codecogs.com/gif.latex?E\left&space;[&space;X&space;\right&space;]&space;=&space;\sum_{i=1}^{k}&space;x_{i}p_{i}" title="E\left [ X \right ] = \sum_{i=1}^{k} x_{i}p_{i}" />
-    - x are outcomes
-    - p are probabilities
-    - ex:
-      - Roll die
-        - 1, 2, 3 then you win $2
-          - 3/6 chance for 2
-        - 4, 5, 6 then you lose $1
-          - 3/6 chance for -1
-        - (.5 \* 2) + (.5 \* -1) = expected winnings
-  - Permutation
-    - Choose k subjects out of n subjects **without replacement, order matters**
-      <img src="https://latex.codecogs.com/gif.latex?P_{k,&space;n}&space;=&space;\frac{n!}{(n-k)!}" title="P_{k, n} = \frac{n!}{(n-k)!}" />
-  - Combination
-    - Choose k subjects out of n subjects **without replacement, order does NOT matter**
-      <img src="https://latex.codecogs.com/gif.latex?C_{k,&space;n}&space;=&space;\binom{n}{k}&space;=&space;\frac{n!}{(n-k)!k!}" title="C_{k, n} = \binom{n}{k} = \frac{n!}{(n-k)!k!}" />
-  - Binomial distribution
-    - n, total number of independent experiments
-    - p is discrete probaility distribution of number of successes in sequence of independent experiments
-    - propability of p
-      - failure: 1 - p
-    - Bernoulli trial / experiment
-      - single success/failure experiment
-    - Bernoulli distribution
-      - n = 1, k = 0 or 1
-    - Equation
-      <img src="https://latex.codecogs.com/gif.latex?Pr(X&space;=&space;k)&space;=&space;\binom{n}{k}&space;p^{k}(1-p)^{n-k}" title="Pr(X = k) = \binom{n}{k} p^{k}(1-p)^{n-k}" />
-      - combination x success x failure
+- Product Rule
+  - job consisting of K seperate tasks
+    - ith job can be done in ni ways for 1 = 1, ...k
+    - job can be done in n1 x n2 ... nx nk ways
+- Expectation / Expected Winnings
+  <img src="https://latex.codecogs.com/gif.latex?E\left&space;[&space;X&space;\right&space;]&space;=&space;\sum_{i=1}^{k}&space;x_{i}p_{i}" title="E\left [ X \right ] = \sum_{i=1}^{k} x_{i}p_{i}" />
+  - x are outcomes
+  - p are probabilities
+  - ex:
+    - Roll die
+      - 1, 2, 3 then you win $2
+        - 3/6 chance for 2
+      - 4, 5, 6 then you lose $1
+        - 3/6 chance for -1
+      - (.5 \* 2) + (.5 \* -1) = expected winnings
+- Permutation
+  - Choose k subjects out of n subjects **without replacement, order matters**
+    <img src="https://latex.codecogs.com/gif.latex?P_{k,&space;n}&space;=&space;\frac{n!}{(n-k)!}" title="P_{k, n} = \frac{n!}{(n-k)!}" />
+- Combination
+  - Choose k subjects out of n subjects **without replacement, order does NOT matter**
+    <img src="https://latex.codecogs.com/gif.latex?C_{k,&space;n}&space;=&space;\binom{n}{k}&space;=&space;\frac{n!}{(n-k)!k!}" title="C_{k, n} = \binom{n}{k} = \frac{n!}{(n-k)!k!}" />
+- Binomial distribution
 
-- Quick review
-  - broadcast subnet capacity wasted when multiple hosts attempt to access channel at same time
-  - Fraction of slots wasted to collision given each time slot divided into discrete slots, with each n hosts attempting to use channel with probability p
+  - n, total number of independent experiments
+  - p is discrete probaility distribution of number of successes in sequence of independent experiments
+  - propability of p
+    - failure: 1 - p
+  - Bernoulli trial / experiment
+    - single success/failure experiment
+  - Bernoulli distribution
+    - n = 1, k = 0 or 1
+  - Equation
+    <img src="https://latex.codecogs.com/gif.latex?Pr(X&space;=&space;k)&space;=&space;\binom{n}{k}&space;p^{k}(1-p)^{n-k}" title="Pr(X = k) = \binom{n}{k} p^{k}(1-p)^{n-k}" />
+    - combination x success x failure
+
+## Internet and Layer Design Issues
+
+- internetworks / internet
+  - collection of interconnected networks
+  - generic sense
+- Internet (Specific internet)
+
+  - ISP networks to connect enterprise networks, home networks, and other networks
+  - evolved from ARPANET
+    - first operational packet network
+    - developed to solve problem of communicating across arbitrary, multiple, packet-switched networks
+    - Led to Foundation of TCP/IP protocol suite
+  - Internet operations
+    - data -> sequence of IP packets (diagram)
+    - packet -> travel series of routers and networks
+    - each router, receive packet, decide routing and forward packet
+
+- Internet Architecture
+  - Network Access Point (NAP)
+    - ISP can connect with one another in peering arrangements
+      - ex: gov to commercial (ISP to ISP)
+  - Point of Presence (POP)
+    - 2+ networks/communication devices build connection with each other
+      - ex: local user connect with company network (ISP)
+- Customer-premises Equipment (CPE)
+  - communication equipment located onsite with the host
+    - service and capacity
+  - ex: DSL, cable modem, setlett
+- Internet Example Configuration
+  - IP backbone network at center
+    - At periphery
+      - edge routers / aggregate routers
+      - provide connectivity to external network and user
+  - Large enterprise network
+    - ATM (Asynchronous Transfer Mode) WAN
+    - router with firewall
+  - Small/business
+    - ethernet LAN configuration
+    - router to the internet (DSL)
+  - Mobile devices
+    - through cellular network
+- Protocol Architecutre
+  - Need for protocol architecture
+    - data exchange involve complex procedure
+    - better if task broken into subtasks
+    - subtask modules arranged in vertical stack
+    - implement each module separately
+      - layers shouldn't affect other layers
+      - provide functions to perform communication for layers above
+      - use functions provided by layers below
+    - Peer layers communication with protocol
+  - Key features of Protocol
+    - set of rules that allow peer layers to communicate
+    - components
+      - syntax
+        - forms of data blocks
+      - semantics
+        - control information and error handling
+      - timing
+        - speed matching and sequencing
+- Network Software
+
+  - No exact architecture / topology of internet
+  - Network structured in layers
+    - built upon layers below
+    - reduce design complexity
+  - Protocol Hierarchy
+    - Layer n communication process
+      - virtual communication
+      - data and control to the next lower level
+      - interface between each pair of adjacent layers
+    - Peers
+      - entities comprising the corresponding layers on different machiens
+      - communicate using protocol to talk to each other
+    - Physical medium
+      - actual communication occurs
+    - Network architecture
+      - set of layers and protocols
+      - hides detail implementation and specification of interfaces
+    - Protocol stack
+      - list of protocols (1 protocol per layer)
+    - Lower protocol layers often implemented/embedded in hardware/firmware
+
+- Layer Design Issues
+  - Addressing
+    - Network growth and evolution
+    - Addressing
+      - network layer
+    - Considerations
+      - Each layer have mecanism to idenify sender and receiver addresses
+      - Rules for data transfer
+        - single direction
+          - simplex communication
+        - bidirection but only one direction at a time
+          - half duplex communication
+        - bidirectional including both directions simultaneous
+          - full duplex communication
+  - Error Control
+    - Reliability despite failures
+    - Codes for error detection/correction
+      - data link layer
+    - Considerations
+      - error detection
+        - find and resend
+      - error correction
+        - recover info
+      - Tradeoff?
+        - need to redundant info
+      - used at low layers
+  - Flow Control
+    - Reliability despite failures
+    - Error/flow control
+      - transport layer
+    - Consideration
+      - piecing messages together from receiver
+      - accomodating for differnet message lengths
+  - Multiplexing
+    - Allocation of resources like bandwidth
+    - Multiple access
+      - medium access layer
+    - Congestion control
+      - network and transport layers
+    - Consideration
+      - multiplex/demultingplexing to share network dynamically
+        - according short-term needs host
+    - Situation
+      - cost ineffective or impractice to set up individual connections for each pair of communiction press
+  - Routing
+    - reliability despite failures
+    - routing around failures
+      - network layer
+- Relationships between services and protocols
+
+  - adjacent layers in protocol architecture
+
+    - Primitives
+      - specify function to be performed
+    - Parameters
+      - use to pass data and control info
+
+  - Primitive Types
+    - Request
+      - issue by service user to invoke service and pass params to specify request service
+    - Indication
+      - service provider
+        - indicate procedure has been invoked and provide associated params
+        - notify user of provider intiated action
+    - Response
+      - issued by service user to acknowledge or complete some procedure previously invoked by indication
+    - Confirm
+      - service provider to acknowledge or coplete procedure previously invoked by request
+  - Confirmed Service
+    - request, indication, response, confirm
+  - Nonconfirmed service
+    - request and indication
+
+- Connection-Oriented vs Connectionless Services
+  - Connection-oriented service
+    - modeled after telephone system
+    - user stablshes connection, uses connection, release connection
+    - **connection prior to communication**
+      - reliable
+        - file trasnfer
+        - movie download
+  - Connectionless Service
+    - modeled after postal system
+    - each message carries full destination address and routed through intermediate inside the system independently
+    - **messages handled separately**
+      -example
+      - spammers and junk email
+- Services and Protocols
+  - Service
+    - set of operations/primitives that a layer provides to the layer above it
+    - nothing about implementation
+    - interface between two layers to provide service (**vertical**)
+      - lower layer
+        - service provider
+      - upper layer
+        - service user
+  - Protocol
+    - set of rules governing format and meaning of frames, packets, or messages exchanged by peer entites within layer
+      - protocols to implement service definition
+      - free to change protocols at will
+      - service visible to users
+      - service and protocol completely decoupled
+    - layer talks to peer using protocol (**horizontal**)
