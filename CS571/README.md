@@ -467,3 +467,238 @@
       - service visible to users
       - service and protocol completely decoupled
     - layer talks to peer using protocol (**horizontal**)
+
+## Reference Models
+
+- Reference Models
+
+  - describes layer in network architecture
+  - models
+
+    - OSI reference model
+
+      - model is useful, but protocols are not
+      - layers
+
+        1. Application
+
+           - provides functions needed by user
+
+        2. Presentation
+
+           - syntax and semantic of info transmitted, different representations
+
+        3. Session
+           - manage task dialogs, synchronization
+        4. Transport
+
+           - provide end-to-end delivery
+
+        5. Network
+           - sends packets over multiple links, determines how to send packets
+        6. Data Link
+           - sends frames of info
+        7. Physical
+           - send raw bit signals
+
+    - TCP/IP reference model
+
+      - model is not useful, but protocols are useful
+      - layers
+
+        1. Application
+
+        - provides session and presentation functions
+
+        2. Transport
+
+        - provide end-to-end delivery
+
+        3. Internet
+
+        - deliver IP packets where they are supposed to go
+
+        4. Link
+
+        - interface bewteen host and transmission links
+
+      - Protocols in each layer
+        - Application
+          - HTTP
+          - SMTP (email)
+          - RTP (real time mediums / voice / movies)
+          - DNS
+          - FTP
+        - Transport
+          - TCP
+          - UDP
+        - Internet
+          - IP
+          - ICMP
+            - Internet control message protocol
+            - error reporting
+            - sends and creates messages router/service/host can't be reached for packets
+            - any IP networked device can send/receive/possess ICMP messages
+        - Link
+          - DSL
+          - SONET (synchronous data transmission)
+          - 802.11 (wireless local network)
+          - Ethernet
+
+- Standardized Protocol Architectures
+  - layer architecture
+  - functions well defined
+  - standards developed independently for each layer
+  - boundaries well defined
+    - changes in one layer won't affect layer in another
+  - Lower layers concerned with more levels of detail
+  - each layer provides services to higher layer
+  - layer standards
+    - service definition
+      - functional description for internal use
+      - what services are provided
+        - not how
+    - addressing
+      - service access point (provides service to next higher layer)
+    - protocol specification
+      - precise syntax and semanics for interoperability
+      - protocol elements
+        - format of PDU (protocol data units)
+        - semantics of all fields
+        - allows sequence of PDU
+- TCP/IP Protocol Architecture
+  - result of protocol research and developed conducted on ARPANET
+    - ARPANET, experimental packet-switched network
+    - funded by Defense Advance Research Projects Agency (DARPA)
+  - TCP/IP protocol suite
+  - Protocol suite, comprises large collection of standardized protocols
+  - Layers
+    - Physical Layer
+      - physical interface between comuter and network
+      - concerned with
+        - characteristics of transmission midium
+        - signal levels
+        - data rates
+    - Data Link Layer / Network Access
+      - exchange data between end system and attached network
+      - concerned with
+        - destination address provision
+        - access to and routing data across network link between two attached systems
+        - invoking specific services like priority
+        - software depends on type of network used
+      - allows layers above to ignore link specifics
+    - Internet Layer (IP)
+      - implemented in all end system and router
+      - allow data to traverse multiple interconnected networks
+      - provide communication between devices that are attached to diff networks
+      - IP protocol to provide routing function
+      - implemented in end systems and routers
+        - routers connect two networks and relay data between them
+    - Transport Layer (TCP)
+      - host-to-host layer
+        - only implemented in end systems
+        - keep track of data to assure all are delivered reliably to appropriate application
+      - common layer shared by all applications
+      - provides reliable delivery of data
+      - data exchanged reliably is requried
+        - all data arrive at destination
+        - in same order as sent
+    - Application Layer
+      - provude support for user applications
+      - need separate module for each type of application
+- Operation of TCP and IP
+
+  - steps
+    - process on Host A, send message to process on Host B
+    - TCP -> msg -> IP with instructions to send it to host B
+    - IP -> packet -> network access layer with instructions to send to router J
+  - Addressing Requirements
+    - each host on subnet needs unique network address
+      - IP address
+    - each application on host needs unique address within host
+      - port
+  - Data transmission
+    - User data by application of byte styeam
+    - TCP segment: TCP Header + data
+    - IP datagram: IP header + TCP segment
+    - Network-level packet/frame: Network header + IP datagram
+
+- Transmission Control Protocol (TCP)
+
+  - usual transport layer
+  - TCP segment, basic protocol unit
+  - Provides reliable connection for transfer of data
+    - connection, temporary logical association btween two entities in different system
+    - logical connection, given pair of port values
+  - Tracks segments between entities for duration of each connection
+    - to regulate flow of segments
+    - to recover from lost/damaged segments
+  - TCP Header
+
+    - 20 octects, 1 octect = 8 bits
+    - source port | destination port
+    - flow control and error control
+      - sequency number
+      - acknowledgement number
+      - window
+    - checksum 16 bit to detect errors in TCP segment
+    - Header length 4 bit
+    - Reserved 3 bits
+    - Flags, 9 1 bit flags
+
+- User Datagram Protocol (UDP)
+
+  - alternative of TCP
+  - no guaranteed delivery
+  - no preservation of sequence
+  - no protection against duplication
+  - Minimum overhead
+    - enable procedure to send message to other procedure with minimum of protocol mechanism
+  - connectionless
+  - adds port addressing to IP
+  - UDP header
+    - Source port | Destination port
+    - checksum, optiona
+
+- IP Header (IPv4)
+
+  - minimum of 20 octects
+  - IP Datagram / packet
+  - 32 bit source and destination address
+  - header checksum
+  - protocol
+  - Id, flags, fragment offset
+  - version, IPv4 = 4
+  - IHL, size of header
+  - DS, real time streaming
+  - ECN, ene to end notification injection without dropping packets
+  - total length, entire packet size in bytes including header and data
+
+- IPv6
+
+  - 1996, developed by IETF (Internet Engineering Task Force)
+  - Functional enhancements of existing IP
+  - accomodate higher speeds and mix of data streams
+  - Driving force: need for more addresses
+  - IPv6 includes 128-bit source and destination fields
+
+- OSI vs TCP/IP
+  - OSI (Open Systems Interconnection)
+    - developed by ISO
+    - 7 layers
+    - theorectical system delivered too late
+    - TCP/IP is fact standard
+  - TCP/IP
+    - key protocols were mature and well tested while similar OSI protocols were in development
+    - OSI model is uncessarily complex
+
+![TCP/IP Applications](./tcp_ip_applications.png)
+
+- Model used in thise course
+  - based on TCP/IP model
+  - Layers
+    - Application
+    - Transport
+    - Network
+    - Link
+    - Physical

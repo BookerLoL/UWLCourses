@@ -257,3 +257,83 @@ $$Language plpgsql;
 create trigger check_full before insert on copy
   for each row executre procedure check_full();
 ```
+
+## Normalization
+
+- BCNF to reduce funtional dependencies
+
+- Redundancies
+  - attribute value appears in many places
+  - allows room for inconsistencies
+- Anaomalies
+
+  - update
+    - if changed, must change in many places
+  - delete
+    - deletes an attribute can result in losing information about other things
+  - insert
+    - must wait to insert until there exists a value
+
+- Functional dependencies
+
+  - FD, X -> A
+  - Given determinant, same value must always result in same dependency
+
+    - if given 10 -> A then must always be 10 -> A
+
+  - Armstrongs Axioms
+    - Reflexivity
+      - if Y subset of X, X -> Y
+    - Augmentation
+      - if X -> Y, then XZ -> YZ
+    - Transitivity
+      - if X -> Y and Y -> Z then X -> Z
+    - Union
+      - if X -> A and X -> B then X -> AB
+    - Decomposition
+      - if X -> AB then X -> A, X -> B
+  - Closure of set is F+
+  - Two FD sets are equivalent iff F+ = G+
+
+  - Attribute closure
+
+    - need FD set
+    - find other dependencies that are implied
+      - given X attributes
+
+  - super keys
+    - can determine all the attributes in the table
+      - find closure of key
+  - key
+    - superkey and no proper subset of key has super key property
+    - **every key is a super key, but not every super key is a key**
+  - candidate key
+  - primary key
+
+- 1NF
+  - attribute values are atomic
+  - no repeating groups
+    - no lists in the form of a columns or list values in a row
+- 2NF
+  - no partial key dependency exists
+  - no non-prime attribute functionally determined by proper subset of a key
+  - right side is subset of left side
+- 3NF
+  - X -> A, X is super key or A is prime attribute (key attribute)
+- BCNF
+
+  - X -> A, X is super key
+
+- Create 3NF tables
+  - Identify all attributes
+    - universal table: identify all attributes in R
+    - designer works with customers
+      - may need to create artificial key
+  - create minimal cover FD set, G from F
+  - apply 3NF synthesis using FD set G and set of attributes R
+- Minimal Cover Set
+  - cover set G, of an FD set F is FD set such that
+  - G is equivalent to F
+  - no FD can bre removed to create a smaller but equivalent FD set to F
+  - no FD can have attribute removed to create a smaller but equivalent FD set to F
+  - minimal cover set are not unique
