@@ -730,6 +730,55 @@
     - zealots -> simulatenously attacked many government offices
   - Warlord gained control of Luoyang capital
 
+## Buddhism
+
+- 220-589, political division, no control
+
+  - 220-265, three kingdoms
+  - 265-316, Western Jin, reunified
+    - fell to internal squabbling
+      - North taken by alien rules
+      - Souyth transplanted cout of emigre aristocrats
+  - social inequalitity
+    - aristocrats at top
+    - personal bondate at bottom
+  - Religion increased
+    - salvation and trascendence
+
+- Three Kingdoms
+  - 205, poet-general CaoCao dictator of North China
+    - huge state farms from war lands
+      - landless poor and capture rebels work there
+    - recruited Xiongnu tribesmen
+  - 220, son, Cao Pei
+    - force abdication of last Han emperor
+    - Founded Wei dynasty at Luoyang
+  - Wu state
+    - Sun Ce and Sun Quan
+    - central and lower Yangzi valley
+  - Shu State
+    - Liu Pei (Han Imperial Family) and Zhuge Liang
+    - 2x population and largest army -> won, forced out Wei Dynasty
+- Jin Dynasty
+
+  - Confucian beliefs decreased
+    - Study of Mysterious, popular
+    - reinterpreted Book of Changes and Zhuangzi
+  - Clique struggles at court
+  - Search of naturalness and spontaneity
+    - burst of self-expression in the arts, poetry
+      - five syllable lines of poetry
+      - Seven Sages of Bamboo Grove
+  - Failed autocratic imperial institution
+    - families of empresses, lots of assinations
+    - can't control civil service
+      - nine rank system into assigning based on standing of family
+    - gave lots of land to imperial princes
+      - led to many civil wars
+
+- 89
+- pg108
+
 # whatever
 
 - Dynasties
