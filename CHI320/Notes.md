@@ -775,6 +775,139 @@
       - nine rank system into assigning based on standing of family
     - gave lots of land to imperial princes
       - led to many civil wars
+  - 304, Liu Yuan, Xiongnu chief
+    - "King of han"
+    - 304-439, northern china was a battleground
+      - banditry, family -> forts and organized self-defence forces
+        - economy bad -> many fled south of Yangzi
+  - 420-589, 4 Southern Dynasties
+
+    - Ruled from Nanjing
+      - Song
+      - Qi
+      - Liang
+      - Chen
+    - wanted imperiral institutions, but not the ability to concetrate power
+      - issues because hereditary aristocracy in higher reaches of officialdom
+        - nine rank system abuse
+          - stayed in power, assured government salaries, exemption from salary and labor
+    - Benefit of captial in south
+      - temperate climate, ample supply of water -> taxable agricultural lands
+        - affected local inhabitats and tax-payers
+    - 548, Warlord, Hou JIng
+    - Tuoban clan of Xianbei, agriculture into Wei Dynasty (439 - 534)
+
+      - brought back lots of people from northern Shanxi
+
+    - 486, Nortern Wei, overhal on Fiscal System
+      - state owned all land
+        - small amount land except for powerful families
+      - government asserted power to assign and tax land
+    - 490s, Emperor Xiaowen
+      - ruins of Luoyang -> new city
+      - Xianbei (imperieral house meaning)
+      - chinese lang and dress at court
+      - intermarriage between Xianbei and elites
+    - 524, LUoyang sacked
+      - Ruanruan and turks hate sinified Xianbei aristocrats
+    - Qi Dynasty (552-577)
+      - East and Northern China
+    - Zhou dynasty (557-581)
+      - West / North
+      - Got Chen to join (77), invaded qi
+      - later usurped by a general -> Sui dynasty
+    - Reunification
+      - because of divisional militia
+        - won't bankrup state
+        - volunteer famer-soldiers at capital/frontier
+        - cavalrymen had to provide own horses
+        - let soldiers farm when not training/campaigning
+        - easy to co-ordinate and command than military forces
+
+  - 'good' vs base/ignoble (multated criminals / slaves)
+    - zhou and han period mostly
+    - may sell wife and children to be slaves/bondservants
+    - punish kidnapping 'good'
+    - many till land and help out in battles, private soldiers, dependants
+    - tribe winnings, losing people -> enslaved
+  - Buddhism
+    - Shakyamuni, Buddha, "enlightened one"
+      - karma and reincarnation
+        - enless cycle of life
+        - move up and down by karma
+      - desires and attachments were source of suffering
+        - live ethical and spiritual exercises to fix it
+          - escape rebirth into nirvana
+    - Sutras
+      - huge corpus of scriptures
+    - Introduced into China
+      - Tade routes from norther India to Buddhist kingdoms (Khotan and Kucha)
+      - Mahyana Buddhist
+        - pursuing nirvana was selfish
+        - become a bodhisattva, advanced spiritual standing, postponed nirvanna to help others
+    - End of Western Jin, Buddhism more popular in China
+    - Helped unify ethnically mixed population (aliens and China can be together)
+    - Kumarajiva, Chang'an, monks translate texts
+    - Faxian, monk went to India 399, 414 returned, discover what was lost in translation
+    - Huiyuan, learned Kumarajiva, founded monastery on Mount Lu in Jiangxi
+      - 404, On Why MOnks Do Not Bow Down Before Kings
+      - Buddhists make good subjects
+    - Addressed questions of suffering and death
+      - afterlife, salvation, may release from suffering
+      - against taking life
+    - women less than men, but women can pursue salvation equal to men
+    - indifferent to class and ethnicity
+      - not much diffrence between male and female
+    - Wudi of Liang
+      - generous imperial patron
+      - banned meat and wine from imperial table, built temples, wrote commentaries on sutras, assemblies of monkeys and laymen
+    - Doaistss and Confucians denounced ideas and practices as immoral or unsuited
+      - shaving head, cremating dead
+      - celibacy
+      - refused homage to ruler and tax
+    - Counter argument
+      - uptmost expression of filia piety
+      - praying is aiding the state
+  - higher religion
+    - body of sacred texts and clergy expert
+  - Daoist Religion
+    - notions of predestination and reincarnation
+    - competeting with buddhism
+  - Buddhism vs Daoism
+    - Doaism
+      - better spells, hygiene techniques for immortality, control over malevolent local gods
+    - BUddhism
+      - loftier principles, technies for salvation, helping deceased love ones achieve better rebirths
+    - Both consider local dieters as less figures than theirs, reject offering meat to gods
+  - Differential Regional Development
+    - North aristocrats
+      - confucian traditions
+      - prestiege, power, connections to elite families
+      - mastery of classics and histories
+      - started near home (countryside), entry-level positions then prefect commanding troops
+    - South aristocrats
+      - settled there as homesick refugees
+      - gov salaries
+      - cultivate arts
+        - witty conversation, wine, peotry
+        - literary, artistic, philosophical works
+        - caligraphy and painting
+    - Helped buddhism
+      - North
+        - close to Central Asia, aware of foreign origins
+        - translations
+      - SOuth
+        - sinification
+        - interpretation and elaboration of ideas
+    - Status of Son of Heaven
+      - North
+        - geography
+          - control region of all place sacred/memorable in history
+      - South
+        - used ethnicity of rulers
+        - rituals of succession
+  - Buddhist art
+    - pg 106
 
 - 89
 - pg108
