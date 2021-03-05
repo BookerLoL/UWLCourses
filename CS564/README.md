@@ -304,6 +304,7 @@ create trigger check_full before insert on copy
   - super keys
     - can determine all the attributes in the table
       - find closure of key
+        - closure must contain all attributes in relation
   - key
     - superkey and no proper subset of key has super key property
     - **every key is a super key, but not every super key is a key**
@@ -325,15 +326,76 @@ create trigger check_full before insert on copy
   - X -> A, X is super key
 
 - Create 3NF tables
-  - Identify all attributes
+  - Identify all attributes (to store in db) and all functional dependencies
     - universal table: identify all attributes in R
     - designer works with customers
       - may need to create artificial key
   - create minimal cover FD set, G from F
   - apply 3NF synthesis using FD set G and set of attributes R
 - Minimal Cover Set
+
   - cover set G, of an FD set F is FD set such that
   - G is equivalent to F
   - no FD can bre removed to create a smaller but equivalent FD set to F
   - no FD can have attribute removed to create a smaller but equivalent FD set to F
   - minimal cover set are not unique
+
+- Attribute Closure
+
+  - Check attributes that don't ever appear on right hand side
+  - example 1
+    - R = {A, B, C, D, E, F}
+    - FD
+      - ABF -> C
+      - CF -> B
+      - CD -> A
+      - BD -> AE
+      - C -> F
+      - B -> F
+    - ABC+
+      - ABC
+      - F
+    - ABD+
+      - ABD
+      - E
+      - F
+      - C
+
+- Minimal Cover Algorithm
+
+  1. Make all right hand side single attributes
+     - use decomposition
+  2. remove redundant attributes from LHS
+     - XB -> A, if X -> A implied then remove XB -> A, but keep X -> A
+  3. remove implied depndencies produced from step 2
+     - can remove equivalent dependencies
+       - ex: X -> A
+       - if can find A with closure of X without X -> A then remove X -> A
+  4. Combine FDs that have same LHS
+
+- 3NF Synthesis
+
+  - input: set of attributes R and FDs F
+
+  1. create minimal cover for F called G
+  2. for each FD in G creat a table
+  3. if none of the nwe tables contain a super key for universal table, create a new table containing the attributes of key for universal table
+
+- Lossless decomposition
+  - lossless if T1 intersect T2 -> T1 or T1 intersects T2 -> T2
+  - lossless if every valid T (relative to FDs), T = T1 natural join T2
+  - if don't have, will get more rows than should
+- Dependency Presevering Decomposition
+
+  - T1, T2 is decomposition of T with FD set F
+  - F1, F2 be FDs from F+ lie in T1 and T2
+  - preserving if and only if: F+ = F1 union F2
+
+- Decomposition of Tables
+
+  - 3NF synthesis is equivalent to series of lossless, dependency preserving decompositions
+  - lossless decomposition in BCNF is possible but dependency preserving may not
+    - would need to join in order to confirm constraint holds true
+
+- Removing 3NF or BCNF violator through decomposition
+  - break violator into it's own table
