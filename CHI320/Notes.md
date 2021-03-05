@@ -909,8 +909,137 @@
   - Buddhist art
     - pg 106
 
-- 89
-- pg108
+## Buddhism Online
+
+## Cosmopolitan Empire (617 - 907)
+
+- Sui Dynasty (581 - 617)
+  - reunited North and South
+    - force of arms
+    - conquer south
+      - naval and land attacks
+      - forced nobles and officials to move to **Chang'An, new Sui capital**
+  - Yang Jian, 581
+    - killed 59 princes
+    - known as Emperor Wendi (581-604)
+    - Buddhist Cakravartin King
+      - monarch uses military force to defend Buddhist faith
+    - labor serivce and military campaigns were onerous
+      - led to rebellions and fall of Sui
+- Tang Dynasty (618 - 907)
+  - Li Yuan was leader
+  - Taizong, son of Li Yuan
+  - cosmopolitan empire
+- Sui and Tang
+  - uniform taxes: grain, cloth, labor service relatively low
+    - household doubled
+  - fortications, marriage diplomacy, investiture rulers, trade and tribute missions, getting tribe to fight each other
+    - kept Turks in check
+  - **code of law**
+    - beatings, servitude, exile, death
+    - grade penalty based on relationship of parties
+      - servant kill master is more severe than vice versa
+  - Sui
+    - reduced prefectures and counties, ministry power to fill lower posts, officials can't serve in home prefecture or more than 1 tour
+    - **Civil Service Exam**
+      - literary abilities and knowledge of classics
+  - Tang
+    - state schools
+    - authorized versions of Five Classics
+    - selected commentaries
+  - exams
+    - upper class more bookish, less on martial skills (horsemanship, archery, swordsmanship)
+    - standardize and overcome differences in elites
+  - 605-609, Grand Canal
+    - linked Luoyang to Yangzi valley
+    - extended, 12000 miles
+    - wealth and supplies
+- Empress Wu (forceful, Tang period, 683-705)
+  - began as Gaozong's concubine
+  - got rid of rivals and sons
+  - 690, emperor
+  - circulated the Great Cloud Sutra
+    - Buddhist legitimation
+- Chang'an
+  - square grid
+  - west and east market
+  - large thick walls
+- Open to the outside
+  - Xuanzang, returning back from Asia and India
+  - envoys, merchants, pilgrims
+    - horses, jewels, musical instruments, textiles
+  - foreign fashion
+    - hair and clothes
+  - game of polo
+  - pottery
+  - other religions
+  - silver smithing
+    - from Persian designs and techniques
+  - new instrubments and tunes for music
+  - sitting in stools and chairs instead of mat
+- Development
+  - Tea popularlized
+  - maritime trade
+  - education period
+    - aristocrats
+      - confucian stuff not incompatible with Buddhism/Daoism
+      - learned more than 1 tradition
+      - calligraphy
+    - **poems**
+- Xuan Zong (712-756)
+  - grandson of Empress Wu
+  - grand scale ceremonies
+  - major codification of state ritual
+  - Tantric school of Buddhism
+  - poem academy
+  - new census and reformed equal field system
+  - ring of miltary provinces
+    - protect from Turkso, Uighurs, Tibetans
+  - fell in love with Yang Gufei
+    - gave power and men to Yang Gufei's company, An Lushan
+      - An Lushan, 755, rebelled, Xuanzong flees and has to kill Yang Gufei
+- Buddhism into Chinese Life
+  - monastaries ran schools
+  - loding for travellers
+  - litearati places for socail occassions
+  - land and lots of serfs -> mills and oill presses and open up new land
+  - changed imagination
+    - stories and festivals
+  - 841, economic drain due to rough times so supressed religions
+    - 745, rescinded orders
+- Life from centre
+  - **Dunhuang** northwestern edge of China proper
+  - equal-field system
+    - some rented land to tenants
+  - some education
+    - The Family Instructions of the Grandfather
+  - reproduce texts numerous ways
+  - Diamond Sutra, oldest printed book copy
+- Political and Economic Realignments
+  - restore order after An Lushan
+    - pardoned rebel leaders -> military govenors
+  - 780, abolished equal-field system
+  - quotas on tax, lee on raising funds
+  - **production and distribution of salt**
+    - surcharges on merchants -> indirectly pay tax
+    - led to Wine, tea also surcharged
+  - gave up supervision on operations of urban markets
+    - stimulated trade
+  - Eunuchs, execute officials when given chance to hold power
+  - Had allies with Tibet and Uighurs but they later fell
+  - after 860, lots of bandit gangs
+- Five Dynasties (907-960)
+  - 10 regional states
+- Du You
+  - Tongdian
+    - plea activist approach, gov strengthen centralized interventionist aspect of imperial rule
+    - food and money
+      - tributed Gao Jiong (Sui dynasty guy)
+      - **preferred well-designed gov control over leaving people to their own devices**
+  - better if long periods of peace and poulation growth
+- Han You
+  - brother of Du you
+  - preferred Confucian learning, Buddhism is barbarisnm
 
 # whatever
 
