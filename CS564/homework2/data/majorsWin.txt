@@ -1,0 +1,12 @@
+1|Math|Mth
+2|Stats|Mth
+3|Physics|Phy
+4|Classics|Phi
+5|Logic|Phi
+6|Philosophy|Phi
+7|CompSci|CSc
+8|SoftEng|CSc
+9|English|Eng
+10|Rhetoric|Eng
+11|RussianLit|Rus
+12|Sociology|Soc

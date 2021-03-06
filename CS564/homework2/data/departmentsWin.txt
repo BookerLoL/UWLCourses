@@ -1,0 +1,7 @@
+Mth|Archimedes Hall|314
+Phy|Newton Hall|200
+Phi|Lyceum|50
+Eng|Avon Hall|120
+Soc|Comte Hall|6
+CSc|Aiken Hall|2
+Rus|Puskin Hall|80

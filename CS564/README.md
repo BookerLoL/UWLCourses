@@ -173,6 +173,8 @@ select libnum from Library L1 where NOT Exists ( (select aid from Author) Except
   - \i file.sql
 - **\d**
   - show available tables
+  - \d table_name
+    - provides more details
 - **\conninfo**
   - current db info
 - **\cd**
@@ -197,6 +199,10 @@ select libnum from Library L1 where NOT Exists ( (select aid from Author) Except
 #### Postgres operations
 
 - create database db_name
+
+### Modules
+
+- ex: create extension cube;
 
 ### Stored Procedures and Triggers
 

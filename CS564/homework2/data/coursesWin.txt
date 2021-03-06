@@ -1,0 +1,174 @@
+Mth207|Calculus I|Fall|2014|5|1
+Mth208|Calculus II|Fall|2014|4|5
+Mth309|Linear Algebra|Fall|2014|4|10
+Mth310|Calculus III|Fall|2014|4|11
+Mth410|Abstract Algebra|Fall|2014|3|12
+Mth145|Statistics I|Fall|2014|4|16
+Mth245|Statistics II|Fall|2014|4|17
+Phy100|Physics I|Fall|2014|4|2
+Phy200|Physics II|Fall|2014|4|2
+Phy300|Mechanics|Fall|2014|4|2
+Phy400|Electricity and Magnetism|Fall|2014|4|2
+Phi100|Logic I|Fall|2014|3|3
+Phi200|Logic II|Fall|2014|3|3
+Phi300|Mathematical Logic|Fall|2014|3|6
+Phi150|Aristotle|Fall|2014|3|7
+Phi250|Kant|Fall|2014|2|7
+Eng100|English Literature I|Fall|2014|3|19
+Eng200|Science Fiction|Fall|2014|3|18
+Eng300|Satire|Fall|2014|3|20
+Soc100|Sociology I|Fall|2014|3|13
+Soc200|Sociology II|Fall|2014|3|13
+CSc100|Programming I|Fall|2014|4|4
+CSc200|Programming II|Fall|2014|4|9
+CSc300|Data Structures|Fall|2014|3|8
+CSc400|Compilers|Fall|2014|3|14
+CSc500|Computational Theory|Fall|2014|3|14
+Rus100|Russian Literature I|Fall|2014|3|21
+Rus200|Russian Literature II|Fall|2014|3|22
+Rus300|Russian Literature III|Fall|2014|3|23
+Mth207|Calculus I|Spring|2014|5|1
+Mth208|Calculus II|Spring|2014|4|5
+Mth309|Linear Algebra|Spring|2014|4|10
+Mth310|Calculus III|Spring|2014|4|11
+Mth410|Abstract Algebra|Spring|2014|3|12
+Mth145|Statistics I|Spring|2014|4|16
+Mth245|Statistics II|Spring|2014|4|17
+Phy100|Physics I|Spring|2014|4|2
+Phy200|Physics II|Spring|2014|4|2
+Phy300|Mechanics|Spring|2014|4|2
+Phy400|Electricity and Magnetism|Spring|2014|4|2
+Phi100|Logic I|Spring|2014|3|3
+Phi200|Logic II|Spring|2014|3|3
+Phi300|Mathematical Logic|Spring|2014|3|6
+Phi150|Aristotle|Spring|2014|3|7
+Phi250|Kant|Spring|2014|2|7
+Eng100|English Literature I|Spring|2014|3|19
+Eng200|Science Fiction|Spring|2014|3|18
+Eng300|Satire|Spring|2014|3|20
+Soc100|Sociology I|Spring|2014|3|13
+Soc200|Sociology II|Spring|2014|3|13
+CSc100|Programming I|Spring|2014|4|4
+CSc200|Programming II|Spring|2014|4|9
+CSc300|Data Structures|Spring|2014|3|8
+CSc400|Compilers|Spring|2014|3|14
+CSc500|Computational Theory|Spring|2014|3|14
+Rus100|Russian Literature I|Spring|2014|3|21
+Rus200|Russian Literature II|Spring|2014|3|22
+Rus300|Russian Literature III|Spring|2014|3|23
+Mth207|Calculus I|Spring|2015|5|1
+Mth208|Calculus II|Spring|2015|4|5
+Mth309|Linear Algebra|Spring|2015|4|10
+Mth310|Calculus III|Spring|2015|4|11
+Mth410|Abstract Algebra|Spring|2015|3|12
+Mth145|Statistics I|Spring|2015|4|16
+Mth245|Statistics II|Spring|2015|4|17
+Phy100|Physics I|Spring|2015|4|2
+Phy200|Physics II|Spring|2015|4|2
+Phy300|Mechanics|Spring|2015|4|2
+Phy400|Electricity and Magnetism|Spring|2015|4|2
+Phi100|Logic I|Spring|2015|3|3
+Phi200|Logic II|Spring|2015|3|3
+Phi300|Mathematical Logic|Spring|2015|3|6
+Phi150|Aristotle|Spring|2015|3|7
+Phi250|Kant|Spring|2015|2|7
+Eng100|English Literature I|Spring|2015|3|19
+Eng200|Science Fiction|Spring|2015|3|18
+Eng300|Satire|Spring|2015|3|20
+Soc100|Sociology I|Spring|2015|3|13
+Soc200|Sociology II|Spring|2015|3|13
+CSc100|Programming I|Spring|2015|4|4
+CSc200|Programming II|Spring|2015|4|9
+CSc300|Data Structures|Spring|2015|3|8
+CSc400|Compilers|Spring|2015|3|14
+CSc500|Computational Theory|Spring|2015|3|14
+Rus100|Russian Literature I|Spring|2015|3|21
+Rus200|Russian Literature II|Spring|2015|3|22
+Rus300|Russian Literature III|Spring|2015|3|23
+Mth207|Calculus I|Fall|2015|5|1
+Mth208|Calculus II|Fall|2015|4|5
+Mth309|Linear Algebra|Fall|2015|4|10
+Mth310|Calculus III|Fall|2015|4|11
+Mth410|Abstract Algebra|Fall|2015|3|12
+Mth145|Statistics I|Fall|2015|4|16
+Mth245|Statistics II|Fall|2015|4|17
+Phy100|Physics I|Fall|2015|4|2
+Phy200|Physics II|Fall|2015|4|2
+Phy300|Mechanics|Fall|2015|4|2
+Phy400|Electricity and Magnetism|Fall|2015|4|2
+Phi100|Logic I|Fall|2015|3|3
+Phi200|Logic II|Fall|2015|3|3
+Phi300|Mathematical Logic|Fall|2015|3|6
+Phi150|Aristotle|Fall|2015|3|7
+Phi250|Kant|Fall|2015|2|7
+Eng100|English Literature I|Fall|2015|3|19
+Eng200|Science Fiction|Fall|2015|3|18
+Eng300|Satire|Fall|2015|3|20
+Soc100|Sociology I|Fall|2015|3|13
+Soc200|Sociology II|Fall|2015|3|13
+CSc100|Programming I|Fall|2015|4|4
+CSc200|Programming II|Fall|2015|4|9
+CSc300|Data Structures|Fall|2015|3|8
+CSc400|Compilers|Fall|2015|3|14
+CSc500|Computational Theory|Fall|2015|3|14
+Rus100|Russian Literature I|Fall|2015|3|21
+Rus200|Russian Literature II|Fall|2015|3|22
+Rus300|Russian Literature III|Fall|2015|3|23
+Mth207|Calculus I|Fall|2016|5|1
+Mth208|Calculus II|Fall|2016|4|5
+Mth309|Linear Algebra|Fall|2016|4|10
+Mth310|Calculus III|Fall|2016|4|11
+Mth410|Abstract Algebra|Fall|2016|3|12
+Mth145|Statistics I|Fall|2016|4|16
+Mth245|Statistics II|Fall|2016|4|17
+Phy100|Physics I|Fall|2016|4|2
+Phy200|Physics II|Fall|2016|4|2
+Phy300|Mechanics|Fall|2016|4|2
+Phy400|Electricity and Magnetism|Fall|2016|4|2
+Phi100|Logic I|Fall|2016|3|3
+Phi200|Logic II|Fall|2016|3|3
+Phi300|Mathematical Logic|Fall|2016|3|6
+Phi150|Aristotle|Fall|2016|3|7
+Phi250|Kant|Fall|2016|2|7
+Eng100|English Literature I|Fall|2016|3|19
+Eng200|Science Fiction|Fall|2016|3|18
+Eng300|Satire|Fall|2016|3|20
+Soc100|Sociology I|Fall|2016|3|13
+Soc200|Sociology II|Fall|2016|3|13
+CSc100|Programming I|Fall|2016|4|4
+CSc200|Programming II|Fall|2016|4|9
+CSc300|Data Structures|Fall|2016|3|8
+CSc400|Compilers|Fall|2016|3|14
+CSc500|Computational Theory|Fall|2016|3|14
+Rus100|Russian Literature I|Fall|2016|3|21
+Rus200|Russian Literature II|Fall|2016|3|22
+Rus300|Russian Literature III|Fall|2016|3|23
+Mth207|Calculus I|Spring|2016|5|1
+Mth208|Calculus II|Spring|2016|4|5
+Mth309|Linear Algebra|Spring|2016|4|10
+Mth310|Calculus III|Spring|2016|4|11
+Mth410|Abstract Algebra|Spring|2016|3|12
+Mth145|Statistics I|Spring|2016|4|16
+Mth245|Statistics II|Spring|2016|4|17
+Phy100|Physics I|Spring|2016|4|2
+Phy200|Physics II|Spring|2016|4|2
+Phy300|Mechanics|Spring|2016|4|2
+Phy400|Electricity and Magnetism|Spring|2016|4|2
+Phi100|Logic I|Spring|2016|3|3
+Phi200|Logic II|Spring|2016|3|3
+Phi300|Mathematical Logic|Spring|2016|3|6
+Phi150|Aristotle|Spring|2016|3|7
+Phi250|Kant|Spring|2016|2|7
+Eng100|English Literature I|Spring|2016|3|19
+Eng200|Science Fiction|Spring|2016|3|18
+Eng300|Satire|Spring|2016|3|20
+Soc100|Sociology I|Spring|2016|3|13
+Soc200|Sociology II|Spring|2016|3|13
+CSc100|Programming I|Spring|2016|4|4
+CSc200|Programming II|Spring|2016|4|9
+CSc300|Data Structures|Spring|2016|3|8
+CSc400|Compilers|Spring|2016|3|14
+CSc500|Computational Theory|Spring|2016|3|14
+Rus100|Russian Literature I|Spring|2016|3|21
+Rus200|Russian Literature II|Spring|2016|3|22
+Rus300|Russian Literature III|Spring|2016|3|23
