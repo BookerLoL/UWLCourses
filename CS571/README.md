@@ -695,6 +695,7 @@
 ![TCP/IP Applications](./tcp_ip_applications.png)
 
 - Model used in thise course
+
   - based on TCP/IP model
   - Layers
     - Application
@@ -702,3 +703,176 @@
     - Network
     - Link
     - Physical
+
+# Physical Layer
+
+- communication in forms of electromagnetic waves
+
+  - media types
+
+    - guided media
+      - twisted pair, coaxial cable, optical fiber
+    - unguided media / wireless
+      - propagation through air, vaccum, seawater
+
+  - Types of Links
+    - Direct link
+      - transmission path between two devices
+      - no intermedia devices
+        - except for amplifier or repeaters used to increase signal strength
+      - both guided and unguided media
+    - Point-to-Point
+      - direct link between devices
+      - are only 2 devices sharing medium
+    - Multi-point
+      - more than 2 devices share same medium
+  - Transmission directions
+    - Simplex
+      - signals transmitted in only one direction
+      - one transmitter and receiver
+      - ex: TV / Radio
+    - Half duplex
+      - both stations can transmit but at only one time
+      - ex: walkie talkie
+    - Full duplex
+      - both stations may transmit simulatenously
+      - medium carrys signals in btoh directions at the same time
+      - ex: telephones
+
+- Analog and Digital Signals
+  - electromagnetic signals are function over time
+  - Time, domain, X axis
+    - Analog signal
+      - signal intensity varies in smooth fashion over time
+        - no breaks or discontinuity
+    - Digital signal
+      - signal intensity maintains a constant level for some period of time
+        and then abruptly changes to another
+        - discrete
+    - Periodic signals
+      - same signal pattern repeated over time
+      - ex: sine wave, square wave
+  - Sine wave
+    - fundamental periodic signal
+    - 3 parameters
+      - Peak amplitude (A)
+        - max value or strength of signal over time
+        - usually in volts
+      - Frequency (f)
+        - Rate at which signal repeats
+        - Heartz(Hz) / cycles per second
+        - Period (T) is amount of time for one reptition
+          - T = 1 / f
+          - inversely proportional to frequency
+        - Phase
+          - relative position in time within a signal period of a signal
+    - equation
+      <img src="https://latex.codecogs.com/gif.latex?s(T)&space;=&space;A&space;\sin(2\pi&space;ft&space;&plus;&space;\varphi&space;)" title="s(T) = A \sin(2\pi ft + \varphi )" />
+    - Wavelength (lambda)
+      - wavelength of a signal is distance occupied by a signle cycle
+        - distance between two consecutive cycles
+      - <img src="https://latex.codecogs.com/gif.latex?\lambda&space;=&space;v&space;T" title="\lambda = v T" />
+      - <img src="https://latex.codecogs.com/gif.latex?\lambda&space;f&space;=&space;v" title="\lambda f = v" />
+      - when v = c
+        - c = 3x10^8 m/s (speed of light in free space)
+    - Frequencies
+      - signals made of many frequencies
+      - components are sine waves
+      - Fourier analysis shows that any signal is made up of components at various frequencies in which each component is a sinusoid
+      - can plot frequency domain functions
+- Spectrum and Bandwidth
+
+  - spectrum of a signal
+    - range of frequencies contained in signal
+  - absolute bandwidth of signal
+    - width of spectrum
+      - ex: 3f - 1f = 2f
+  - effective bandwidth / bandwidth
+    - narrow band of frequencies containing most energy
+  - Dc Component
+    - component of zero frequency
+  - given waveform may contain frequencies over very broad range
+    - any **transmission system** has a limited band of frequencies
+      - limits data rate that can be carried on transmission medium
+  - Bandwidth is physical property of transmission medium
+    - construction, sickness, and length of wire/fiber
+  - <img src="https://latex.codecogs.com/gif.latex?\theta&space;_{n}&space;=&space;tan^{-1}(-B_{n}/A_{n})" title="\theta _{n} = tan^{-1}(-B_{n}/A_{n})" />
+  - Having less bandwidth (harmonics) degrades signal
+    - more difficult to retrieve the information
+    - 1 harmonic is the fundamentally frequency of original signal
+
+- Fourier Analysis
+
+  - Theorem
+    <img src="https://latex.codecogs.com/gif.latex?x(t)&space;=&space;(A_{0}/2)&space;&plus;&space;\sum_{n=1}^{\infty}&space;A_{n}\cos(2&space;\pi&space;n&space;f_{0}&space;t)&space;&plus;&space;B_{n}\sin(2&space;\pi&space;n&space;f_{0}&space;t)" title="x(t) = (A_{0}/2) + \sum_{n=1}^{\infty} A_{n}\cos(2 \pi n f_{0} t) + B_{n}\sin(2 \pi n f_{0} t)" />
+    - f0 = 1/T, fundamnetal frequency
+      <br>
+      <img src="https://latex.codecogs.com/gif.latex?A_{0}&space;=&space;\frac{2}{T}&space;\int_{0}^{T}&space;x(t)&space;dt" title="A_{0} = \frac{2}{T} \int_{0}^{T} x(t) dt" />
+      <br>
+      <img src="https://latex.codecogs.com/gif.latex?A_{n}&space;=&space;\frac{2}{T}&space;\int_{0}^{T}&space;x(t)\cos(2&space;\pi&space;n&space;f_{0}&space;t)&space;dt" title="A_{n} = \frac{2}{T} \int_{0}^{T} x(t)\cos(2 \pi n f_{0} t) dt" />
+      <br>
+      <img src="https://latex.codecogs.com/gif.latex?B_{n}&space;=&space;\frac{2}{T}&space;\int_{0}^{T}&space;x(t)\sin(2&space;\pi&space;n&space;f_{0}&space;t)&space;dt" title="B_{n} = \frac{2}{T} \int_{0}^{T} x(t)\sin(2 \pi n f_{0} t) dt" />
+  - Amplitude phase
+    <img src="https://latex.codecogs.com/gif.latex?x(t)&space;=&space;C_{0}&space;&plus;&space;\sum_{n=1}^{\infty&space;}&space;C_{n}\cos(2&space;\pi&space;n&space;f_{0}t&space;&plus;&space;\theta&space;_{n})" title="x(t) = C_{0} + \sum_{n=1}^{\infty } C_{n}\cos(2 \pi n f_{0}t + \theta _{n})" />
+    <br>
+    <img src="https://latex.codecogs.com/gif.latex?C_{0}&space;=&space;A_{0}&space;/&space;2" title="C_{0} = A_{0} / 2" />
+    <br>
+    <img src="https://latex.codecogs.com/gif.latex?C_{n}&space;=&space;\sqrt{A_{n}^{2}&space;&plus;&space;B_{n}^{2}}" title="C_{n} = \sqrt{A_{n}^{2} + B_{n}^{2}}" />
+    <br>
+    <img src="https://latex.codecogs.com/gif.latex?\theta&space;_{n}&space;=&space;tan^{-1}(-B_{n}/A_{n})" title="\theta _{n} = tan^{-1}(-B_{n}/A_{n})" />
+  - For periodic signal, Average power in one signal
+    <img src="https://latex.codecogs.com/gif.latex?P&space;=&space;\frac{1}{T}&space;\int_{0}^{T}&space;\left&space;|&space;x(t)&space;\right&space;|^{2}dt" title="P = \frac{1}{T} \int_{0}^{T} \left | x(t) \right |^{2}dt" />
+  - Distribution of power
+    <img src="https://latex.codecogs.com/gif.latex?S(f)&space;=&space;\sum_{n=-\infty}^{&plus;\infty}&space;\left&space;|&space;C_{n}&space;\right&space;|&space;^{2}&space;\delta&space;(f&space;-&space;n&space;f_{0})" title="S(f) = \sum_{n=-\infty}^{+\infty} \left | C_{n} \right | ^{2} \delta (f - n f_{0})" />
+    - integral of delta(f)dt = 1
+    - delta(f) is unit impulse
+      - if f = 0, infinity
+      - if f != 0, 0
+    - Cn is fuourier coefficients
+  - periodic waveform, power through first j harmonics is
+    <img src="https://latex.codecogs.com/gif.latex?P&space;=&space;\frac{1}{4}C_{0}^{2}&space;&plus;&space;\frac{1}{2}&space;\sum_{n=1}^{j}&space;C_{n}^{2}" title="P = \frac{1}{4}C_{0}^{2} + \frac{1}{2} \sum_{n=1}^{j} C_{n}^{2}" />
+    - half-power bandwidth is interval between frequencies which S(f) has dropped to half of its max value of power, called: 3dB point
+    - Numbers of harmonics passed
+      - Bandwidth / (bit rate in bps / bit-data)
+
+- Nyquist formula
+
+  - Nyquist Sampling Theorem
+    - frequency of signal is no higher than B Hz
+      - a sufficient sample-rate is anything larger than 2B samples per second
+    - Maximum possible data rate on communication channel
+      - data rate - in bits per second (bps)
+      - bandwidth - cycles per second or hertz
+      - noise - on communication link
+      - error rate - corrupted bits
+    - Limitations due to physical properties
+      - greater the bandwidth the greater the cost
+    - High of data rate at particular limit of error rate at given bandwidth
+      - main constraint: noise
+    - low for 0, high for 1
+    - Symbol: consists of signal bits or n bits
+      - 2 symbols: 0 and 1
+      - 4 symbols: 00, 01, 10, 11
+      - **M = 2^n**
+        - M - symbols
+        - n - bits
+    - in noise-free channel, rate of signal transmission is 2B then signal with frequencies nog reater than B
+      - given bandwidth B, highest signal rate is 2B
+    - In noise-free channel
+      - **Max data rate = 2B log2 M bits/sec**
+        - B is bandwidth in Hz
+        - M is number of signal levels
+  - ex 1
+
+    - noiseless chanlle with bandwidth of 3000 Hz, transmit signal with two signal levels, what is max bit rate?
+
+    - BitRate = 2 x 3000 x log2 2 = 6000 bps
+
+  - ex 2
+    - need to send 265 kbps over noisless channel with bandwidth of 20 kHz, how many signals?
+    - 265000 = 2 x 20,000 log2 L
+    - log2 L = 6.625
+    - L = 2^6.625 = 98.7 since not an int, we need to **increase levels or reduce bit rate**
+      - increase level: L = 2^7, bit rate = 2 x 20,000 log2 128 = 280kbps
+      - decrease level: L = 2^6, 240 kbps
+      - **choice in this case, reduce bit rate**
