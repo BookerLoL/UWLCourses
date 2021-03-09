@@ -327,9 +327,11 @@ create trigger check_full before insert on copy
   - right side is subset of left side
 - 3NF
   - X -> A, X is super key or A is prime attribute (key attribute)
+  - based on individual table only
 - BCNF
 
   - X -> A, X is super key
+  - based on individual table only
 
 - Create 3NF tables
   - Identify all attributes (to store in db) and all functional dependencies
@@ -345,6 +347,7 @@ create trigger check_full before insert on copy
   - no FD can bre removed to create a smaller but equivalent FD set to F
   - no FD can have attribute removed to create a smaller but equivalent FD set to F
   - minimal cover set are not unique
+    - there could be multiple versions, depends on which ones you remove
 
 - Attribute Closure
 
@@ -379,13 +382,66 @@ create trigger check_full before insert on copy
        - if can find A with closure of X without X -> A then remove X -> A
   4. Combine FDs that have same LHS
 
-- 3NF Synthesis
+- 3NF Synthesis Algorithm
 
   - input: set of attributes R and FDs F
 
   1. create minimal cover for F called G
   2. for each FD in G creat a table
   3. if none of the nwe tables contain a super key for universal table, create a new table containing the attributes of key for universal table
+
+- Example problem for 3NF Synthesis
+
+  - Given FDS
+    - ABF -> C
+    - CF -> B
+    - CD -> A
+    - BD -> AE
+    - C -> F
+    - B -> F
+  - Minimal Cover
+    - decompose rhs
+      - BD -> AE
+        - BD -> A
+        - BD -> E
+    - remove redundant lhs
+      - take composite lhs and try removing attributes one by one
+        - then try the find the closure
+          - ABF -> AB (removed F) -> AB+ = ABFC
+          - AB -> A (removed B) -> A+ = A
+          - AB -> B (removed A) -> B+ = BF
+          - CF -> F (removed C) -> F+ = F
+          - CF -> C (removed F) -> C+ = CFB
+          - BD -> D (removed B) -> D+ = D
+        - If removing still determines the rhs then replace the lhs fds with the new reduced versions
+    - Remove redundant dependencies
+      - AB -> C
+      - C -> B
+      - CD -> A
+      - BD -> A
+      - C -> F
+      - B -> F
+      - Find closure of lhs without using that specific FD for each one
+        - ex: CD -> A, CD+ (can't use CD -> A), since C -> F, C -> B, BD -> A
+          - since can reach A without using CD -> A, it's redundant
+      - Results
+        - AB -> C
+        - C -> B
+        - BD -> A
+        - BD -> E
+        - B -> F
+    - Combine common LHS
+      - AB -> C
+      - C -> B
+      - BD -> A, E
+      - B -> F
+  - Table for each dependency
+    - R1 = {A, B, C}
+    - R2 = {C, B}
+    - R3 = {B, D, A, E}
+    - R4 = {B, F}
+  - Check if a new table contains universal set, otherwise create new table with it
+    - R3 = {B, D, A, E} -> BDAE+ = BDAECF
 
 - Lossless decomposition
   - lossless if T1 intersect T2 -> T1 or T1 intersects T2 -> T2

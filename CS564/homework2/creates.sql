@@ -50,7 +50,7 @@ CREATE TABLE enroll (
     cnum varchar(6),
     semester varchar(6),
     year integer,
-    sid integer REFERENCES student NOT NULL,
+    sid integer REFERENCES student(sid) NOT NULL,
     grade varchar(2),
     CONSTRAINT valid_grade CHECK (grade IN ('A', 'AB', 'B', 'BC', 'C', 'D', 'F', 'I')),
     CONSTRAINT course_fk FOREIGN KEY (cnum, semester, year) REFERENCES course(cnum, semester, year)
