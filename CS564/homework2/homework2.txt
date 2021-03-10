@@ -1,0 +1,200 @@
+CREATE TABLE department (
+    dcode varchar(3) PRIMARY KEY,
+    building varchar(20), 
+    room integer
+);
+
+CREATE TABLE major (
+    mid SERIAL PRIMARY KEY,
+    mname varchar(10),
+    dcode varchar(3) REFERENCES department(dcode) NOT NULL
+);
+
+
+CREATE TABLE faculty (
+    fid SERIAL PRIMARY KEY,
+    fname varchar(40),
+    dcode varchar(3) REFERENCES department(dcode)
+);
+
+
+CREATE TABLE student (
+    sid SERIAL PRIMARY KEY,
+    sname varchar(40),
+    mid integer REFERENCES major(mid) NOT NULL,
+    fid integer REFERENCES faculty(fid)
+);
+
+CREATE TABLE course (
+    cnum varchar(6),
+    cname varchar(30),
+    semester varchar(6),
+    year integer, 
+    credits integer,
+    fid integer REFERENCES faculty(fid) NOT NULL,
+    PRIMARY KEY (cnum, semester, year),   
+    CONSTRAINT valid_semester CHECK (semester IN ('Fall', 'Spring', 'Summer')), 
+    CONSTRAINT valid_year CHECK (year BETWEEN 1900 AND 2099),
+    CONSTRAINT valid_credits CHECK (credits BETWEEN 1 AND 12)
+); 
+
+CREATE TABLE enroll (
+    cnum varchar(6),
+    semester varchar(6),
+    year integer,
+    sid integer REFERENCES student(sid) NOT NULL,
+    grade varchar(2),
+    PRIMARY KEY (cnum, semester, year, sid),
+    CONSTRAINT valid_grade CHECK (grade IN ('A', 'AB', 'B', 'BC', 'C', 'D', 'F', 'I')),
+    CONSTRAINT course_fk FOREIGN KEY (cnum, semester, year) REFERENCES course(cnum, semester, year)
+);
+
+
+
+CREATE OR REPLACE FUNCTION valid_coursenum()
+RETURNS trigger AS $$
+BEGIN
+    IF NOT EXISTS (SELECT * FROM department WHERE SUBSTRING(NEW.cnum, 1, 3) = dcode) THEN 
+        RAISE EXCEPTION 'course does not have a valid matching course name';
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+
+create trigger check_valid_coursenum BEFORE INSERT OR UPDATE ON course
+    FOR EACH ROW EXECUTE PROCEDURE valid_coursenum();
+
+
+
+CREATE OR REPLACE FUNCTION faculty_can_teach()
+RETURNS trigger AS $$ 
+BEGIN
+    IF NOT EXISTS (SELECT * FROM (SELECT dcode FROM department WHERE SUBSTRING(NEW.cnum, 1, 3) = dcode) AS d NATURAL JOIN (SELECT dcode from faculty WHERE NEW.fid = fid) AS f) THEN
+        RAISE EXCEPTION 'The advisor cannot teach courses outside of the department';
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+create trigger check_faculty_can_teach BEFORE INSERT OR UPDATE ON course
+    FOR EACH ROW EXECUTE PROCEDURE faculty_can_teach();
+
+
+
+
+CREATE OR REPLACE FUNCTION valid_student_advisor()
+RETURNS trigger AS $$
+BEGIN
+    IF ((NEW.fid IS NOT NULL) AND (NOT EXISTS (SELECT * FROM (SELECT dcode from major WHERE NEW.mid = mid) AS m NATURAL JOIN (SELECT dcode from faculty WHERE NEW.fid = fid) AS f))) THEN
+        RAISE EXCEPTION 'The advisor does not belong to the same department as the students major';
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE trigger check_valid_student_advisor BEFORE INSERT OR UPDATE ON student
+    FOR EACH ROW EXECUTE PROCEDURE valid_student_advisor();
+
+
+
+
+
+CREATE OR REPLACE FUNCTION get_latest_completed(course_num varchar, student_id integer) 
+RETURNS enroll AS $$ 
+DECLARE 
+    latested_graded_completed enroll;
+BEGIN 
+    SELECT * INTO latested_graded_completed FROM enroll WHERE student_id = sid AND course_num = cnum AND grade <> 'I'
+    ORDER BY year DESC, 
+        CASE semester 
+            WHEN 'Spring' THEN 1
+            WHEN 'Summer' THEN 2
+            WHEN 'Fall' THEN 3
+            else 4
+        END DESC
+    LIMIT 1;
+    return latested_graded_completed;
+END;
+$$ LANGUAGE plpgsql;
+
+
+
+CREATE OR REPLACE FUNCTION get_numeric_grade(grade varchar)
+RETURNS numeric AS $$
+DECLARE 
+    grade_points numeric;
+BEGIN 
+    CASE grade 
+        WHEN 'A' THEN  
+            grade_points = 4.0;
+        WHEN 'AB' THEN
+            grade_points = 3.5;
+        WHEN 'B' THEN 
+            grade_points = 3.0;
+        WHEN 'BC' THEN 
+            grade_points = 2.5;
+        WHEN 'C' THEN 
+            grade_points = 2.0;
+        WHEN 'D' THEN 
+            grade_points = 1.0;
+        ELSE 
+            grade_points = 0.0;
+    END CASE;
+    RETURN grade_points;
+END;
+$$ LANGUAGE plpgsql;
+
+
+
+CREATE OR REPLACE FUNCTION calc_student_gpa(student_id integer)
+RETURNS numeric AS $$
+DECLARE
+    total_points numeric := 0.0;
+    total_credits numeric := 0.0;
+    course_credit numeric := 0.0;
+    completed_course enroll;
+    course_num varchar;
+BEGIN
+    FOR course_num IN (SELECT distinct(cnum) FROM enroll WHERE student_id = sid)
+    LOOP
+        completed_course := get_latest_completed(course_num, student_id);
+        IF completed_course IS NOT NULL THEN
+            SELECT credits INTO course_credit FROM course WHERE completed_course.cnum = cnum AND completed_course.year = year AND completed_course.semester = semester;
+            total_points := total_points + (get_numeric_grade(completed_course.grade) * course_credit);
+            total_credits := total_credits + course_credit;
+        END IF;
+    END LOOP;
+
+    IF (total_credits = 0) THEN 
+        return 0.0;
+    END IF;
+    RETURN total_points / total_credits;
+END;
+$$ LANGUAGE plpgsql;
+
+
+
+
+
+
+
+CREATE OR REPLACE FUNCTION change_major(student_id integer, major_id integer, faculty_id integer)
+RETURNS void AS $$
+BEGIN
+    IF faculty_id IS NULL THEN
+        UPDATE student SET mid = major_id WHERE student_id = sid;
+    ELSE
+        UPDATE student SET mid = major_id, fid = faculty_id  WHERE student_id = sid;
+    END IF;
+END;
+$$ Language plpgsql;
+
+
+
+\copy department from 'C:\Users\Ethan\Documents\VSCode\UWLCourses\CS564\homework2\data\departmentsWin.txt' delimiter '|';
+\copy major from 'C:\Users\Ethan\Documents\VSCode\UWLCourses\CS564\homework2\data\majorsWin.txt' delimiter '|';
+\copy faculty from 'C:\Users\Ethan\Documents\VSCode\UWLCourses\CS564\homework2\data\facultyWin.txt' delimiter '|';
+\copy student from 'C:\Users\Ethan\Documents\VSCode\UWLCourses\CS564\homework2\data\studentsWin.txt' delimiter '|';
+\copy course from 'C:\Users\Ethan\Documents\VSCode\UWLCourses\CS564\homework2\data\coursesWin.txt' delimiter '|';
+\copy enroll from 'C:\Users\Ethan\Documents\VSCode\UWLCourses\CS564\homework2\data\enrollWin.txt' delimiter '|';

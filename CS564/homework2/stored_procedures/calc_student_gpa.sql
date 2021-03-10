@@ -6,15 +6,17 @@ BEGIN
     SELECT * INTO latested_graded_completed FROM enroll WHERE student_id = sid AND course_num = cnum AND grade <> 'I'
     ORDER BY year DESC, 
         CASE semester 
-            WHEN 'Fall' THEN 1
-            WHEN 'Summer' THEN 2 
-            WHEN 'Spring' THEN 3
+            WHEN 'Spring' THEN 1
+            WHEN 'Summer' THEN 2
+            WHEN 'Fall' THEN 3
             else 4
-        END
+        END DESC
     LIMIT 1;
     return latested_graded_completed;
 END;
 $$ LANGUAGE plpgsql;
+
+
 
 CREATE OR REPLACE FUNCTION get_numeric_grade(grade varchar)
 RETURNS numeric AS $$
@@ -40,6 +42,8 @@ BEGIN
     RETURN grade_points;
 END;
 $$ LANGUAGE plpgsql;
+
+
 
 CREATE OR REPLACE FUNCTION calc_student_gpa(student_id integer)
 RETURNS numeric AS $$

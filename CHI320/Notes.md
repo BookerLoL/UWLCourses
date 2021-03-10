@@ -513,7 +513,7 @@
       - focused on reconcile him to death
         - views of life and death coloured political views
 
-- Confucianism vs Doaism
+- Confucianism vs Daoism
 
   - Confucianism
     - ethically correct way for humankind
@@ -861,7 +861,7 @@
     - Wudi of Liang
       - generous imperial patron
       - banned meat and wine from imperial table, built temples, wrote commentaries on sutras, assemblies of monkeys and laymen
-    - Doaistss and Confucians denounced ideas and practices as immoral or unsuited
+    - Daoists and Confucians denounced ideas and practices as immoral or unsuited
       - shaving head, cremating dead
       - celibacy
       - refused homage to ruler and tax
@@ -874,7 +874,7 @@
     - notions of predestination and reincarnation
     - competeting with buddhism
   - Buddhism vs Daoism
-    - Doaism
+    - Daoism
       - better spells, hygiene techniques for immortality, control over malevolent local gods
     - BUddhism
       - loftier principles, technies for salvation, helping deceased love ones achieve better rebirths
@@ -982,7 +982,7 @@
       - 5th century, 500 rooms
       - 494 surviving caves
     - Yungang
-      - Tuoa defeat Northern Wei 386, Northern Wei Taiwu curbed for Doaist and Confucian officials
+      - Tuoa defeat Northern Wei 386, Northern Wei Taiwu curbed for Daoist and Confucian officials
         - 446-452, persecution of Buddhism
           - Taiwu gradnson, Wencheng (452-465) reinstated Buddhism
             - excavated caves
