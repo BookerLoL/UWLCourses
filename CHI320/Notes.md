@@ -911,6 +911,124 @@
 
 ## Buddhism Online
 
+- introduced, Han Period (206 Bc - 220 AD)
+
+  - Mahayana Buddhism most prominent branch
+
+- Images
+
+  - Buddhas (enlightened one)
+    - **Sakyamuni** founder of Buddhism (500 BC north India)
+      - role in devotional practices
+      - austere in stature, pose, and dress
+      - lotus blossom, elongated ears, usnisa (protrusion on top of head), urna (dot in middle of forehead)
+        - features refer to life story of historical Buddha
+      - **Mudras**, hand gestures convey actions
+        - absence of fear
+        - appeasement
+        - knowledge fist
+        - touching the ground
+        - diamond handclasp
+        - concentration
+        - fulfilling of the vow
+        - turning the wheel of law
+      - Lotus symbolizes purity and strength
+      - bronze vs stone and clay depends on materials available
+  - Bodhisattvas
+
+    - enlightnened beings who put off nirvana in order to help others attain enlightenment
+      - save suffering beings
+    - **Avalokitesvara (Guanyin)** most famous
+      - young Indian prince
+      - feminine characteristics more prominent
+      - after Tang, more popular, from literature, folk stories, images
+        - **became Chinese goddess figure**
+    - less austere or inward than Buddha
+      - precious jewlry, garments, graceful postures
+    - Tang dynasty, Buddhism floruished
+
+  - Other divinities
+    - venerate, protect, support Buddha
+    - hierarchical structure
+      - Divine Kings
+        - protect Buddha, law, sanctuary, Buddhist congregation from dangers and threats of evil
+      - God of Strenth
+        - wrathful deities, muscular
+        - fight evil forces
+      - Apsaras
+        - heavenly beings, usually female
+  - Group of deities
+    - view images as assemblages
+      - found in altars of temples and shrines in homes
+
+- Temples
+
+  - near end of fifth century, over 10,000 temples
+  - place to pay homage and meet with clergy
+  - interior dectoration found in cave temples
+
+  - Cave Temples
+    - create tmples out of rock faces from Central Asia
+    - Most cave temples started in north during Northern Dynasties
+    - 3 famous caves temples:
+      - Dunhuang (Gansu), 366
+      - Yungang (Shanxi), 460
+        - Bingling and Maijishan
+      - Longmen (Henan)
+        - Longmena nd Gongxian
+    - Dunhuang
+      - northwestern China
+      - gateway into China from Central Asia
+      - 5th century, 500 rooms
+      - 494 surviving caves
+    - Yungang
+      - Tuoa defeat Northern Wei 386, Northern Wei Taiwu curbed for Doaist and Confucian officials
+        - 446-452, persecution of Buddhism
+          - Taiwu gradnson, Wencheng (452-465) reinstated Buddhism
+            - excavated caves
+      - 50,000+ statues from 52 caves
+    - Longmen
+      - 6th century, Empress Wu, 380 images
+      - 100,000+ images in 1,3000 caves
+    - "thousdan Buddhas"
+      - portrayed by small repeated images
+  - Urban Temples
+    - Fayuan Temple
+      - Beijing, late 7th century Tang
+      - rebuilt many times
+      - gate -> side buildings by lay people -> buildigns by monks and nuns
+      - main gate, mountain gate
+        - **Lions** not native to China, Manjursi/Wenshu depicted riding a lion
+          - custom to have pair of lions gaurding door (3rd century)
+      - Central buildings
+        - most important, shrines, scriptures, holy relics
+
+- Practice
+  - Divide in Buddhism
+    - Tibetan Buddhism (Tibet, Ningxia, Qinghai, Inner Mongolia)
+      - important branch
+    - Other regrions of China
+  - Monks and Nuns
+    - the third of the Threefold Refuge, creed of Buddhism
+    - Joining monastery / nunnery
+      - spiritual salvation and enlightment
+      - Buddhist monastic life best for social and economic needs
+        - Widows, orphans, and other displaced members could find refuge
+        - children to fulfill religious vow
+          - become novices and prepare for ordination
+    - Music and sounds important to monastery
+      - bells and other instructments signal transitions between daily activities
+    - Pagoda model
+      - from Indian stupa and native Chinese towers
+    - Females sit in back of ordination ceremonies
+    - Colorful ritual dances during New Year
+      - religious themes and characters
+  - Lay people
+    - visiting temples, pray, burn incense, offerings (fruit / flowers) at
+      altars, observe rituals
+    - prostration
+      - special type of bow
+
 ## Cosmopolitan Empire (617 - 907)
 
 - Sui Dynasty (581 - 617)
