@@ -1048,6 +1048,8 @@
   - Li Yuan was leader
   - Taizong, son of Li Yuan
   - cosmopolitan empire
+  - Chang'an
+    - most popular city in the world
 - Sui and Tang
   - uniform taxes: grain, cloth, labor service relatively low
     - household doubled

@@ -119,7 +119,6 @@ END;
 $$ LANGUAGE plpgsql;
 
 
-
 CREATE OR REPLACE FUNCTION get_numeric_grade(grade varchar)
 RETURNS numeric AS $$
 DECLARE 
@@ -144,6 +143,8 @@ BEGIN
     RETURN grade_points;
 END;
 $$ LANGUAGE plpgsql;
+
+
 
 
 
