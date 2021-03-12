@@ -390,7 +390,7 @@ create trigger check_full before insert on copy
   2. for each FD in G creat a table
   3. if none of the nwe tables contain a super key for universal table, create a new table containing the attributes of key for universal table
 
-- Example problem for 3NF Synthesis
+- **Example problem for 3NF Synthesis**
 
   - Given FDS
     - ABF -> C
