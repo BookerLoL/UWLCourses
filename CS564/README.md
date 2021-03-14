@@ -388,7 +388,15 @@ create trigger check_full before insert on copy
 
   1. create minimal cover for F called G
   2. for each FD in G creat a table
+
+  - If there are FD's where they have the same exact values (not subset)
+    - ex: E -> BD, BD -> E then can just make 1 table instead of 2
+
   3. if none of the nwe tables contain a super key for universal table, create a new table containing the attributes of key for universal table
+
+  - take closure of those tables
+    - can make an inference and check if there are any attributes that never appear on RHS as a good starting point
+    - if no closure contains super key for universal table, create a table that would (preferably minimum amount of attributes)
 
 - **Example problem for 3NF Synthesis**
 
@@ -460,4 +468,15 @@ create trigger check_full before insert on copy
     - would need to join in order to confirm constraint holds true
 
 - Removing 3NF or BCNF violator through decomposition
+
   - break violator into it's own table
+
+- Check if table in BCNF?
+
+  - if non-trivial dependency, X -> A that lies in T where X is not a super key
+    - check by taking closure
+  - non-trivial dependency
+
+    - rhs not a subset of lhs
+
+  - A -> D, decompose: {A, D}, {A, C}
