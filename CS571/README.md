@@ -876,3 +876,177 @@
       - increase level: L = 2^7, bit rate = 2 x 20,000 log2 128 = 280kbps
       - decrease level: L = 2^6, 240 kbps
       - **choice in this case, reduce bit rate**
+
+- Shannon Capacity Formula
+  - relation
+    - components
+      - data rate
+      - noise
+      - error rate
+    - burst of noise affects more bits
+    - given noise level, higher rates = higher errors
+  - Forumla
+    <img src="https://latex.codecogs.com/gif.latex?Max.data.rate&space;=&space;B&space;log_{2}(1&plus;&space;\frac{S}{N})&space;bits/sec" title="Max.data.rate = B log_{2}(1+ \frac{S}{N}) bits/sec" />
+      - B = bandwidth (hz)
+      - S = signal strength
+      - N = noise
+  -  Capacity
+    <img src="https://latex.codecogs.com/gif.latex?C&space;=&space;B&space;log_{2}(1&space;&plus;&space;SNR)" title="C = B log_{2}(1 + SNR)" />
+    - theoreticla maximum capacity
+    - get lower in practice
+    - SNR, signal-to-noise ratio
+      - decibels
+      - SNRdb = 10Log10(S/N)
+  - Ex
+    - channel, 1-MHz bandwidth, SNR is 63
+      - What is appropriate bit rate and signal level?
+        - shannon formula to find upper-limit
+          - 10^6 log2(1+63) = 6
+        - Nyquist
+          - 6 Mbps = 2x1MHzxlog2 L => 2^3
+        - for better performance, choose lower bit rate   
+          - ex: 4 Mbps
+  - Shannon capacity gives upper limit
+  - Nyquist forumla tells us how many levels
+    - tells use achievable max data rate
+    - must use different signaling method to achieve Shannon's
+- Analogy and Digital Data Transmission
+  - continuous and discrete
+  - 3 regards
+    - data
+      - entities that convey info
+    - Signals
+      - electric or electromagnetic representation of data
+    - signaling
+      - physical propagation of signal along suitable medium
+    - transmission
+      - communication of data by propgation and processing of signals
+  - Analog Data
+    - audio, accoustic soundwaves
+    - humans can perceive it
+    - human speech
+      - 100hz to 7 kilo hz
+      - 600-700 hz usually
+      - 25db
+    - limited frequency spectrum, continuous
+  - Digital Data
+    - binary data
+    - terminals, computers
+    - two DC components
+      - 0 and 1
+    - bandwidth depends on data rate
+    - digital to modem to analog signal
+      - encodes data
+    - analog to codec to digital signal
+      - decodes data
+    - Pros and cons
+      - cheaper
+      - data integrity
+        - less susceptible to noise
+          - repeaters -> longer distance over lower quality lines
+      - but greater attenuation
+        - can lose info
+- Transmission Impairments
+  - Signal received may differ from transmitted
+    - Analog, degradation of signal quality
+    - Digital, bit errors
+  - Most significant impairments
+    - attenuation distortion
+    - delay distortion
+    - noise
+  - Attenuation
+    - strength of signal fall off with distance over any transmission medium
+      - varies with frequency
+      - higher frequency = greater attenuation
+  - Delay Distoration
+    - occur in transmission cable
+      - twisted pair, coaxial cable, optic fiber
+    - doesn't occur in air
+      - antennas
+    - Occurs because propgation speed of signal in guided medium varies with frequency
+      - velocity tend to be highest at center, fall off at ends
+        - arrive different times, varying delays
+    - critical for digital data
+      - part of one bit spill over into others
+        - **intersymbol interference**
+          - limitation to max bit rate
+  - Noise
+    - additional signal between transmitter and receiver
+    - categories
+      - thermal (predictable and constant magnitude)
+        - thermal agitation of electrons
+        - presented in all elecontric devices and medias
+        - uniformly distributed across bandwidths
+        - white noise
+      - Intermodulation (predictable and constant magnitude)
+        - by nonlinerarities in transmitter and receiver
+        - effect to product signals at frequency that is sum or difference of two original frequencies
+        - due to excessive signal strength / malfunction
+      - Impulse noise (non continuous)
+        - irregular pulse or spike
+        - short duration
+        - high amplitude
+        - minor annoyance for analog signals
+        - major source of error in digital data
+        - lightning, etc
+  - Succeesful transmission of data based on
+    - quality of signal
+    - transmission medium characteristics
+  - Characteristic and quality determined by medium and signal
+    - unguided media
+      - bandwidth produced by antenna
+    - guided media
+      - medium
+- Circuit Switching
+  - uses dedicated path betweeen two stations.
+  - three phases
+    - establish
+    - transfer
+    - disconnect
+  - inefficeint
+    - channel capacity dedicated for duration of connection
+    - if no data, capacity wasted
+  - setup connection takes time
+    - transfer is transparent after connected
+  - telephone system
+    - fully-interconnected network
+      - all nodes connected with each other
+    - centralized switch
+      - simplicity
+      - short hub, 1 node in center
+      - security, maintability, upgradability
+      - reliability, failure in center, entire network damaged
+    - two-level hierarchy
+      - combination of full-interconnected and centralized switch
+      - star configuration
+    - components
+      - local loops
+        - analog twisted pairs into houses and businesses
+      - trunks
+        - digital fiber optics connecting the switching offices
+      - switching offices
+        - pass calls from one trunk to another
+      - local call procedure
+        - direct connection made when subscribe attached to given end office calls another subscribe to the same end office
+      - long distance calls
+        - outside local loop
+          - end office routes call to nearby toll office
+        - caller and callee phone in same toll office
+          - direct connection
+        - caller and callee phone different toll offices
+          - additional hierarchy required, intertoll trunk (interoffice-trunk)
+    - Local loop
+      - modem to convert digital to analog
+      - codec to convert analog to digital
+      - computer -> digital -> modem -> analog -> codec -> digital -> medium-bandwidth trunk -> toll office -> high-bandwidth trunk-> toll office 
+- SONET
+  - protocol to transfer bit to bit string
+  - sychnonous optical entwork
+  - high speec capability of optical fiber
+  - virtually all long-distance telephone use SONET in pyhsical layer
+  - common signal standard
+    - wavelength, timing, framing structure
+    - possible for different carrier interwork
+      - unify US, Euro, Japanese digital systems
+    - can multiplex multiple digital channels
+    
