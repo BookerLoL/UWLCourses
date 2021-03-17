@@ -1161,6 +1161,193 @@
   - brother of Du you
   - preferred Confucian learning, Buddhism is barbarisnm
 
+# Shifting South
+- Song dynasty (960 - 1276)
+  - agriculture -> south and yangzi valley migration -> central economy
+  - culture for yellow river 
+  - civil service exam and confucianism dominate
+  - Can't control East Asia, powerful neighbor states treated as equals
+- Embattled State
+  - 860-960
+    - ten kingdoms in south
+    - local rulers everywhere
+    - 5 dynasties
+      - Later liang, later Tang, later jin, later Han, later zhou
+    - 937, contender for throne
+      - asked help fro mKhitans to gain control of Kaifeng
+      - Khitans as overloads and territory around Beijing
+  - **Zhao Kuangyin as Taizu (960 - 76) Song Dynasty founder**
+    - stopped independent regional armies
+    - commanders retire on pensions and replaced military govs with civil officials
+  - Zhao Kuangyin's brother
+    - army under civilian control, regularly rotated officers
+      - prevent new regional strongmen uprise
+    - no more military provinces
+    - appointed intendants, coordinate prefectures
+  - No military dominance
+    - Khitans in around Beijing
+       - **Liao state**
+    - Tanguts (Tibetans) northwest (Gansu)
+      - **Xia state**
+    - 979-1041, Song army tripled
+      - 3/4 state revenue
+      - **gunpowder, catapult grenades, true canons**
+  - Central power and civil officials
+    - listen to many opinions, defer to lead officials
+    - no deaths for those who disagree
+  - **Weaknesses**
+    - Factionalism
+      - can't resolve political conflicts
+        - seek influence emperor
+          - Emperor Shenzong (1067-1085)
+            - **Wang Anshi** reform gov
+              - enrich country, wealth into state coffers
+              - pg 139-141
+    - Bureaucratism
+      - could print a lot
+      - rules
+- Buregoning Economy
+  - 742 to 1100
+    - 50 million people to 100 million
+      - rice cultivation, food supply increased
+    - agriculture + desnser settlement patterns to more commercialization
+      - peasants and farmers sell lots of products in desnser areas
+    - Interregional trade led to inland and coastal ship industry
+      - ship builders, sailors, can buy boats
+      - Marco Polo visit China, Yangzi River
+    - 997, **no longer silk, coins as currency**
+      - silver
+      - Certificate of deposit
+        - worked like money
+      - **1120's, worlds first paper money**
+  - partnerships, specialization, commercial ventures as stock companies
+  - brokers, wholesalers, warehousemen, money-lenders
+  - guilds
+  - foreign trade
+    - maritime trade
+      - large ships, **1119, compass**, tax commerce
+  - Industrial development
+    - silk, lacquer, ceramics reached perfection
+      - workshops and family businesses
+    - Iron production
+      - metallurgy innovations
+      - hydraulic machinery
+      - iron used for industrial processes (salt and copper), tools, weapons, nails, chains, statues
+    - bituminous coke replaced charcoal
+  - Kaifeng, capital until 1126
+    - open all hours, multi-storey houses on streets, renting
+    - best city, by Marco Polo
+- Scholarly Elite
+  - **scholar-official class via examinations**
+    - shi/shidafu -> scholar-gentleman/scholar-official
+      - less aristocratic habits and ideals, increase wealth, intellectual excitement by Confucian teachings, exmin system for recruitment to office
+    - papers recopied and identified only by number
+      - avoids influence
+      - central and south dominated instead of the north
+    - better chance to rise to policy-making post
+    - if don't take exam, start as sheriffs in remote places, almost never rise above post of migistrate
+    - lots of people but number of posts never changed
+      - wealthy families have lots of books to help for exam
+        - classics and  forms of compsitions
+    - **Shen Gua**
+      - designed drainage and embankment systems
+      - financial expert
+      - headed bureau of astronomy
+      - supervised military defence preparations
+      - Laio state as envoy, negotiate treaty
+      - wrote a lot, commentaries
+    - Families able to educate 
+      - landholders, local elite
+      - once in, had economic standing
+        - privileges: access to exminations with better success to direct entry into lower posts
+        - need to know how to manage teanants and agents, buy and sell land, lend money, invest
+          - otherwise, lose property
+- Loss of the North
+  - **Huizong (1100-26)**
+    - most cultivated
+    - painter, calligrapher
+      - imperial painting collection, new styles of calligraphy
+    - Lost north China
+  - 1115, **Jurchens**
+    - agricultural, heding, and hunting people in eastern Manchuria
+    - declared as **Jin dynasty**
+    - alliance with Song
+      - **1126 attacked Kaifeng**
+  - **Northern Song**
+    - period before losing the north
+  - **Southern Song**
+    - period after loss of north
+  - 1138, Song cout at Hangzhou, controlling area near Huai River
+  - Yue Fei, general, tried to get North, got to Luoyang, but executed
+  - 1142, treaty
+    - Song gov appease Jin with annual tributary payments
+    - cost effective trading in south, improved development in south
+- A turn inward
+  - revitalize Confucianism to strengthen Chinese culture
+    - personal moral and intellectual growth
+    - Cheng yi, Cheng hao, developed metaphysical theories of cosmos
+      - Li (principle, pattern)
+        - moral / physical
+      - Qi (vital energies, material force..)
+        - needed, energy and makes things up
+      - **agreed with menicius**
+        - people had good li, impure qi accounted for selfish desires
+  - reform families, local communities, establish academies, spread message through publishing
+  - Zhu Xi
+    - establish academies as private gathering places
+      - White Deer Grotto Academy
+        - moral exhortation and scholarly exegesis -> virtuous and erudite
+    - condemned as 'spurious teaching'
+    - 1241, 'illuminating the way', students must study his commentaries
+- Local Society
+  - peasants had a better life
+    - landloards let tenants manage thier own, fixed rents
+    - most farming done by owner-cultivators
+  - Temples
+    - Wenchang, serpent spirit in Sichuan
+  - Ouyang Xiu, how to compile suitable genealogy
+  - Fan Zhongyan, corporate lineage estate
+  - Zhu xi, halls for ancestral rites
+  - lineages, major force in local social and political life
+  - Printing
+    - spread and standization of ideas and practices
+    - handbooks on agriculture, childbirth, pharmacy, divination, Doaist 
+      - ordinary people access to knowledge, funeral services, dabble in geomancy, medicines, etc
+- Women's lives
+  - printing led to documentation of women role in society
+  - widow ran inns, run away from abusive masters, babies in 70's, 
+  - nuns, singing girls and courtesans, communicate with spirits, weaving mats, write poetry, etc
+  - child rearing, select spouses for their children, strong ties to sons
+  - educated class + printing
+    - educated, write letters, tutor children
+    - Li Qingzhao, great fame as poet
+  - increased prosperity
+    - servants, concubines, courtesants, prostitutes
+    - women's legal claims to property improved
+      - wives and widows control over dowries
+      - orphan daughters shares of family property, landed property
+  - footbinding and female demeanour
+    - delicate and restrainted women 
+    - modesty, veiled faces
+    - footbinding, tenth/elventh century
+      - dancers, upper-class
+      - narrow feet considered enhance beauty and movements more dainty
+  - Confucian reinforced bad trends
+    - women should not desire to own property
+    - feel no jealousy when husband took concubine
+    - no bias against children of concubines
+    - remtain to care for parents and children if husband died
+    - no frivolous pasttimes like writing poetry
+
+# Alien Rule
+- 1276, Mongols took over Song
+  - three dynasties of conquest
+    - Liao (907-1125)
+    - Jin (1125, 1234)
+    - Yuan (1215/1276-1368)
+- Steppe Nomadism and Inner Asian States
+  - pg 164
+
 # whatever
 
 - Dynasties
