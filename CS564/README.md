@@ -480,3 +480,25 @@ create trigger check_full before insert on copy
     - rhs not a subset of lhs
 
   - A -> D, decompose: {A, D}, {A, C}
+
+# Indexes
+
+- Additional data structure to reduce page accesses to find row/rows
+  - built on attriutes on one table
+- location mechanism
+
+  - algorithm + data structure
+
+- Btree, good for equaliy and range searches
+- Hash index, hash table
+- **Extendable Hashing**
+  - Eliminates chains of pages caused by collisions
+  - range of hash function has to be extended to accommodate additional buckets
+  - h(v) mod 2^k
+    - h2, look at last 2 bits to determine bucket
+  - uses directory (level of indirection)
+  - **If buckets are full**
+    - switch to h+1
+    - concatenate copy of old directory to new directory
+    - split overflowed bucket B, into B and B' dividing entries in B between the using h3
+    - Pointer to B in directory copy replaced by point B'
