@@ -887,16 +887,16 @@
     - given noise level, higher rates = higher errors
   - Forumla
     <img src="https://latex.codecogs.com/gif.latex?Max.data.rate&space;=&space;B&space;log_{2}(1&plus;&space;\frac{S}{N})&space;bits/sec" title="Max.data.rate = B log_{2}(1+ \frac{S}{N}) bits/sec" />
-      - B = bandwidth (hz)
-      - S = signal strength
-      - N = noise
-  -  Capacity
+    - B = bandwidth (hz)
+    - S = signal strength
+    - N = noise
+  - Capacity
     <img src="https://latex.codecogs.com/gif.latex?C&space;=&space;B&space;log_{2}(1&space;&plus;&space;SNR)" title="C = B log_{2}(1 + SNR)" />
-    - theoreticla maximum capacity
-    - get lower in practice
-    - SNR, signal-to-noise ratio
-      - decibels
-      - SNRdb = 10Log10(S/N)
+  - theoreticla maximum capacity
+  - get lower in practice
+  - SNR, signal-to-noise ratio
+    - decibels
+    - SNRdb = 10Log10(S/N)
   - Ex
     - channel, 1-MHz bandwidth, SNR is 63
       - What is appropriate bit rate and signal level?
@@ -904,7 +904,7 @@
           - 10^6 log2(1+63) = 6
         - Nyquist
           - 6 Mbps = 2x1MHzxlog2 L => 2^3
-        - for better performance, choose lower bit rate   
+        - for better performance, choose lower bit rate
           - ex: 4 Mbps
   - Shannon capacity gives upper limit
   - Nyquist forumla tells us how many levels
@@ -1038,8 +1038,9 @@
     - Local loop
       - modem to convert digital to analog
       - codec to convert analog to digital
-      - computer -> digital -> modem -> analog -> codec -> digital -> medium-bandwidth trunk -> toll office -> high-bandwidth trunk-> toll office 
+      - computer -> digital -> modem -> analog -> codec -> digital -> medium-bandwidth trunk -> toll office -> high-bandwidth trunk-> toll office
 - SONET
+
   - protocol to transfer bit to bit string
   - sychnonous optical entwork
   - high speec capability of optical fiber
@@ -1049,4 +1050,129 @@
     - possible for different carrier interwork
       - unify US, Euro, Japanese digital systems
     - can multiplex multiple digital channels
-    
+
+  # Packet Switching
+
+  - circuit-switched
+    - **for voice**
+    - dedicated path established
+      - fiber, copper, microwave
+  - Packet-switched
+
+    - **for data**
+    - small packets
+    - **consists of data and control info**
+      - routing info
+    - received, stored briefly, passed onto next node
+    - typical upperbound, 1000 bytes
+
+      - series of packets if larger
+
+    - pros
+      - line efficiency
+        - single node-to-node link can be dynamically shared by many packets over time
+        - packets are queued up and transmitted as possible over the link
+      - Data rate conversion
+        - two stations of diff data rate can exchange packets
+          - can buffer data if require equalize data rates
+      - Packets accepted even when network is busy
+        - still accepted but delivery delay increases
+      - Priorities can be used
+    - Techniques
+      - stations break long msg into packets
+      - packets sent one at a time to network
+      - packets handled in two ways
+        - datagram
+          - each packet is treated independently with no reference to previous packets
+        - virtual circuit
+          - preplanned route is established before any packets are sent
+
+- datagram
+
+  - **packets may not follow same route** despite same destination
+    - depends on traffic, availability, etc
+    - **may not be in order**
+  - **Destination must reorder**
+    - handle lost of packets
+    - packet can be destroyed
+      - crashed
+
+- Virtual circuit diagram
+
+  - route is fixed prior to data transfer
+  - Node doesn't have to make routing decision for packet
+    - only has to do it once
+
+- Packet Size vs Transmission Time
+
+  - T = (data length + header size) x (# of hops + (packets per msg - 1))
+    - msg: 40B octects/bytes, 3B control info
+    - X -> a -> b -> Y
+      - entire msg: (40 + 3) x 3 = 129BT, 3B overhead
+      - 2 messages: (20 + 3) x (3 + (2 - 1)) = 92BT, 6B overhead
+      - 5 message: (8 + 3) x (3 + (5-1)) = 77BT, 15B overhead
+    - **processing, queueing at each node, and overhead for more packets**
+
+- Timing
+
+  - Host -> Node1 -> node2 -> host2
+  - Delays
+    - propagation
+      - signal propagate from one node to next
+      - usually neglible
+    - Transmission
+      - transmitter send out block of data
+    - Node
+      - processing
+  - Circuit
+
+    - circuit establish
+    - data transmission
+    - circuit terminated
+    - Total Delay = total transmission + total propgation + total processing
+
+      - Linked prpagation delay = L
+      - per-hop processing delay = P
+      - transmission speed = W bit/s
+      - message size = B bits
+      - number of hops = M
+
+      - Total transmission = B / W
+      - total propgation = 4ML
+        - link to host, return back link, send data, terminate link
+      - total procesing = (M-1)P
+      - B/W + 4ML + (M-1)P
+
+  - Datagram
+
+    - packet transmission delay = T
+    - message contains N packets
+    - total delay = total transmission + propagation + processing + store&forward
+      - NT + ML + (M-1)P + (M-1)T
+
+  - Virtual circuit packet switching
+    - total delay
+    - NT + (M-1)T + 4ML + 4(M-1)P
+  - **interested in only delay elapsed from first bit sent to last bit was received**
+    - circuit swithcing
+      - delay= B/W + 3ML+ (M-1)P
+    - datagram packet switching
+      - delay = NT + ML + (M-1)T + (M-1)P
+    - virtual circuit packet switching
+      - delay = NT + 3ML + (M-1)T + 3(M-1)P
+
+- Slow link vs Fast link
+  - propgation bounded by speed of light
+  - circuit switching
+    - adds exrtra dountrip over packet switching
+    - eliminates sotre and forward delays
+  - Slow link
+    - bottleneck is transmission speed
+      - w/o store and forward helps a lot
+      - extra roundtrip adds neglible delay
+      - circuit switching
+  - Fast link
+    - bottleneck is propagation delay
+      - adding roundtrip hurts
+      - w/o store and forward saves neglible amount of time
+      - packet switching
