@@ -492,6 +492,7 @@ create trigger check_full before insert on copy
 - Btree, good for equaliy and range searches
 - Hash index, hash table
 - **Extendable Hashing**
+
   - Eliminates chains of pages caused by collisions
   - range of hash function has to be extended to accommodate additional buckets
   - h(v) mod 2^k
@@ -502,3 +503,27 @@ create trigger check_full before insert on copy
     - concatenate copy of old directory to new directory
     - split overflowed bucket B, into B and B' dividing entries in B between the using h3
     - Pointer to B in directory copy replaced by point B'
+
+- Directories
+  - depend on number of bits using
+  - 1 -> 2
+  - 2 -> 4
+  - 3 -> 8
+- Each bucket
+
+  - needs to keep track of how many bits it's using
+
+- **If bucket is full and using the max amount of bits the directory provides hv value**
+  - double directory
+    - new directories should point to existing buckets (don't create new buckets)
+    - then split the overfilled bucket
+      - update the associated directory (2x)
+- **If buccket is full but not full bit size**
+
+  - split bucket
+    - create new associated bucket (2x)
+    - update directory
+    - update bucket size too
+
+- h1, bucket size 2
+  - 2 directories, 2 sized buckets
