@@ -527,3 +527,26 @@ create trigger check_full before insert on copy
 
 - h1, bucket size 2
   - 2 directories, 2 sized buckets
+
+# Homework3
+
+- **indexes on unique values**
+- DBTTable class implements basic databse table
+  - every method will use ExtHash
+- ExtHash implements extendable hash index
+- File
+  - numOtherFields (at least 1)
+  - length 1 (for each fixed length field)
+  - length 2 ()
+  - free (pointer value to next address that is free)
+    - added and removing, always do it at head of list
+- Bucket file
+  - 0, bucket size
+  - n bits
+  - n keys (in the bucket)
+  - keys
+  - DB table address for that value
+- Directory file
+  - hash bits
+  - addr, bucket address
+- use hash index, never search
