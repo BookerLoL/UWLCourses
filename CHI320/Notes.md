@@ -1162,9 +1162,10 @@
   - preferred Confucian learning, Buddhism is barbarisnm
 
 # Shifting South
+
 - Song dynasty (960 - 1276)
   - agriculture -> south and yangzi valley migration -> central economy
-  - culture for yellow river 
+  - culture for yellow river
   - civil service exam and confucianism dominate
   - Can't control East Asia, powerful neighbor states treated as equals
 - Embattled State
@@ -1186,7 +1187,7 @@
     - appointed intendants, coordinate prefectures
   - No military dominance
     - Khitans in around Beijing
-       - **Liao state**
+      - **Liao state**
     - Tanguts (Tibetans) northwest (Gansu)
       - **Xia state**
     - 979-1041, Song army tripled
@@ -1248,7 +1249,7 @@
     - if don't take exam, start as sheriffs in remote places, almost never rise above post of migistrate
     - lots of people but number of posts never changed
       - wealthy families have lots of books to help for exam
-        - classics and  forms of compsitions
+        - classics and forms of compsitions
     - **Shen Gua**
       - designed drainage and embankment systems
       - financial expert
@@ -1256,7 +1257,7 @@
       - supervised military defence preparations
       - Laio state as envoy, negotiate treaty
       - wrote a lot, commentaries
-    - Families able to educate 
+    - Families able to educate
       - landholders, local elite
       - once in, had economic standing
         - privileges: access to exminations with better success to direct entry into lower posts
@@ -1311,11 +1312,11 @@
   - lineages, major force in local social and political life
   - Printing
     - spread and standization of ideas and practices
-    - handbooks on agriculture, childbirth, pharmacy, divination, Doaist 
+    - handbooks on agriculture, childbirth, pharmacy, divination, Doaist
       - ordinary people access to knowledge, funeral services, dabble in geomancy, medicines, etc
 - Women's lives
   - printing led to documentation of women role in society
-  - widow ran inns, run away from abusive masters, babies in 70's, 
+  - widow ran inns, run away from abusive masters, babies in 70's,
   - nuns, singing girls and courtesans, communicate with spirits, weaving mats, write poetry, etc
   - child rearing, select spouses for their children, strong ties to sons
   - educated class + printing
@@ -1327,7 +1328,7 @@
       - wives and widows control over dowries
       - orphan daughters shares of family property, landed property
   - footbinding and female demeanour
-    - delicate and restrainted women 
+    - delicate and restrainted women
     - modesty, veiled faces
     - footbinding, tenth/elventh century
       - dancers, upper-class
@@ -1340,6 +1341,7 @@
     - no frivolous pasttimes like writing poetry
 
 # Alien Rule
+
 - 1276, Mongols took over Song
   - three dynasties of conquest
     - Liao (907-1125)
