@@ -25,7 +25,7 @@ public class Tester {
 			new TestInput(8, "Kylo".toCharArray(), "Ren".toCharArray()),
 			new TestInput(9, "Jackie".toCharArray(), "Chan".toCharArray()),
 			new TestInput(10, "Summer".toCharArray(), "Winter".toCharArray()),
-			// new TestInput(11, "Felicia".toCharArray(), "Keys".toCharArray())
+			new TestInput(11, "Felicia".toCharArray(), "Keys".toCharArray())
 	};
 
 	private static TestInput[] test2Inputs = { new TestInput(2, "Tesing".toCharArray(), "Yo".toCharArray()),
@@ -42,7 +42,7 @@ public class Tester {
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
 
-		test3();
+		test1();
 		long finish = System.currentTimeMillis();
 
 		long timeElapsed = finish - start;
@@ -53,36 +53,52 @@ public class Tester {
 		try {
 			DBTable dbt = new DBTable("test", new int[] { 20, 20 }, 2);
 
-			for (TestInput input : test1Inputs) {
+			//
+			for (int i = 0; i < test1Inputs.length; i++) {
+				TestInput input = test1Inputs[i];
 				dbt.insert(input.key, input.values);
 			}
-
+			
+			
 			dbt.close();
 
 			dbt = new DBTable("test");
+			for (TestInput input : test1Inputs) {
+				//System.out.println(dbt.search(input.key));
+				// System.out.println(dbt.search(input.key + 100000));
+			}
+			dbt.printBuckets();
+			// 4, 3, 6, 8, 7 //1-10
+			int[] keyOrder = { 5, 4, 3, 6, 8, 7, 2, 10, 1, 9, 11 };
+			for (int key : keyOrder) {
+				System.out.println(dbt.remove(key));
+			}
+			dbt.printBuckets();
+			dbt.printBuckets();
+			System.out.println("AFTER AFTER AFTER AFTER AFTER\n\n\n");
+			for (int i = 0; i < test1Inputs.length; i++) {
+				TestInput input = test1Inputs[i];
+				dbt.insert(input.key, input.values);
+			}
+			dbt.printBuckets();
+
+			for (TestInput input : test1Inputs) {
+				//System.out.println(dbt.insert(input.key, input.values));
+			}
+			
 			for (TestInput input : test1Inputs) {
 				System.out.println(dbt.search(input.key));
 				// System.out.println(dbt.search(input.key + 100000));
 			}
 
-			// 4, 3, 6, 8, 7 //1-10
-			int[] keyOrder = { 5, 4, 3, 6, 8, 7, 2, 10, 1, 9 };
-			for (int key : keyOrder) {
-				System.out.println(dbt.remove(key));
-			}
-
 			for (int i = 0; i < test1Inputs.length; i++) {
 				TestInput input = test1Inputs[i];
-				dbt.insert(input.key, input.values);
+				System.out.println(dbt.remove(input.key));
 			}
+		
 
 			for (TestInput input : test1Inputs) {
-				dbt.insert(input.key, input.values);
-			}
-
-			for (TestInput input : test1Inputs) {
-				System.out.println(dbt.search(input.key));
-				System.out.println(dbt.search(input.key + 100000));
+				System.out.println(dbt.insert(input.key, input.values));
 			}
 
 			for (int i = 0; i < test1Inputs.length; i++) {
@@ -90,10 +106,16 @@ public class Tester {
 				System.out.println(dbt.remove(input.key));
 			}
 
-			// dbt.printDBTable();
-			// dbt.printDirectory();
-			// dbt.printBuckets();
+			for (TestInput input : test1Inputs) {
+				System.out.println(dbt.insert(input.key, input.values));
+			}
 
+			for (int i = 0; i < test1Inputs.length; i++) {
+				TestInput input = test1Inputs[i];
+				System.out.println(dbt.remove(input.key));
+			}
+			
+			dbt.printBuckets();
 			dbt.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -102,11 +124,12 @@ public class Tester {
 
 	private static void test2() {
 		try {
-			DBTable dbt = new DBTable("test", new int[] { 20, 20 }, 2);
+			DBTable dbt = new DBTable("test", new int[] { 20, 20 }, 1);
 
 			for (int i = 0; i < test2Inputs.length; i++) {
 				TestInput input = test2Inputs[i];
 				dbt.insert(input.key, input.values);
+
 			}
 
 			// dbt.printDirectory();
@@ -123,7 +146,7 @@ public class Tester {
 
 			for (int i = 0; i < test2Inputs.length; i++) {
 				TestInput input = test2Inputs[i];
-				// System.out.println(dbt.remove(input.key));
+				System.out.println(dbt.remove(input.key));
 				// dbt.printDirectory();
 			}
 
@@ -154,7 +177,7 @@ public class Tester {
 
 	private static void test3() {
 		try {
-			DBTable dbt = new DBTable("test", new int[] { 20, 20 }, 2);
+			DBTable dbt = new DBTable("test", new int[] { 20, 20 }, 1);
 
 			for (int i = 0; i < test1Inputs.length / 2; i++) {
 				TestInput input = test1Inputs[i];
@@ -173,13 +196,13 @@ public class Tester {
 				// System.out.println(dbt.search(input.key + 100000));
 			}
 
-			//dbt.printDBTable();
-			//dbt.printBuckets();
+			// dbt.printDBTable();
+			// dbt.printBuckets();
 			for (int i = test1Inputs.length / 4; i < test1Inputs.length / 3; i++) {
 				TestInput input = test1Inputs[i];
 				System.out.println(dbt.remove(input.key));
-				//dbt.printDBTable();
-				//dbt.printBuckets();
+				// dbt.printDBTable();
+				// dbt.printBuckets();
 				// dbt.printDirectory();
 			}
 
@@ -194,21 +217,20 @@ public class Tester {
 				TestInput input = test1Inputs[i];
 				dbt.insert(input.key, input.values);
 			}
-			
+
 			for (int i = test1Inputs.length / 2; i < test1Inputs.length; i++) {
 				TestInput input = test1Inputs[i];
 				System.out.println(dbt.remove(input.key));
-				//dbt.printDBTable();
-				//dbt.printBuckets();
+				// dbt.printDBTable();
+				// dbt.printBuckets();
 				// dbt.printDirectory();
 			}
 
-			
 			for (int i = 0; i < test1Inputs.length; i++) {
 				TestInput input = test1Inputs[i];
 				dbt.insert(input.key, input.values);
 			}
-			
+
 			for (int i = 0; i < test1Inputs.length; i++) {
 				TestInput input = test1Inputs[i];
 				System.out.println(dbt.remove(input.key));

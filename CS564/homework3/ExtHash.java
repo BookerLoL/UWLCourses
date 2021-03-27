@@ -1,24 +1,20 @@
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class ExtHash {
-	private static final String FILE_MODE = "rw";
-	private static final long NOT_FOUND = 0;
-	public static final int INITIAL_HASH_BITS = 1;
 	public static final String BUCKET_FILE_SUFFIX = "buckets";
 	public static final String DIRECTORY_FILE_SUFFIX = "dir";
+	private static final String FILE_MODE = "rw";
+	private static final int MIN_DIRECTORY_BITS = 1;
+	private static final long NOT_FOUND = 0;
 
 	RandomAccessFile buckets;
 	RandomAccessFile directory;
@@ -40,7 +36,6 @@ public class ExtHash {
 		}
 
 		public Bucket(long address) throws IOException {
-			// Bucket in order of file structure
 			bucketAddress = address;
 			buckets.seek(bucketAddress);
 			nBits = buckets.readInt();
@@ -148,8 +143,8 @@ public class ExtHash {
 		File directoryFile = createNewFile(filename + DIRECTORY_FILE_SUFFIX);
 		buckets = new RandomAccessFile(bucketsFile, FILE_MODE);
 		directory = new RandomAccessFile(directoryFile, FILE_MODE);
-		bucketSize = bsize;
-		directoryBits = INITIAL_HASH_BITS;
+		bucketSize = bsize > 0 ? bsize : 4;
+		directoryBits = MIN_DIRECTORY_BITS;
 
 		buckets.writeInt(bucketSize);
 		directory.writeInt(directoryBits);
@@ -202,7 +197,11 @@ public class ExtHash {
 			return false;
 		}
 
+		System.out.println("Trying to insert: " + key + "\t reinsert? " + skipSearch);
+
 		Bucket keyBucket = getBucketOn(key);
+
+		System.out.println("BUCKET: " + keyBucket);
 
 		if (keyBucket.insert(key, addr)) {
 			keyBucket.write();
@@ -210,45 +209,45 @@ public class ExtHash {
 		}
 
 		if (keyBucket.isDirectoryExpandable()) {
+			System.out.println("EXPANDING DIRECTORY");
 			expandDirectory();
 		}
 
 		// SPLIT
-
-		// Grab all the buckets that need to be split due to differing bits of the
-		// bucket's next nBits
+		// Grab all the bucket, split due to differing bits of the bucket's next nBits
 		final int nextBucketNBits = keyBucket.nBits + 1;
 		final int updatedBitsToMatch = getLeastSigBitsValue(hash(key), nextBucketNBits);
 
-		List<Integer> newSplitDirectoryBins = getPointedDirectoriesOn(keyBucket).stream()
-				.filter(directoryBin -> updatedBitsToMatch == getLeastSigBitsValue(directoryBin, nextBucketNBits))
-				.collect(Collectors.toList());
+		System.out.println(nextBucketNBits);
+		System.out.println(hash(key));
+		System.out.println(updatedBitsToMatch);
+		// Need to handle case where multiple directories point to the same bucket, rare
+		// case that arises when buckets are small
+		Pair<List<Integer>, List<Integer>> splitLists = getSplitDirectoryBins(keyBucket, updatedBitsToMatch,
+				nextBucketNBits);
 
-		// update directories that need to split to the new bucket, there could be more
-		// than 1
+		System.out.println("SPLIT LIST ONE: " + splitLists.key);
+		System.out.println("SPLIT LIST TWO: " + splitLists.value);
+		// Grabs the directory with a higher number
+		List<Integer> newSplitDirectoryBins = getMaxHeadList(splitLists);
+
 		Bucket newSplitBucket = new Bucket();
-		// System.out.println(newSplitDirectoryBins);
 		for (int splitDirectoryBin : newSplitDirectoryBins) {
 			directory.seek(getDirectoryAddress(splitDirectoryBin));
 			directory.writeLong(newSplitBucket.bucketAddress);
 		}
 
 		// grab all the items to rearrange
+		// would be more efficient to just split the keys between the two buckets.
 		List<Pair<Integer, Long>> rearrangeItems = keyBucket.getKeyAndAddresses();
 		rearrangeItems.add(new Pair<>(key, addr));
 
-		// Update the nbits and update the key as if removed and to handle potential
-		// future splits.
-
+		// Will reinsert all the keys in case of rare propagated splits
+		keyBucket.nKeys = 0;
 		keyBucket.nBits = nextBucketNBits;
 		newSplitBucket.nBits = nextBucketNBits;
-		keyBucket.nKeys = 0;
 		keyBucket.write();
 		newSplitBucket.write();
-
-		// System.out.println(keyBucket);
-		// System.out.println(newSplitBucket);
-		// System.out.println();
 
 		// Insert all the items
 		for (Pair<Integer, Long> item : rearrangeItems) {
@@ -256,20 +255,6 @@ public class ExtHash {
 		}
 
 		return true;
-	}
-
-	private void expandDirectory() throws IOException {
-		// double directory using the current bucket addresses for the new directories
-		List<Long> oldAddresses = getAllDirectoryBucketAddresses();
-		directory.seek(directory.length());
-
-		for (long oldAddress : oldAddresses) {
-			directory.writeLong(oldAddress);
-		}
-
-		this.directoryBits++;
-		directory.seek(0); // update directory bits in file
-		directory.writeInt(directoryBits);
 	}
 
 	private List<Integer> getPointedDirectoriesOn(Bucket b) throws IOException {
@@ -283,9 +268,50 @@ public class ExtHash {
 		return sameDirectoryBucket;
 	}
 
+	private Pair<List<Integer>, List<Integer>> getSplitDirectoryBins(Bucket keyBucket, final int updatedBitsToMatch,
+			final int nextBucketNBits) throws IOException {
+		List<Integer> directoryBins = getPointedDirectoriesOn(keyBucket);
+		List<Integer> splitBinOne = new LinkedList<>();
+		List<Integer> splitBinTwo = new LinkedList<>();
+
+		for (int directoryBin : directoryBins) {
+			if (getLeastSigBitsValue(directoryBin, nextBucketNBits) != updatedBitsToMatch) {
+				splitBinOne.add(directoryBin);
+			} else {
+				splitBinTwo.add(directoryBin);
+			}
+		}
+		return new Pair<>(splitBinOne, splitBinTwo);
+	}
+
+	private List<Integer> getMaxHeadList(Pair<List<Integer>, List<Integer>> listPair) {
+		if (listPair.key.isEmpty()) {
+			return listPair.key;
+		} else if (listPair.value.isEmpty()) {
+			return listPair.value;
+		}
+		return listPair.key.get(0) > listPair.value.get(0) ? listPair.key : listPair.value;
+	}
+
+	private void expandDirectory() throws IOException {
+		// double directory using the current directory bucket addresses for the new
+		// directories
+		System.out.println("Before Directory Length: " + (directory.length() - 4));
+
+		List<Long> oldAddresses = getAllDirectoryBucketAddresses();
+		directory.seek(directory.length());
+		for (long copyOldAddress : oldAddresses) {
+			directory.writeLong(copyOldAddress);
+		}
+		System.out.println("After Directory Length: " + (directory.length() - 4));
+		this.directoryBits++;
+		directory.seek(0);
+		directory.writeInt(directoryBits);
+	}
+
 	private List<Long> getAllDirectoryBucketAddresses() throws IOException {
 		final int totalDirectories = totalDirectories();
-		List<Long> directoryBucketAddresses = new ArrayList<>();
+		List<Long> directoryBucketAddresses = new ArrayList<>(totalDirectories);
 		for (int directoryBin = 0; directoryBin < totalDirectories; directoryBin++) {
 			directory.seek(getDirectoryAddress(directoryBin));
 			directoryBucketAddresses.add(directory.readLong());
@@ -294,7 +320,7 @@ public class ExtHash {
 	}
 
 	private int totalDirectories() {
-		return (int) Math.pow(2, directoryBits);
+		return 1 << directoryBits; // (int) Math.pow(2, directoryBits)
 	}
 
 	public long remove(int key) throws IOException {
@@ -311,65 +337,84 @@ public class ExtHash {
 		}
 
 		keyBucket.write();
-		int keyDirectory = getLeastSigBitsValue(hash(key), directoryBits);
 
-		if (keyBucket.isEmpty() && this.directoryBits > 1) {
-			List<Integer> samePointingDirectories = this.getPointedDirectoriesOn(keyBucket);
-			int correspondingLowerHalfBin = keyDirectory - (getNearestUnderPowerOfTwo(keyDirectory) / 2);
+		// Can attempt to borrow or combine
+		if (keyBucket.isEmpty() && directoryBits > MIN_DIRECTORY_BITS) {
+			List<Integer> samePointingDirectories = getPointedDirectoriesOn(keyBucket);
+
+			int keyDirectory = getLeastSigBitsValue(hash(key), directoryBits);
 			int firstLaterHalfDirectory = totalDirectories() / 2;
 
-			keyDirectory = samePointingDirectories.stream().min(Integer::compare).get();
+			System.out.println(keyDirectory + "\t" + samePointingDirectories);
+			keyDirectory = samePointingDirectories.get(0); // always has the min at the start
 
 			// Check if can borrow from parent
 			if (keyDirectory < firstLaterHalfDirectory) {
 				int parentDirectoryBin = firstLaterHalfDirectory + keyDirectory;
+				System.out.println("KEY DIRECTORY VS LATER HALF: " + keyDirectory + "\t" + parentDirectoryBin + "\t"
+						+ totalDirectories());
 
-				Bucket parentBucket = this.getBucketFromDirectory(parentDirectoryBin);
+				Bucket parentBucket = getBucketFromDirectory(parentDirectoryBin);
 
-				keyBucket.nKeys = parentBucket.nKeys;
+				System.out.println("BORROWING BITS: PARENT VS KEY\t" + parentBucket.nBits + " vs " + keyBucket.nBits);
+
+				keyBucket.nKeys = Math.max(keyBucket.nKeys, parentBucket.nKeys);
 				keyBucket.keys = parentBucket.keys;
 				keyBucket.rowAddrs = parentBucket.rowAddrs;
-				keyBucket.nBits = Math.min(parentBucket.nBits, keyBucket.nBits);
-				if (keyBucket.nBits > 1) {
+				if (keyBucket.nBits > MIN_DIRECTORY_BITS) {
 					keyBucket.nBits--;
+				} else {
+					// CAN HAPPEN IF BORROWING AT 0 OR 1 BUCKET
+					System.out.println("BITS WAS ALREADY 1 \t" + keyBucket);
 				}
 
 				keyBucket.write();
 
-				parentBucket.nBits--;
+				if (parentBucket.nBits > MIN_DIRECTORY_BITS) {
+					parentBucket.nKeys = 0;
+					parentBucket.nBits--;
+				}
 				parentBucket.write();
 
 				samePointingDirectories = getPointedDirectoriesOn(parentBucket);
 				updateDirectoryBinAddrs(keyBucket, samePointingDirectories);
 
 			}
-			if (correspondingLowerHalfBin >= 0 && !samePointingDirectories.contains(correspondingLowerHalfBin)) {
-				// Check if need to shift pointers.
+
+			// Collapse pointers to lower bin if possible
+			// Probably can get rid of correspondingLowerHalfBin check since keyDirectory protects against those issues
+			int correspondingLowerHalfBin = keyDirectory - (getNearestUnderPowerOfTwo(keyDirectory) / 2);
+			System.out.println("LOWER HALF BIN: " + correspondingLowerHalfBin + "\tKEY DIRECTORY: " + keyDirectory);
+			if (keyDirectory > 1 && correspondingLowerHalfBin >= 0
+					&& !samePointingDirectories.contains(correspondingLowerHalfBin)) {
 				Bucket lowerHalfBinBucket = this.getBucketFromDirectory(correspondingLowerHalfBin);
 
-				if (lowerHalfBinBucket.nBits > 1) {
+				if (lowerHalfBinBucket.nBits > MIN_DIRECTORY_BITS) {
 					lowerHalfBinBucket.nBits--;
 				}
 
+				System.out.println("COLLASPING");
 				lowerHalfBinBucket.write();
 				updateDirectoryBinAddrs(lowerHalfBinBucket, samePointingDirectories);
 			}
 
 			boolean removedHalfDirectory = false;
 			while (canRemoveHalfDirectory()) {
-				this.directoryBits--;
-				this.directory.seek(0);
-				this.directory.writeInt(directoryBits);
-				this.directory.setLength(getDirectoryAddress(totalDirectories()));
+				directoryBits--;
+				directory.seek(0);
+				directory.writeInt(directoryBits);
+				directory.setLength(getDirectoryAddress(totalDirectories()));
 				removedHalfDirectory = true;
 			}
 
-			if (removedHalfDirectory) { // clean up bucket file as much as possible
-				long bucketAddr = addrsMapBin().keySet().stream().max(Comparator.naturalOrder()).get()
-						+ this.bucketSize();
-				this.buckets.setLength(bucketAddr);
+			// clean up bucket file as much as possible
+			if (removedHalfDirectory) {
+				long endOfLastValidBucket = addrsMapBin().keySet().stream().max(Comparator.naturalOrder()).get()
+						+ bucketSize();
+				buckets.setLength(endOfLastValidBucket);
 			}
 		}
+
 		return removeAddr;
 	}
 
@@ -381,7 +426,7 @@ public class ExtHash {
 	}
 
 	private boolean canRemoveHalfDirectory() throws IOException {
-		if (directoryBits == 1) {
+		if (directoryBits == MIN_DIRECTORY_BITS) {
 			return false;
 		}
 
@@ -393,14 +438,21 @@ public class ExtHash {
 
 			if (b.isEmpty() || b.nBits < this.directoryBits) {
 				continue;
-			} else {
-				canRemoveHalf = false;
-				break;
 			}
 
+			canRemoveHalf = false;
+			break;
 		}
-
 		return canRemoveHalf;
+	}
+
+	private HashMap<Long, Integer> addrsMapBin() throws IOException {
+		HashMap<Long, Integer> addrToBin = new HashMap<>();
+		for (int i = 0; i < totalDirectories(); i++) {
+			Bucket b = getBucketFromDirectory(i);
+			addrToBin.putIfAbsent(b.bucketAddress, i);
+		}
+		return addrToBin;
 	}
 
 	public long search(int k) throws IOException {
@@ -429,8 +481,7 @@ public class ExtHash {
 	}
 
 	private long getDirectoryAddress(int directoryBin) {
-		// directory * long byte size + offset
-		return directoryBin * 8 + 4;
+		return directoryBin * 8 + 4; // directory * long byte size + offset
 	}
 
 	public int hash(int key) {
@@ -444,7 +495,7 @@ public class ExtHash {
 
 	private static int getLeastSigBitsValue(int value, int nBits) {
 		StringBuilder binarySB = new StringBuilder(nBits);
-
+		nBits = Math.min(nBits, 32); // int is only 32 bits at most
 		for (int i = nBits - 1; i >= 0; i--) {
 			int mask = 1 << i;
 			char bit = (value & mask) == 0 ? '0' : '1';
@@ -455,7 +506,7 @@ public class ExtHash {
 	}
 
 	private long bucketSize() {
-		return 8 + (4 * this.bucketSize) + (8 * this.bucketSize);
+		return 8 + (4 * bucketSize) + (8 * bucketSize);
 	}
 
 	private static int getNearestUnderPowerOfTwo(int number) {
@@ -478,15 +529,6 @@ public class ExtHash {
 		for (int i = 0; i < totalDirectories(); i++) {
 			System.out.println("Bin " + i + ", address=" + bucketAddress.get(i));
 		}
-	}
-
-	private HashMap<Long, Integer> addrsMapBin() throws IOException {
-		HashMap<Long, Integer> addrToBin = new HashMap<>();
-		for (int i = 0; i < this.totalDirectories(); i++) {
-			Bucket b = this.getBucketFromDirectory(i);
-			addrToBin.putIfAbsent(b.bucketAddress, i);
-		}
-		return addrToBin;
 	}
 
 	public void printBuckets() throws IOException {
