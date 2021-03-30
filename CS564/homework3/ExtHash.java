@@ -7,6 +7,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class ExtHash {
@@ -111,6 +112,16 @@ public class ExtHash {
 			nKeys--;
 
 			return addr;
+		}
+
+		public void borrow(Bucket other) {
+			nKeys = other.nKeys;
+			keys = other.keys;
+			rowAddrs = other.rowAddrs;
+
+			if (nBits > MIN_DIRECTORY_BITS) {
+				nBits--;
+			}
 		}
 
 		public List<Pair<Integer, Long>> getKeyAndAddresses() {
@@ -340,62 +351,21 @@ public class ExtHash {
 
 		// Can attempt to borrow or combine
 		if (keyBucket.isEmpty() && directoryBits > MIN_DIRECTORY_BITS) {
-			List<Integer> samePointingDirectories = getPointedDirectoriesOn(keyBucket);
+			int keyBucketDirectory = getLeastSigBitsValue(hash(key), directoryBits);
+			int upperHalfBucketDirectory = totalDirectories() / 2;
 
-			int keyDirectory = getLeastSigBitsValue(hash(key), directoryBits);
-			int firstLaterHalfDirectory = totalDirectories() / 2;
-
-			System.out.println(keyDirectory + "\t" + samePointingDirectories);
-			keyDirectory = samePointingDirectories.get(0); // always has the min at the start
+			// keyBucket.borrow(upperHalfSiblingBucket);
+			// updateDirectoryPointers(upperHalfSiblingBucket, keyBucket);
 
 			// Check if can borrow from parent
-			if (keyDirectory < firstLaterHalfDirectory) {
-				int parentDirectoryBin = firstLaterHalfDirectory + keyDirectory;
-				System.out.println("KEY DIRECTORY VS LATER HALF: " + keyDirectory + "\t" + parentDirectoryBin + "\t"
-						+ totalDirectories());
-
+			if (keyBucketDirectory < upperHalfBucketDirectory) {
+				int parentDirectoryBin = upperHalfBucketDirectory + keyBucketDirectory;
 				Bucket parentBucket = getBucketFromDirectory(parentDirectoryBin);
 
-				System.out.println("BORROWING BITS: PARENT VS KEY\t" + parentBucket.nBits + " vs " + keyBucket.nBits);
-
-				keyBucket.nKeys = Math.max(keyBucket.nKeys, parentBucket.nKeys);
-				keyBucket.keys = parentBucket.keys;
-				keyBucket.rowAddrs = parentBucket.rowAddrs;
-				if (keyBucket.nBits > MIN_DIRECTORY_BITS) {
-					keyBucket.nBits--;
-				} else {
-					// CAN HAPPEN IF BORROWING AT 0 OR 1 BUCKET
-					System.out.println("BITS WAS ALREADY 1 \t" + keyBucket);
-				}
-
+				keyBucket.borrow(parentBucket);
 				keyBucket.write();
 
-				if (parentBucket.nBits > MIN_DIRECTORY_BITS) {
-					parentBucket.nKeys = 0;
-					parentBucket.nBits--;
-				}
-				parentBucket.write();
-
-				samePointingDirectories = getPointedDirectoriesOn(parentBucket);
-				updateDirectoryBinAddrs(keyBucket, samePointingDirectories);
-
-			}
-
-			// Collapse pointers to lower bin if possible
-			// Probably can get rid of correspondingLowerHalfBin check since keyDirectory protects against those issues
-			int correspondingLowerHalfBin = keyDirectory - (getNearestUnderPowerOfTwo(keyDirectory) / 2);
-			System.out.println("LOWER HALF BIN: " + correspondingLowerHalfBin + "\tKEY DIRECTORY: " + keyDirectory);
-			if (keyDirectory > 1 && correspondingLowerHalfBin >= 0
-					&& !samePointingDirectories.contains(correspondingLowerHalfBin)) {
-				Bucket lowerHalfBinBucket = this.getBucketFromDirectory(correspondingLowerHalfBin);
-
-				if (lowerHalfBinBucket.nBits > MIN_DIRECTORY_BITS) {
-					lowerHalfBinBucket.nBits--;
-				}
-
-				System.out.println("COLLASPING");
-				lowerHalfBinBucket.write();
-				updateDirectoryBinAddrs(lowerHalfBinBucket, samePointingDirectories);
+				updateDirectoryBinAddrs(keyBucket, getPointedDirectoriesOn(parentBucket));
 			}
 
 			boolean removedHalfDirectory = false;
@@ -405,6 +375,16 @@ public class ExtHash {
 				directory.writeInt(directoryBits);
 				directory.setLength(getDirectoryAddress(totalDirectories()));
 				removedHalfDirectory = true;
+			}
+
+			if (directoryBits == MIN_DIRECTORY_BITS) {
+				// Weird special case that isn't handled when collapsing the directory nor
+				// borrowing
+				for (int i = 0; i < totalDirectories(); i++) {
+					Bucket b = this.getBucketFromDirectory(i);
+					b.nBits = 1;
+					b.write();
+				}
 			}
 
 			// clean up bucket file as much as possible
@@ -430,20 +410,14 @@ public class ExtHash {
 			return false;
 		}
 
-		boolean canRemoveHalf = true;
 		final int totalDirectories = totalDirectories();
 		for (int bin = totalDirectories / 2; bin < totalDirectories; bin++) {
-			directory.seek(getDirectoryAddress(bin));
-			Bucket b = new Bucket(directory.readLong());
-
-			if (b.isEmpty() || b.nBits < this.directoryBits) {
-				continue;
+			Bucket parent = getBucketFromDirectory(bin);
+			if (!parent.isEmpty()) {
+				return false;
 			}
-
-			canRemoveHalf = false;
-			break;
 		}
-		return canRemoveHalf;
+		return true;
 	}
 
 	private HashMap<Long, Integer> addrsMapBin() throws IOException {
@@ -466,8 +440,7 @@ public class ExtHash {
 	}
 
 	private int getDirectoryBinOn(int key) throws IOException {
-		int hashKey = hash(key);
-		return getLeastSigBitsValue(hashKey, directoryBits);
+		return getLeastSigBitsValue(hash(key), directoryBits);
 	}
 
 	private Bucket getBucketOn(int key) throws IOException {
@@ -507,14 +480,6 @@ public class ExtHash {
 
 	private long bucketSize() {
 		return 8 + (4 * bucketSize) + (8 * bucketSize);
-	}
-
-	private static int getNearestUnderPowerOfTwo(int number) {
-		int powerOfTwo = 2;
-		while (number >= powerOfTwo) {
-			powerOfTwo = powerOfTwo << 1;
-		}
-		return powerOfTwo;
 	}
 
 	public void printDirectory() throws IOException {

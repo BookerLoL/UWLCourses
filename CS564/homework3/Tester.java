@@ -25,9 +25,9 @@ public class Tester {
 			new TestInput(8, "Kylo".toCharArray(), "Ren".toCharArray()),
 			new TestInput(9, "Jackie".toCharArray(), "Chan".toCharArray()),
 			new TestInput(10, "Summer".toCharArray(), "Winter".toCharArray()),
-			new TestInput(11, "Felicia".toCharArray(), "Keys".toCharArray())
+			//new TestInput(11, "Felicia".toCharArray(), "Keys".toCharArray())
 	};
-
+	
 	private static TestInput[] test2Inputs = { new TestInput(2, "Tesing".toCharArray(), "Yo".toCharArray()),
 			new TestInput(6, "Ethan".toCharArray(), "Booker".toCharArray()),
 			new TestInput(10, "Bobby Jr".toCharArray(), "Jacobsen".toCharArray()),
@@ -42,7 +42,7 @@ public class Tester {
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
 
-		test1();
+		test2();
 		long finish = System.currentTimeMillis();
 
 		long timeElapsed = finish - start;
@@ -51,7 +51,7 @@ public class Tester {
 
 	private static void test1() {
 		try {
-			DBTable dbt = new DBTable("test", new int[] { 20, 20 }, 2);
+			DBTable dbt = new DBTable("test", new int[] { 20, 20 }, 1);
 
 			//
 			for (int i = 0; i < test1Inputs.length; i++) {
@@ -83,12 +83,12 @@ public class Tester {
 			dbt.printBuckets();
 
 			for (TestInput input : test1Inputs) {
-				//System.out.println(dbt.insert(input.key, input.values));
+				System.out.println(dbt.insert(input.key, input.values));
 			}
 			
 			for (TestInput input : test1Inputs) {
 				System.out.println(dbt.search(input.key));
-				// System.out.println(dbt.search(input.key + 100000));
+				System.out.println(dbt.search(input.key + 100000));
 			}
 
 			for (int i = 0; i < test1Inputs.length; i++) {
@@ -110,10 +110,20 @@ public class Tester {
 				System.out.println(dbt.insert(input.key, input.values));
 			}
 
+			int removed = 0;
+			for (int i = test1Inputs.length-1; i >= 0; i--) {
+				TestInput input = test1Inputs[i];
+				if (dbt.remove(input.key)) {
+					removed++;
+				}
+				
+			}
+			System.out.println(removed);
 			for (int i = 0; i < test1Inputs.length; i++) {
 				TestInput input = test1Inputs[i];
 				System.out.println(dbt.remove(input.key));
 			}
+			
 			
 			dbt.printBuckets();
 			dbt.close();

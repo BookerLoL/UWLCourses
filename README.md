@@ -12,7 +12,11 @@
 
 ## CS442 - Compilers
 
-## CS531 - Intro to Robotics
+## CS 551 - User Interface Design
+
+## CS555 - Fundamentals of Information Security
+
+## CS564 - Advanced Database Management Systems
 
 ## CS571 - Computer Networks
 
