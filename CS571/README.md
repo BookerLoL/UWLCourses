@@ -1176,3 +1176,101 @@
       - adding roundtrip hurts
       - w/o store and forward saves neglible amount of time
       - packet switching
+
+# Modem, Ecoding, Modulation
+
+- Modem
+
+  - input: accepts serial stream of bits
+  - produces: modulated carrier and vice versa
+    - twisted pair, cable, optical fiber, wireless
+  - AC signaling used
+  - sine wave carrier
+
+- Signal Encoding Techniques
+
+  - digital signaliing g(t) encoded (encoder) into digital signal x(t)
+
+    - x(t) depends on encoding technique and optiimze transmission medium
+
+  - Modulator
+    - Carrier frequency
+      - continuous constant-freq signal
+        - basis for analog signaliing
+      - data transmitted using carrier signal by modulation
+        - Modulation
+          - process of encoding source data into carrier signal with freq Fc
+          - all modulation techniques
+            - involve one or more
+              - amplitude, frequency, phase
+          - Input signal m(t), modulating signal / baseband signal
+            - digital or analogy
+          - output: modulated signal s(t)
+            - s(t) is bandlimited (bandpass) signal
+          - location of bandwidth on spectrum is related to fc, often near center
+          - actual encoding, chosen to optimize characteristic of transmission
+
+# Digital Data vs Digital Signal
+
+- Digital Signal
+  - seq of discrete, discontinuous voltage pulses
+  - each pulse is a signal element
+  - binary data transmitted, each bit into signal element
+- Terminology
+  - unipolar
+    - all signal elements have same sign
+  - polar
+    - one logic state represented by positive and negative voltage
+  - Data rate
+    - rate of data, bits per sec (bps)
+  - Duration or lenght of bit
+    - time taken for transmitter to emit for the bit
+  - Modulation rate
+    - rate at whcih signal level is changed
+    - rate expressed in baud, signal elements per second
+  - Mark and Space
+    - binary digits: 1 and 0 respectively
+
+# Key Data Transmission Terms
+
+- Data Element
+  - Bits
+  - signla binary, 0 or 1
+- Data Rate
+  - bits per sec (bps)
+- Signal element
+  - digital: voltage pulse of constant amplitude
+  - analog: constant freq, phase, and amplitude
+  - part of signal that occupies shortest interval of signaling code
+- Sigal rate / modulation rate
+  - signal elements per second (baud)
+  - rate of signal elements transmitted
+
+# Encoding Schemes
+
+- Nonreturn to Zero-Levle (NRZ-L)
+  - 0 = high, 1 = low
+- Nonreturn to Zero Inverted (NRZI)
+  - 0 = no transition at beginning of interval (one bit time)
+  - 1 = transition at beginning of interval
+- Bipolar-AMI
+  - 0 = no line signal
+  - 1 = postiive or negative, alternative for successive ones
+- Pseudoternary
+  - 0 = positive or negative level, alternative successive zeros
+  - 1 = no line signal
+- Manchester
+  - 0 = transition high to lower, in middle of interval
+  - 1 = transition from low to high, in middle of interval
+- Differential Manchester
+  - always transition in middle of interval
+  - 0 = transition at beginning of interval
+  - 1 = no transition at beginning of interval
+- B8ZS
+  - same as bipolar AMI, except any string of 8 zeros is replaced by a string of two code violations
+- HDB3
+  - same as bipolar AMI, except any string of four zeros if replaced by one code violation
+
+![Encoding Schemes](./encoding.png)
+
+- sequence: 01001100011
