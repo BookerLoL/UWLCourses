@@ -550,3 +550,49 @@ create trigger check_full before insert on copy
   - hash bits
   - addr, bucket address
 - use hash index, never search
+
+# Query Processing and Relational Algebra 1
+
+- Basic Process
+
+  - System catalog
+    - counts of rows, columns
+    - range, distribution, etc
+  - Sql query
+  - Sql parser (uses catalog)
+  - relation algebra expression
+  - query optimizer (uses catalog)
+    - query plan generator
+    - cost estimator
+      - how many times to go to secondard memory
+  - query execution plan
+  - query plan interpreter (uses catalog)
+  - query result
+
+- Relational Algebra
+  - set, no duplicates
+  - query processing allow duplicates
+  - Operators
+    - Select (sigma(condition))
+    - Project (pi(attribute list))
+      - select only attribute lists as output
+    - Union
+    - Set difference
+      - \-
+    - Intersection
+    - Certesian product
+      - x
+    - Joins
+      - natural join
+        - match up based on same matching column values
+      - equi join and theta join
+      - based on condition
+    - Division
+      - /
+      - if every value is found in other table, then take that table's column value as a result
+    - Renaming
+      - expression[a1, a2, a3]
+
+## Book
+
+- Database Systems by MIchael Kifer
