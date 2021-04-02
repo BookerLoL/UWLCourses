@@ -1299,6 +1299,7 @@
   - not often used for signal transmission
 
 - Multilevel Binary Polary AMI (alternate mark inversion)
+
   - more than 2 levels
   - Bipolary AMI
     - alternate one pulses in polarity
@@ -1309,5 +1310,9 @@
       - lower bandwidth
       - esy error detection
   - Pseudoternary
+
     - one is absennce of line signal
     - zero represented by alternating positive and negative
+    - no advantage or disadvantage over bipolar-ami
+
+  -
