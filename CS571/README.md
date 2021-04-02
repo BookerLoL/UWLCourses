@@ -1274,3 +1274,40 @@
 ![Encoding Schemes](./encoding.png)
 
 - sequence: 01001100011
+
+- Nonreturn to Zero-Level (NRZ-L)
+  - voltage constant during bit interval
+  - no transition, no return to zero voltage
+  - negative voltage for one value, positive for other
+- Nonreturn to Zero Inverted
+  - inverted on ones
+  - data encoded as presence or absence of signal transition
+    - transition (low to high or high to low ) = 1
+    - no transition = 0
+  - differential encoding
+    - more reliable to detect transition with noise
+    - easy to load the sense of the polarity
+- NRZ pros and cons
+
+  - pros
+    - easy to engineer
+    - good use of bandwidth
+  - Cons
+    - dc component
+    - lack of synchonization capability
+  - Used for megnetic recording
+  - not often used for signal transmission
+
+- Multilevel Binary Polary AMI (alternate mark inversion)
+  - more than 2 levels
+  - Bipolary AMI
+    - alternate one pulses in polarity
+    - pros
+      - no loss of sync if long string of ones
+      - long string of zersos still a problem
+      - no net dc component
+      - lower bandwidth
+      - esy error detection
+  - Pseudoternary
+    - one is absennce of line signal
+    - zero represented by alternating positive and negative
