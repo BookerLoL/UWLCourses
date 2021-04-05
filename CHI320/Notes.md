@@ -1345,10 +1345,105 @@
 - 1276, Mongols took over Song
   - three dynasties of conquest
     - Liao (907-1125)
-    - Jin (1125, 1234)
+      - Khitans
+    - Jin (1125-1234)
+      - Jurchens
     - Yuan (1215/1276-1368)
+      - Mongols
 - Steppe Nomadism and Inner Asian States
-  - pg 164
+
+  - Inner asia
+    - constant social organization
+      - patrilineal, clans into tribes, men became warriors
+    - herders vs famers
+      - often raid farmers
+      - frontier, assimilation
+  - Chinese states tore themselves apart
+    - led to non-Chinese regimes into power
+    - Abaoji (Yelu Clan), federation with Khitan tribes -> **Liao dynasty**
+      - copied Chinese model, hold power until death and give power to son, married with Xiao clans
+      - dual state, distinct Khitan and Chinese areas
+        - elites culturally dual
+      - southern capital in beijing
+  - Jurchen
+    - from mountains of eastern Manchuria
+    - Aguda (Wanyan clan) formed federation with Jurchen and allied with Son
+      - 1123 died, 1125 successor defeated Liao and turned on song
+    - used Chinese experts in siegecraft into army
+      - siege engines and incendiary bombs -> Kaifeng fell
+    - still dual gov
+    - 1153, Beijing as capital
+    - 1161, Kaifeng as capital
+    - didn't treat civil officials with respect
+      - flogged high officials
+    - 1161, jin emperor assinated, tried to adopt Chinese customs, language, dress, rituals
+    - new ruler, wanted Jurchen as written language, COnfucian classics into Jurchen, Jurchen schools and exams, threats to those who adopt Chinese customs
+    - End of dynasty, most spoke Chinese, wore Chinese clothes, surnames, married local population
+  - Chinggis (Ghengis) Khan and the mongols
+    - drop in mean temp -> less grass -> can't graze animals
+    - avenged father's death, enjoyed massacring enemy, seizing horses and cattle, and ravish women
+    - 1206, overlord / great khan, militarized Mongol society, ignored decimal hierarchy (1,000 horsenmen in basic unit)
+      - use commanders, can remove anytime, allowed to pass status to sons
+      - internal disorder reduced: robbery and adultery = death
+      - illiterate but Uighur script adopted for writing Mongol
+    - campaign
+      - become ally or face total destruction
+      - 1227, death but conquered many lands (pg 170)
+  - Mongol empire divided into four sections
+    - one for each descendant
+    - Ogodei, 3rd son, had most success
+    - Mongol success due to
+      - incorporate other ethnic groups into armies and gov
+        - non-loyalists joined
+        - chinese catapult and shipbuilders
+        - rewarded and given important posts
+    - Karakorum, new capital
+    - looting and pillaging, land given to commanders, skilled workers back to Mongolia, tax farmers
+  - Khubilai, grandson of Chinggis
+    - 1264, capital in Beijing, as: Dadu
+    - Chinese dynasty: Yuan, chinese court rituals
+    - Xiangyang, city on Han River in Hubei as key to control Yangzi Valley
+      - 1275, mongols crossed river
+      - 1279, won coast of Guangdong
+    - Mongols tried to avoid assimilation
+    - choose rulers through competition
+
+- Life in China Under Alien Rule
+
+  - not forced to adopt the customs of conquerors
+  - land expropriated, serfdom or slavery, transported
+  - legally inferior caste
+  - Aliens encouraged trade
+    - inflation due to circulation of currencies
+  - ethnic hierarchy
+    - judged and sentenced according to own legal traditions
+  - Chinese most likely to rebel
+    - not allowed to congregate in public
+    - no weapons
+    - no bamboo since could make bows and arrows
+    - can't take a Mongol name
+    - punished / killed if fought back
+  - hereditary rank and station
+    - lots of absconding
+  - adapated
+    - clerks did paperwork for gov
+    - scholars taught Mongol rulers Chinese principles
+      - usually as instructors at gov-sponsored academies
+    - illerati
+      - doctors, fortune-tellers, daoist priests, teachers, playwrites, etc
+        - **literary art of drama floruished**
+  - civil service exam mongol quota: 1/2 mongols, 1/4 jin, 1/4 song can pass
+    - 2% recruited through examination, most from promotion through clerical ranks
+
+- Ethnicity, Loayalty, and Confucian Universalism
+
+  - Chinese superior because culture was superior
+  - loyalty to ruler, hostility for others
+  - Confucian theory of transformative power of Chinese culture
+    - worked well when dominant force
+  - use of chinese universalistic political ideaology
+
+- 185
 
 # whatever
 
