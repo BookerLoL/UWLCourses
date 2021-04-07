@@ -1442,8 +1442,48 @@
   - Confucian theory of transformative power of Chinese culture
     - worked well when dominant force
   - use of chinese universalistic political ideaology
+  - conservative reactions
+  - alien rule
+    - iron industry, less vitality
+    - population decline
 
-- 185
+# Limit of Autocracy
+
+- Ming dynasty (1368 - 1644)
+- prosperity in south
+  - burgeoning of trade, international maritime trade
+  - influx of silver due to silk trading
+- Ming Taizu and Depotism
+
+  - Zhu Yuanzhang (Taizu), Ming Founder, most influential single person on Chinese history
+    - first commoner as emperor
+    - joined rebel group, White Lotus Society (affiliated with Red Turbans)
+      - married fost daughter of commander, he died, took control
+  - 1368, control of Beijing
+    - Nanjing is capital
+  - obey superiors, punish those who did evil
+    - officials knee or get beaten
+    - registration of population and land
+    - cut gov expenses, land to soldiers to farm
+    - village service policy, protect against rapacious tax collectors
+    - confucius beliefs
+    - high taxes on rich
+  - many problems led to suspicion
+    - guards into police spies
+      - execute anyone potentially against him
+      - lots of purges
+  - can't trust anyone, his own chief executive
+
+- Management Problems
+
+  - fourth son, Chengzu (Yongle), took over empire
+    - capital as Beijing, secondary capital at Nanjing
+      - Bejing, court and seat of military power
+      - Nanjing, supervision of fiscal matters
+    - Beijing built wall around palace (Forbidden City)
+      - centre of gov district (Imperial City)
+
+- 216
 
 # whatever
 

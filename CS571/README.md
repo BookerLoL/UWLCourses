@@ -1315,4 +1315,158 @@
     - zero represented by alternating positive and negative
     - no advantage or disadvantage over bipolar-ami
 
-  -
+- Manchester and Differential Manchester
+  - Manchester
+    - transition in middle of each bit period
+    - transition is clocking mechanism and as data
+    - low to high = 1
+    - high to low = 0
+  - Differential
+    - midbit transition is clocking only
+    - transition at start of bit period representing 0
+    - no transition at start of bit period representing 1
+  - Biphase pros and cons
+    - Con
+      - at least 1 transition per bit time and possibly two
+      - maxium modulation rate is twice NRZ
+      - requires more bandwidth
+    - Pros
+      - synchonization on mid bit transition (self clocking)
+      - no dc component
+      - error detection
+  - data transmission
+    - manchester, ethenet standard, coxial and twisted pair
+    - differential, token relap
+    - LAN applications, 10 MB/s
+- Scambling
+  - scambling to replace sequences that produce constant voltage
+  - filling sequences
+    - produce enough transitions to sync
+    - be recognized by received and replaced with original
+    - same length as original
+  - design goals
+    - no dc component
+    - no long seqs of zero level line signal
+    - no reduction in data rate
+    - error dection capability
+  - **B8ZS Scrambler**
+    - 8-zeros substitution
+    - coding scheme commonly used in North America
+    - based on bipolar-AMI
+      - if octect all zeros, last voltage pulse preceding is positive
+        - then octect = 000+\-0\-+
+      - if octect all zeros, last voltage pulse preceding is negative
+        - then octect = 000\-+0+\-
+- Baud Rate
+  - data rate = 1 / Tb (Tb, bit duration, bits per seconds)
+  - Modulation rate, signal which signal elements are generated
+    - Manchester
+      - max baud = 2 / Tb
+- Digital Data, Analog Signal
+
+  - public telephone system
+    - 300Hz to 3400Hz freq range
+    - modem, (modulator-demodulator)
+  - Encoding techniques
+    - ASK, amplitude shift keying
+      - encode 0/1 by different carrier amplitudes
+        - one amplitude for zero
+      - susceptible to sudden gain changes
+      - Uses
+        - 1200 bps for on-voice grade lines
+        - very high speeds over optical fibers
+    - FSK
+      - Binary FSK (BFSK)
+        - two values represented by two different frequences (near carrier)
+        - less suscepitable to error than ASK
+        - uses
+          - 1200bps on voice grade lines
+          - high frequency )3 - 30 MHz) radio
+          - evenhigher freq on LAN using coaxial cable
+    - PK
+      - Phase shift keying (PSK)
+        - phase signal represent data
+        - binary PSK (two phases)
+      - Different PSK (DPSK)
+        - shifted relative to previous transmission rather than some reference signal
+        - 1 = oposite signal of previous one
+      - Quadrature PSK (QPSK)
+        - shifts of pi/2 (90 deg)
+          - starts at 45 deg
+          - 00, 01 (-x), 11 (-x, -y), 10 (-y)
+        - each element represents two bits
+        - split input data stream into two
+          - module onto carrier
+          - phase shifted carrier
+      - QAM, constellation diagrams
+        - QPSK
+        - QAM-16
+        - QAM-64
+      - Gray coded
+        - symbols represent bits
+        - 1 bit difference to neighbors
+
+- Analog Data Digital Signal
+
+  - digitization: conversion of analog data into digital data
+    - transmitted using NRZ-L
+    - using code other than NRZ-L
+    - converted to analog signal
+  - Codec
+    - analog to digital conversion
+    - delta modulation
+  - Analog data (voice) -> digitizer -> digital data -> modulator -> analog signal
+
+- Pulse Code Modulation (PCM)
+  - if signal sampled at regular intervals at higher rate than highest signal frequency (Nyquisty) then sample contains all info of original signla.
+    - can reconstruct using lowpass filter
+    - 4000Hz voice data, requires 8000 sample per sec
+- Pule Amplitude Modulation (PAM)
+
+  - analog samples
+  - convert to digital, each analog samples must be assigned a binary code
+
+- PCM Block Diagarm
+  - continuous time / amplitude (analog input signla)
+  - PAM Sampler
+  - discrete time continous amplitude signal (PAM pulses)
+  - Quantizier
+  - discrete time discrete amplitude signal PCM pulses
+  - Encoder
+  - digital bit stream output signal
+- Non-linear coding
+  - mean absolute error same for each level
+  - 24-30db achieved
+- Delta Modulation (DM)
+  - analog input is approx by staircase function
+  - move up or down one quantization level at each sampling interval
+  - Binary behavior
+    - each sampling time, function moves up or down constant amount
+    - output of delta modulation process represented as single binary digit for each sample
+  - bit stream is produced by approx the derivative of analog signal rather than it's amplitude
+    - 1 generated if staircase function goes up, else 0 goes down
+- Multiplexing
+  - utilize data link under heavy load
+  - multiple channels on 1 phyiscal link
+  - common on long-haul, high capacity links
+  - n inputs, mux, 1 link, n channels, demux, n outputs
+  - telephone companies developed schemes for multiplexing conversations over single physical trunk
+  - Frequency division multiplexing (FDM)
+    - video / tv set
+    - freq spectrum is divided in frequency bands
+    - each user has exclusive possession of a freq band
+    - useful bandwidth of transmission medium exceeds required bandwidth of signals to be transmitted
+    - number of signals carried simultanoueously
+      - moduled onto diff carrier frequency
+      - carrier frequencies sufficiently separated
+    - coaxial and microwave systems
+    - digital or analog signals
+  - Time division Multiplexing (TDM)
+    - digitized voice and data streams
+    - use round-robin with each user getting entire bandwidth of a short time period
+    - telephone and celluar systems
+  - Wavelength division multiplexing
+    - another name for FDM
+      - used to carry many signals on one fiber
+      - multiple beams of light at diff frequencies
+      - carried over optical fiber links
