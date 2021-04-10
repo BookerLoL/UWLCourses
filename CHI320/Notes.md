@@ -1482,8 +1482,164 @@
       - Nanjing, supervision of fiscal matters
     - Beijing built wall around palace (Forbidden City)
       - centre of gov district (Imperial City)
+  - unpaid services
+    - burden for taxes or maintaining hostel
+    - famer soldiers not worth money
+      - created mercenary armies
+    - fail to meet coinage, counterfeiting coins, paper money abandoned
+      - went to silver ingots
+  - eunuchs can't read or interfere with politics, but failed
+    - enuchs control vital gov processes
+
+- Southwestern Frontier
+
+  - Yunnan and Guizhou, lots of land
+    - migrations, lots of ethnic mix
+  - prefectures and civil servants -> law codes and tax regulations
+  - native tribes, ruled with loose reign
+    - ming gov as distant overload
+  - settlers vs indigenous people conflicts
+  - civil service officials in areas they are unfamilar with
+    - led to aborigines
+  - Han Chinese dominant
+
+- Literati Life
+
+  - civil service exam, still important
+    - Analects, Mencius, Doctrine of the Mean, and Great Learning interpreted by Zhu Xi
+    - fixed formal eight-part style writing format
+    - provincal quotas
+      - prevent more advanced parts monopolizing
+    - shengyuan, government students, new lower tier
+    - Jinshi, most prestigious
+    - wealth not as important, being an official was
+      - allowed to have more land
+  - wealthy, "idyllic" version of literati life
+    - painting became popular
+
+- Popualr Culture
+
+  - lots of cheap books
+    - all sorts of books
+  - fictions and plays were popular
+    - less literate people can understand it
+  - scripts, full-length novels
+  - venacular literature influence wealthy
+    - judge people using standrds of purity of feelings
+    - women want better lovers that care for them
+
+- Philosophical currents
+
+  - Wang Yangming, challenged Zhu Xi
+    - metaphysics, self-cultivation, debate
+    - memorial
+    - objected moral principles
+      - understood and realized only through careful and rational investigation
+    - true knowing, inseparable from experience
+    - sagehood available to everyone
+    - influenced many people to go different routes
+      - Wang Gen, social standing doesn't limit from moral perfection
+      - pg 206
+
+- Local Society
+
+  - pg 206
 
 - 216
+
+# Manchus and Perialism
+
+- cheiftains of Manchus, northast China proper
+  - **three Manchus, Kangxi, Yongzheng, Qianlong (18th century)**
+- 19th century, plummeted in world ranking
+  - lost opium war 1840-1842
+  - copied from foriegners
+- Manchu Rule
+  -hunting, fishing, farming people
+  - descended from Jurchen
+  - Nurchaci, formed military units
+    - manchu, mongol, and chinese
+    - script for writing had ming law code and chinese books
+    - 1618, attacked Liaodong
+    - everyone forced to adopt Manchu hairstyle
+  - chinese and manchus stricter separation and no weapon possession allowed
+  - HOng Taiji, eigth son of Nurhaci
+    - Qing dynasty
+  - Able to build up state structure outside great wall
+    - more success than Chinese rebels because stronger military and machinery
+  - got rid of eunuchs, gave tasks to enslaved Chinese
+  - farmland in north, given to noblemen, imperial clansman, banners
+  - 1645, decree, men must have manchu hairstyle or executed in 10 days
+  - 1662, got the south
+    - 1663, Wu Sangui, led throw attempt but lost later on since has a previous Ming but couldn't be trusted since colloborating with the Manchus
+- Kangxi, Yongzheng, Qianlong
+
+  - 1669, Kangxi to 1799 Qianlong died
+  - outstanding managers
+    - not Chinese, easy to break patterns of court politics
+  - Kangxi
+    - military leader of Manchu and protectors of Chinese cultural heritage
+    - allowed Chinese literati low position gov jobs
+    - interested in Western religion and math and sciences
+  - Yongzheng
+    - forbid hereditary servile status
+    - public levies
+  - Qianlong, fourth son of Yongzheng
+    - sage emperor
+    - lots of reading, painting, writing
+    - Complete Books of the Four Treasuries
+      - all copies of offending books were destroyed
+
+- Territorial Expansion
+
+  - 1683, Taiwan acquired
+  - 1662, Zheng Chenggong drove out Dutch
+  - Took mongols over, better technology
+  - 1720, Lhasa taken
+  - 1884, Xinjiang
+    - British vs Russia, allowed China to take certian places
+
+- Culture and Society
+  - social hierarchy to prevent open and fluid society from emerging
+  - stricter rules on behaviors, like homosexuality
+  - faithful widows refusing to remarry
+  - many literati look for old texts to handle "laxness"
+    - 230-231
+- Maritime Trade and Relations with European Nations
+
+  - 1700, China was unmatched
+  - 19th century, outmatched in material and technology by the West
+  - British Easy India Company and Co-hong, meet in Guangzhou for trade
+    - silk, porcelain, tea (super popular)
+  - West: China has good ethics but no liberty or progress valued so it's inferior
+  - Qianlong refuse European goods as already "possess all things"
+
+- Opium and Opium War
+
+  - 1840-42
+  - Opium used for medicine then smoking
+    - narcotic effects, addictive
+  - 1800, import and domestic production banned of opium
+    - to fight addiction spread
+  - 1813, smoking outlawed and punishable
+  - gangs, smugglers, corrupt cops, etc
+  - Lin Zexu, an official who helped destroy the opium
+    - William Jardine, lobby for war
+  - Protected Guangzhou, but British went for Ningbo and Tianjin
+    - lost, ceded Hong Kong
+  - Treaty of Nanjing
+    - 21 mill oz silver, abolish CO-hong, open 5 treat ports
+    - if nation extracted new privilege from China, Britain would get it too
+  - Can't set own tariffs, need European officer to collect them
+  - more ports and less restrictive laws if didn't meet demands
+  - christian missionaries allowed, foreign business men can open factories on Chinese soil
+  - 1860, opium allowed
+
+- Internal Adversaries
+
+  -
+
+- pg 258
 
 # whatever
 

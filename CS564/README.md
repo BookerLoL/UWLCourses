@@ -590,8 +590,33 @@ create trigger check_full before insert on copy
     - Division
       - /
       - if every value is found in other table, then take that table's column value as a result
+        - **every** a good candidate to use this
     - Renaming
       - expression[a1, a2, a3]
+  - Result size
+    - R Union S
+      - Max = Size(R) + Size(S)
+      - Min = Max(Size(R), Size(S))
+    - R Intersection S
+      - Max = Min(Size(R), Size(S))
+      - Min = 0
+    - R difference S
+      - Max = Size(R)
+      - Min = 0
+      - if everything in S is in R = Size(R) - Size(S)
+    - Project A from R
+      - Max = Size(R)
+      - Min = 1
+    - R x S
+      - Size(R) x Size(S)
+    - Join
+      - Max = Size(R) x Size(S)
+      - Min = 0
+      - if primary key in R, foreign key is S
+        - no join attributes are null in S, Max = Size(R)
+    - Divide
+      - Max = Size(R) / Size(S)
+      - Min = 0
 
 ## Book
 
