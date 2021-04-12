@@ -617,6 +617,50 @@ create trigger check_full before insert on copy
     - Divide
       - Max = Size(R) / Size(S)
       - Min = 0
+- Quiz 8 solution fixes
+
+  - 1
+    - project libnum (select first = 'George' and last = 'Saunders' (A join W join B join Co))
+      - other solution: (A join W join Co)
+  - 2
+    - wrong logic
+    - needed to take set difference of pages > 200
+  - join Lo, Co, W, A
+
+- External Sorting
+  - large amount of data in secondary storage
+  - limited number of in memory space (memory buffers)
+  - partial sorting
+  - k-way merge sorted results
+  - simple example
+    - memory space, 4, 5 word (each int needs one word) memory buffers
+      - only room for 20 integers in memory
+    - 4 memory buffers, page holds 5 integers
+    - 223 integers to sort
+    - cieling(223/5) = 45 pages to sort with 4 mem buffers
+    - read 4 pages, sort them, write 4 sorted pages to secondary storage
+      - ceiling(45/4) = 12 sorted sequences
+    - merge sorted sequences
+      - 3 input pages, 1 output page
+      - ceiling(12/3) = 4 sorted sequences (1st pass)
+      - ceiling (4/3) = 2 sorted sequences (2nd pass)
+      - ceiling(2/3) = 1 sorted sequence (3rd pass and stop)
+  - sorting cost
+    - dominated by I/O
+    - suppose table with F pages, M memory page buffers
+    - partial sort cost
+      - 2F pages operations (F reads and F writes)
+      - produces ceiling(F/M) sorted sequences
+  - K-way merge cost
+    - ceiling(F/(M-1)) sorted sequences after partial sort
+      - 1 because need to have 1 page to write out to
+      - usually recursive, so have to keep going until 1 sequence
+    - multiple passes (usually)
+  - total costs
+    - partial sort costs + merge costs
+  - formula estima
+    - 2F x ceiling(log(M-1)F)
+      - X \* F page accesses
 
 ## Book
 
