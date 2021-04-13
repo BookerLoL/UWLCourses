@@ -1470,3 +1470,159 @@
       - used to carry many signals on one fiber
       - multiple beams of light at diff frequencies
       - carried over optical fiber links
+
+# Datalink Layer
+
+- Datalink Layer
+  - responsible for delivering frames of information over a single link
+    - regulates flow of data, bits in same order
+    - handle transmission errors
+  - Services
+    - framing
+    - control flow
+    - flow control
+  - provide well-edfined service interface to the network layer
+  - dealing with transmission errors
+  - regulating the flow of data so that slow receivers not swamped by fast senders
+  - Packet from network layer into Frames
+    - Frames have a header, payload field, trailer
+- Services provided to Network Layer
+
+  - principal service
+    - transfer data from network layer on source machine to network layer on destination machine
+  - services
+    - unacknowledged connectionless service
+      - src send frames to dest, dest no acknowledge of reception
+      - no logical connection between src and dest
+      - no action for lost frames
+      - appropriate for low error rate transmission
+        - recovery left to higher layers
+      - appropriate for real-tiem traffic
+    - acknolwedged connectionless service
+      - no logical connection between source and destination
+      - each frame individually acknowledged
+        - timed monitoring
+      - commonly used in wireless networks (WIFI)
+    - acknowledged connection-oriented service
+      - source and destination establish connection before data transmitted
+      - frames are numbered
+      - each frame received exactly once and in correct order
+      - appropriate for long, unreliable links
+        - satellite channel / long-distance telephone circuit
+  - Phases for connection-oriented service
+    - connections established between sender and receiver
+      - init frame tracking (buffers and counters)
+    - frame transmission
+    - connection is released
+
+- Framing
+
+  - error dection in data link layer
+    - break bit stream into frames, determine checksum for each frame at source
+    - checksum is recomputed after frame is received at destination
+    - error detection is based on comparing check sums
+      - if not same, then error has happened
+  - Breaking bit streams into frames
+    - byte count
+    - flag bytes with byte stuffing
+    - bit stufing with starting and ending flags
+    - physical layer coding violations
+
+- Byte count
+  - header field specifies number of bytes in frame
+  - byte count to determine end of frame
+  - erors amke frame tracking difficult
+    - doesn't know where next frame should start
+  - rarely used by itself
+- Flag Bytes with Byte Stuffing
+  - each frame starts and ends with special bytes
+    - flag bytes
+    - 2 consecutive flag bytes indicate end of one frame and start of next
+  - provide resynchonization after errors
+  - Byte stuffing
+    - send data link layer insert special escape byte (ESC) before flag bytes that are encoded as part of the data
+    - detect and remove escape byte prior to passing data
+    - **Rules**
+      - if flag byte, add escape byte before it
+      - if escape byte, add escape byte before it
+      - if escape then flag byte then need to escape both, thus 2 more escape bytes added
+      - if escape byte then escape then need to escape both, thus 2 more escape bytes added
+- Bitstuffing with starting and ending flags
+  - bit pattern of flag byte: 0x7E
+  - if data contains flag pattern: 01111110
+    - on transmite, after 5 1's in data, 0 is added
+    - on receive, a 0 after 5 1's is deleted
+  - USB uses bit stuffing
+  - Physical layer coding violations
+    - used only for networks where encoding on physical medium contains some redundancy
+      - some signals will not occur in regular data
+      - some reserved signals to indicate start and end frames
+      - usign coding violations to delimit frames
+      - ethernet and wifi
+        - might have a preamble
+- Error Control and FLow Control
+  - acknowledgement protocol, special control frames
+    - positive, frame arrived safely
+    - negative, something gone wrong, must be transmitted again
+  - Timers to accomodate missing frames
+    - uses connection-oriented appraoch
+    - avoid hanging for response
+    - **use sequence numbers** to differeniate originals from retransmissions
+  - Flow Control
+    - sender transmits frames faster than receiver can accept
+    - approaches
+      - feedback-base flow control
+        - receiver send back info
+          - permission to send more data
+          - status of receiver
+      - rate-based flow control
+        - limit rate of which senders may transmit data, without feedback from receiver
+        - can send N frames until X time to send more.
+- Error Detection and Correction
+
+  - error correction is ongoing problem
+    - really bad for wireless
+  - use redundant info
+    - error correcting codes
+      - decipher data transmitted
+      - correction codes
+      - FEC
+    - error detecting codes
+      - deicpher error has occurred
+      - request retransmission
+  - Bit Error Rate
+    - probability of bit received is incorrect
+    - frame of F bits long
+    - Probability (frame arrives perfectly)
+      - (1 - Pb)^F
+    - Probability(error detection, error go undetected)
+      - 1 - P(frame arrives perfectly)
+  - Regardless of transmission medium
+    - There will always be errors
+
+- Error Correction
+
+  - Codeword
+    - n-but unit (frame) containg data (m bits) and redundant check bits (r bits)
+    - (n, m) code
+      - n = m + r
+    - XOR to find num bits differ, count num 1 bits
+      - hamming distance: number of bit positions differ
+      - d single-bit errors to convert one into the other
+  - Construct list of legal codewords
+    - message can have 2^ possibilities
+    - bit calculation limits codeword possibilities (< 2^n)
+    - r check bits
+      - legal codewords in possible messages: 2^m/2^n or 1/2^r
+  - Depend on hamming distance
+    - detect d errors, need d + 1 code
+    - need d errors, distance 2d+1 code is required
+  - Parity bit
+    - number of 1 bits in codeword is even or odd
+      - modulo 2 sum
+      - or XOR of data bits
+    - append parity bit to end of word
+    - even parity, add 0
+    - odd parity, add 1
+
+- NEed to finish later
