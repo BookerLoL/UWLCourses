@@ -1637,9 +1637,59 @@
 
 - Internal Adversaries
 
-  -
+  - numerous rebellions
+    - millenarian White Lotus sect
+    - milleranian Eight Trigrams sect
+    - most difficult **Taiping rebellion** (1850-64)
+      - 20 mill deaths
+      - peasant uprising
+      - started in South China, locals and Hakka
+        - opium war, disruption
+        - porters lost job after new ports opened
+        - disliked foriegners such as Hakka
+      - **Hong Xiuquan**, Hakka
+        - failed civil service exam
+        - christian, visions to kill demons
+        - destroyed idols, ancestral temples, no more opium and alcohol, end footbinding and prostitution
+        - 1850, guanxi, lots of followers
+        - 1851, started revolt, declared himself as King of the Heavenly Kingdom of Great Peace (Taipings)
+          - many soldiers, secret-society-members, other discontents
+        - 1853, took Nanjing, killed surviving Manchus by burning, stabbing, drowning
+        - Nanjing, utopian calls
+          - equalization of land holding
+          - equality of men and women
+          - civil service exams, open to men and women
+            - based on Hong's teachings and translation of Bible
+        - failures
+          - didn't gain many gentry followers, aid from mmissionaries
+            - too 'heretical'
+          - westerners counter attack Shanghai
+          - leadership problems
+            - Hong let others rule and run
+              - led to assinations
+          - too much systematic slaughtering of survivors
+        - **Zeng Guofan**, scholar in Hunan, 120,000 troops to take back Nanjing
+
+- 242
 
 - pg 258
+
+# Homework
+
+- "What do you want to do more research on?"
+  - show own interpretation of it
+    - show knowledge about that historical period of time
+- primary sources
+  - video links and other resources
+    - online museums
+    - visual source book
+- 1 page proposal
+  - topic to explore
+  - list links to primary sources
+    - the particular item
+  - embed image into proposal
+- 6 page paper
+- in class presentation
 
 # whatever
 
