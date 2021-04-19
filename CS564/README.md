@@ -661,6 +661,64 @@ create trigger check_full before insert on copy
   - formula estima
     - 2F x ceiling(log(M-1)F)
       - X \* F page accesses
+- NoSQL
+  - address areas of concern where relational db wouldn't be so applicable
+  - motivation
+    - scaling
+    - distributed data sources
+    - high costs of joins
+    - great variation in data
+    - design focuses on query needs of application
+    - RDBMS not always match needs to application
+    - RDBMS not going away
+  - Characteristics
+    - no predefined schema
+    - limited or no support for declarative query language
+    - focus on scalability, availability, and performance
+  - SQL vs NoSQL
+    - Transactions
+    - ACID
+      - Atomicity
+      - Consistency
+      - Isolation
+      - Durability
+    - BASE
+      - Basically Available
+      - Soft state
+      - Eventually consistent
+    - CAP
+      - Consistent
+        - all replicas contain same view of the data
+        - client always see the same view of the data
+      - Available
+        - systems remain operational in presence of failures
+        - all clients can always read and write
+      - Partition Tolerance
+        - system remains operational in presence of communication failures or network partition
+    - Cap "Theorem"
+      - Systems can only support 2 or 3
+      - ideas debated
+    - Scalability
+      - Horizontal
+        - distribute data and load over many servers
+        - servers don't share RAM or Disks
+        - **Better for scaling**
+      - Vertical
+        - distribute load of many cores or processors
+        - cores or processors share RAM and disks
+        - **Relies on machines, bottleneck**
+    - Partitioning
+      - Horizontal (Sharding)
+        - storing records on different servers
+      - Vertical
+        - Storing parts of a record on different servers
+    - Replication
+      - Storing multiple copies of the same data
+    - Taxonomy of NoSQL
+      - Key-Value (map-like)
+      - Column Based
+      - Document (like mongo)
+      - Graph Database (like neo4j)
 
 ## Book
 
