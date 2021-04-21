@@ -1626,3 +1626,261 @@
     - odd parity, add 1
 
 - NEed to finish later
+
+# Network Layer
+
+## Review of TCP and IP
+
+- TCP hand msg to IP with instructions to host B
+  - IP hands msg to network access layer with instructions to router j
+- enable data send across subnetwork
+- IP in all end systems and router
+- TCP only in end systems
+- TCP keeps track of data to assure all delivered reliably to appropriate application
+- Addressing requirements (2 levels)
+  - each host on subnet needs unique global network address
+    - IP address
+  - each application on host needs unique address
+    - port
+
+## Connectionless Internetworking
+
+- Internetworking involves connectionless operation at the level of the internet protocol
+  - approaches
+    - virtual circuit
+    - datagram
+  - initially dev for DARPA internet project
+  - protocol is needed to access particular network
+- must share same TCP and IP
+- router only needs to implement up to IP
+- connectionless internet facility is flexible
+  - IP provides connectionless service between systems
+    - flexible
+    - made robust
+    - no uncessary overhead
+
+## IP Design Issues
+
+- routing
+  - ES/routers maintain routing table
+    - indicate next router to which datagram is sent
+    - static or dynamic
+      - static can have alternative routes
+      - dynamic more flexible for error and congestion conditions
+  - source routing
+    - seq list of routers to follow
+    - useful for security and priority
+  - Router recording
+    - each router appends internet address to list of addresses in datagram
+    - for testing and debugging
+- datagram lifetime
+  - if dynamic or alternate routing, then potential indefinite loop
+    - consumes resources
+    - transport protocol use upper bound lifetime
+      - mark datagram with lifetime
+      - discard when lifetime expires
+      - Approaches
+        - counter
+        - time difference
+          - can be used in reassmbly
+- fragmentation and reassembly
+  - data into smaller blocks, fragmentation
+  - reasons
+    - network accepts blocks of certain size
+    - more efficient error control and smaller retransmission units
+    - fairer access to shared facilities
+    - smaller buffers
+  - disadvantages
+    - smaller buffers
+    - more interrupts and time processing
+  - When to re-assemble
+    - at destination
+      - packets get smaller as data traverses internet
+    - intermediate re-assembly
+      - need large buffers at routers
+      - buffers may fill with fragments
+      - all fragments must go through same router
+  - IP fragmentation
+    - IP re-assembles at destination only
+    - user fields in header
+      - Data Unit Identifier (ID)
+        - identifies end system originated datagram
+      - data length
+        - length of user data in octects
+      - offset
+        - position of fragment of user data in original datagram
+        - in multiples of 64 bits (8 octets)
+      - more flag
+        - indicate this is not the last fragment
+    - Create datagram with data length = data field, offset = 0, more flag = 0 (false)
+    - fragment into two pieces
+      1. copy header fields of incoming datagram into two new datagrams
+      2. divide data into two portions
+      3. first data gram, set length to inserted data, more flag to 1, offset unchanged
+      4. second data gram, set length to inserted data, length of first data portion / 8 to offset field, more flag unchanged
+    - Approaches when to reassemble
+      - reassembly lifetime
+      - datagram lifetime
+    - example
+      - original IP datagram
+        - IP header (20)
+        - TCP header (20)
+        - TCP Payload (384)
+      - Partial 1
+        - IP Header
+        - TCP Header
+        - Payload
+      - Partial 2
+        - IP Header
+        - Payload
+- error control
+  - discarded datagram identification is needed
+  - reasons
+    - lifetime expiration
+    - congestion
+    - FCS error
+- flow control
+  - allow routers to limite rate of data received
+  - send flow control packets requesting reduced data flow
+
+## IP Parameters
+
+- Source Address (IP Entity)
+- Destination Address (IP Entity)
+- Protocol
+  - recipient protocol entity (IP user, such as TCP)
+- Type of Service
+  - specify treatment of data unit
+- Identification
+  - source address + destination address + user protocol
+- Don't fragment identifier
+  - whether IP can fragment data to accomplish delivery
+- Time to Live
+  - in seconds
+- Data Length
+- Option Data
+- Data
+- **identification, don't fragment identifier, and time to live** are present in send primitive, not deliver primitive
+
+## IP Options
+
+- future extensibility and inclusion of parameters not involved
+- Values
+  - Security
+  - Source routing
+  - Route recording
+  - Stream identification
+  - timestamping
+
+## IPv4 IP Services
+
+- IPv4
+  - defined in RF 791
+  - part of TCP/IP suite
+  - two parts
+    - Interface, specifying services IP provices
+    - actual protocol format and mechanisms
+- Primitives
+  - specifies functions to be performed
+  - form of primitive implementation dependent
+    - like a procedural call
+  - send-request transmission of data unit
+  - deliver-notify user of arrival of data unit
+- Paramters
+  - used to pass data nd control info
+
+## IPv4 Address Format
+
+- classes
+  - class A
+    - 0, 7 bits network, 24 bits host
+    - few networks
+    - 127 reserved
+      - range: 1-126
+  - class B
+    - 10, 14 bits network, 16 bits host
+    - medium networks
+    - 2^14 addresses
+    - 128-191 reserved
+  - class C
+    - 110, 21 bits network, 8 bits host
+    - many networks
+    - 192-223 reserved
+    - 2^21
+  - class D
+    - 1110, multicast
+  - class E
+    - 11110, future use
+- IP Address
+  - binary into numbers
+  - Look at beginning bits to find which class it belongs to
+- Subnets and masks
+  - arbitrary complexity internetworked LANs within organization
+  - insulate overall internet from growth of network numbers and routing complexity
+  - site looks to rest of internet like single network
+  - each LAN assigned subnet number
+  - Host portion of address partitioned into subnet number and host number
+  - local routers route within subnetted network
+  - subnet mark indicates which bits are subnet numbers and which are host number
+
+## Internet Control Message Protocol (ICMP)
+
+- RFC 792
+- provides means for transferring messages from routers and others hosts to a host
+- provide feedback about problems
+  - datagram can't reach destination
+  - not buffer capacity forward
+  - router can send traffic on shorter route
+- Encapsulated in IP datagram
+  - not reliable
+- 64 bit header
+  - type, code, checksum, pointer, 32 bit params, additional info fields
+- common messages
+  - destination unreachable, time exceeded, source quench
+  - paramter problem
+  - redirect
+  - echo, echo reply
+  - timestamp
+  - timestamp reply
+  - address mask request
+  - address mask reply
+
+## Address REsolution Protocol (ARP)
+
+- MAC address to send to LAN host
+  - included in network address
+  - central directory
+  - address resolution protocol
+- ARP (RFC 826) provides dynamic IP to ethernet address mapping
+  - source broadcasts ARP request
+  - destination replies with ARP response
+
+## Virtual Private Network (VNP)
+
+- set of computers interconnected usign unsecure network
+  - linking corporate LANs over Internet
+- useing encryption and special protocols to provide security
+  - evasdropping
+  - entry point for unauthroized users
+- Properietary solutions are problematic
+  - development of IPSec standard
+
+## IPsec
+
+- RFC 1636 identified security need
+- encyption and authentication necessary security features in IPv6
+- designed also for use with current IPv4
+- Benefits
+  - provide strong security for external traffic
+  - resistant to bypass
+  - below transport layer henc transparent to applications
+  - transparent to end users
+  - can provide security for individual users if needed
+- Functions
+  - authentication header (AH)
+    - for authentication only
+  - Encapsulating Security Payload (ESP)
+    - for combined authentication/encryption
+  - key exchange function
+    - manuagel or automated
+  - VPNs usually need combined function
