@@ -719,6 +719,67 @@ create trigger check_full before insert on copy
       - Column Based
       - Document (like mongo)
       - Graph Database (like neo4j)
+- Query Processing Basics
+  - file scan
+    - linear
+  - sorting
+    - k-way sort
+  - indexes
+  - computing projection
+    - duplicates allowed
+      - scan table keep attributes
+      - if F pages in table then F reads + F or less writes
+    - duplicates not allowed
+      - sort-based projections
+        - sort and remove duplicates at write of last merge phase
+        - cost same as sorting
+      - Hash-based projections
+        - hash into buckets, remove duplicates in each bucket
+        - cost is 4F assume the bucket fits in memory
+  - Computing selection
+    - selection with simple conditions
+    - select attribute op value R
+      - no index, file scan
+      - B+ tree index
+        - search for B+ tree node where attr = value and scan leaves based on operator
+      - hash index
+        - only works for attr = value
+    - selection with complex conditions
+      - selections with conjunctive conditions (and)
+        - use most selective access path
+          - scan tuples returned by that acess path
+          - access path chosen depends on indexes available
+        - use multiple access paths (intersect results)
+          - use intersection of tuples returned by all access paths
+      - selections with disjunctive conditions (or)
+        - if all disjuncts have better acess path than scan, use them otherwise scan
+      - selection problem
+        - 5,000 tuples with 10 tuples per page
+          - 500 pages
+        - a 2-level B+ tree index on attribute A with up to 100 index entries per page
+        - attribute A is a candidate key of R
+        - values of A are uniformly distributed in range of 1 to 100,000
+  - Computing Joins
+    - simple nested loops
+      - for each row algorithm
+      - F pages in R and S
+      - N rows in R and S
+      - cost = Fr + Nr x Fs
+      - order of loop matters
+    - block nested loops
+      - for each page algorithm
+      - cost Fr + Fr x Fs
+      - improvement
+        - assume M page buffers available
+        - read M-2 page form R and join with page from S
+          - Fr + Fs x ceiling(Fr / (M-2))
+    - index nested loops
+      - index to work with
+      - use index on attribute B to find all tuples
+      - B+tree (height h) index on B in S
+        - Fr + ((h+1) + 1) x Nr
+          - +1 because btree of height h is actuall level 0 + height
+          - +1 for access
 
 ## Book
 

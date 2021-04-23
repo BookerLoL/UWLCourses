@@ -1674,6 +1674,170 @@
 
 - pg 258
 
+## Opening to the World
+
+- 1980s
+  - incr market activity, foriegn investment, students abroad
+  - many from countryside to expanding cities
+- 1990s
+  - more modernized
+- Deng Xiaoping and the Reform Programme
+  - Mao's widow, Jiang Qing, radical egalitarian
+  - **Deng Xiaoping**
+    - rising leader of victims of cultural revolution
+      - economic incentives and pramatic policies
+- Hua Guofeng, head of COmmunist Party after Mao's death
+  - Gang of Four arrested, Jiang Qing
+- 1977, Deng Xiaoping back in power
+  - revolutionary pedigree
+  - **Reform on universities**
+    - reintroduce college entrance exams
+    - four modernizations
+      - agriculture, industry, science and technology, defense
+    - people sent to countryside can return home
+    - western teachers to teach english and other languages
+    - study abroad
+  - 'responsibility system'
+    - given land and incentives to increase production
+    - sell crops for specific use of fields
+    - keep and sell whatever they made extra of
+  - 1987, farmers can buy or sell right to use plots of land
+    - rural local govs encouraged other ventures
+      - fish farming, equipment repair, mini factories for toys
+  - 1985, relaxed state control of vegtables, fruits, and meats
+  - Cities
+    - private sector revived
+      - open restaurants, beauty palours, and other small businesses
+    - expropriated property returned
+  - Foreign investment
+    - 1979, US foreign affairs visit
+    - 1980, first Special Economic Zone at Shenzhen
+    - 1980s, foreign manufacturers for cheap labour costs
+    - Guangdong best access to financial giant Hong Kong
+    - Zhejiang was big in 2000s
+  - **socialist market economy**
+    - communism failed in soviet union
+    - 'to liberate and develop productive forces'
+  - Sold to international markets
+    - Russia, Japan, America
+    - Joint ventures and foreign-invested firms from HK, Taiwan, South Korea
+    - GDP increase, volume of export trade incr
+  - 2001, joined World Trade Organization (WTO)
+  - 2008, ranked 2nd in export trade and in foreign reserves
+    - **less poverty**
+    - advances in standard of living
+      - improved adult literacy
+      - decreased infant mortality
+  - firms with government connections had advantages
+    - access to credit
+    - didn't threatan doiminance of party or state
+  - Problems
+    - smuggling, fraud, conterfeiting
+    - inflation
+    - closing big companies, lots of job losses
+- Party-State and Its critics
+  - Tried to regain people's support
+    - 1978, labelled rightists had label removed
+      - exiled or inprisoned people released
+    - 1980, party members sent back to school to learn to read and write
+    - retirement ages for elderly party members
+  - Many corrupt party members
+    - publicized persecutions and stiff sentences did nothing
+  - Legal system overhual
+    - 'The rule of law', key slogan
+      - bureaucratic regulations
+        - legal codes, training lawyers, and educated people in law
+      - courts difficult time enforcing judgement against party leaders
+        - didn't restraint government
+    - 1979, uni law programs
+  - 1978-1979, can voice criticism on policies and leaders
+    - Wei Jingshen, wanted true democracy, able to vote leaders
+      - arrested
+  - Student protests
+    - Fang Lizhi, 1986
+      - 150 campuses
+        - wanted greater freedom, less corruption, better living conditions in dorms
+    - April 1989, honoring Hu Yaobang who recently deceased
+      - Students wanted
+        - officials to disclose income and assets
+        - renounce mass political campaigns
+        - abolish prohibition against street protests
+        - permit journalists to report protest activities
+        - end corruption
+      - Foreign supporters, Mikhail Gorbachev, Soviet Unions General Secretary
+        - many supporters and in surveryed were with the movement
+    - ultimately led to humiliation for the gov
+      - brought in tanks and artillery to stop the protests
+    - **Massive censorship, can't talk badly about the gov**
+      - any political potential will get shut down
+  - Tolerate growing inequalities
+    - regional inequalities
+      - coastal was growing
+        - was invested for ports and rail lines
+        - many migrated to these cities for jobs
+          - lots of taking advantage of these people
+    - Rural population moved to towns and cities
+    - Shared housing became rare, private bedrooms more popular
+    - private buying and selling of homes popular
+    - Chinese like to buy since more people had money
+      - technology, furniture, you name it!
+    - Third generation
+      - Great Leap famine
+      - Schooling cut short, Cultural Revolution
+      - One child, lost jobs to younger generation, hard to find new ones
+    - Rural areas can't afford barefoot doctors from the Communes
+      - 2007, school fees finally eliminated for rural
+    - Massive wealth vs poor issues
+  - Environmental Degradation
+    - terracing mountains, plowing grasslands, reclaiming wetlands, damming rivers, killing all sparrows
+      - soil rerosion, desertification, massive flooding
+    - air and water pollution
+    - thousands of non-gov organizations
+    - tougher laws but not enforced
+  - Shrinking Families
+    - women has right to divorce
+    - coerced marriage less common
+    - women did farm work and efforts to enroll in schools
+    - women were treated more equally, could join party
+    - family less central in their lives, less time at home
+    - more concerned with nuclear family than family continuity
+    - reform era
+      - rural, fees to schools, didn't send children to school
+      - hiring process widthdrew, girls less likely to get job
+      - women laid off first
+      - suicide rates huge when men left wife at home and went to another place
+      - **stringent birth control policies**
+        - limit population, near 1 billion mark
+        - one child policy, cities
+        - one or two child policy, countryside
+        - permission from work unit to get married
+          - permission to have child
+        - if too many children, abortion or potentially lose house
+        - **1/3 of the population by 2050 will be over 60 which is a big problem**
+        - ultrasound made it so women wanted abortion if baby was a girl
+          - 2005, 119 to 100 male to fmale (normal: 106 to 100)
+            - shortage of women, lots of single men
+  - Culture and Arts
+    - religion revivied
+      - gov rebuild churches, mosques, temples
+    - press and media livelier
+      - reporters on corruption
+      - philosophers
+        - reaxamine premise of Marxism
+      - novelists, poets, filmmakers
+        - explore taboo of sexuality
+    - Western pop culture 1980s
+      - music
+      - short skirts, sunglasses, hairstyles
+      - campaigns to stop eroticism, individualism, vulgarity of young people
+        - failed
+    - new styles of arts being explored
+      - leaving socialist realist styles
+      - more art galleries
+      - contemporary art
+    - higher quality films
+      - beijing film academy
+
 # Homework
 
 - "What do you want to do more research on?"
