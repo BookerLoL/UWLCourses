@@ -1837,6 +1837,26 @@
       - contemporary art
     - higher quality films
       - beijing film academy
+    - movies
+      - international collaborations
+  - China and the World
+    - Afraid of Soviet Union with spies
+    - 1970s foreign policy, build relationship with western countries
+      - Cambodia support, but lost in Vietnam war
+        - led to needing of modernization of the armed forces
+    - Hong Kong 1997, reclaimed
+      - one country, two systems
+      - able to maintain own plitical and economic system
+        - for 50 years
+    - **diplomacy for help in economic goals**
+      - 1990s, joined World Bank, International Monetary Fund, Asian Development Bank
+        - needed to report economic situation more openly
+      - 2001, joined World Trade Organization
+    - 1987, Taiwan lifted restrictions on travel
+      - many live in Mainland for work
+        - lower wages helped Taiwan provide care for old people
+  - Challenges
+    - **industrializatin, urbanization, declining birth rates, ageing society, development of consumer culture, wealth gap, environmental degradation**
 
 # Homework
 
