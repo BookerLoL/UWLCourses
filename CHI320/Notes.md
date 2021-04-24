@@ -1539,13 +1539,61 @@
     - sagehood available to everyone
     - influenced many people to go different routes
       - Wang Gen, social standing doesn't limit from moral perfection
-      - pg 206
+        - pg 206
 
 - Local Society
 
-  - pg 206
+  - more opportunities for elite and villagers to interact
+    - marketing systems, schools, descent groups, religious associations, community compacts, preachers
+  - descent groups, lineages helped share ideas, values, assumptions, frame of references, etc
+  - common people being indoctrinated
 
-- 216
+- Relations to The Outer World
+
+  - Ming emperors no interest in multi-state system of Song
+    - assert centrality using model of Han or Tang
+  - Tribute System
+    - Taizu forbade private foreign trade
+    - Chengzu, lots of emissaries
+    - worked best with small or remote states
+    - paternalistic obligations, aid of loyal vassal states
+  - Merchants turned into smugglers
+  - lots of pirates
+  - Main exports
+    - silk and porcelain
+  - marittime trade
+    - new goods and new ideas
+      - sweet potatoes, maize, peanuts, food that helped population growth
+      - Matteo Ricci, Macao, 1583
+        - considered as foreign literati
+        - many other foreign missionaries came
+      - Chinese hostile towards Christanity
+        - didn't like people being converting with impossible ideas
+
+- Factionalism and Political Protect
+  - Wang Yangming and his followers
+  - Confucian idea of loyalty to the throne and responsibility of officials to speak out on matters of principle
+    - Any criticism, even if welcomed by emperor usuaully ended in death or imprisoned
+  - Line between heroism and factionalism not clear
+    - made it difficult to find political solutions to problems of Ming Gov
+- Fiscal Collaspe
+
+  - gov almost went bankrupt
+    - cost of maintaining imperial clan out of hand
+      - clansmen and military campaigns funded
+  - population grew, burearcracy less efficient, revent not keeping up
+    - poor lose, rich capitalize and minimize lost
+    - gov has no money then can't respond to situations where revenue is needed
+  - famine, gangs, tax increases, floods , drought, locusts, epideemic
+    - beggars increased, tenants rising against landlords, workers rioting
+  - lack of silver
+    - in 1639, shuftdown trading between Macao and Nagasaki
+      - no more silver
+    - Sino spanish trade
+      - many chinese dead, shut down another source of silver
+    - rapid deflation, hoarding silver and grains led to artificial famines
+      - tax defaults and rent riots
+      - can't collect usual taxes
 
 # Manchus and Perialism
 
