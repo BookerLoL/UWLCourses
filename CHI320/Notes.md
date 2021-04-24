@@ -1669,10 +1669,93 @@
               - led to assinations
           - too much systematic slaughtering of survivors
         - **Zeng Guofan**, scholar in Hunan, 120,000 troops to take back Nanjing
-
-- 242
-
-- pg 258
+  - Weakness in central gov, lots of malcontents
+    - North, banditry, Nian gangs
+      - size crops, rob, kidnap for random
+    - SW and NW, muslim and miao rebls
+      - 1873, put down insurrections in Yunnan and Gansu
+      - 1879, defeated Muslim invaders in Xinjiang
+  - Self Strengthening
+    - want to avoid dynasty collapse
+    - **re-establish local control and restore economy by reduce gov expenditures, fix transportation infrastructure, induce peasants to return to abandoned land**
+      - tax assessments, water control, grain transport, defence, supress bandits, etc
+    - the thought or act of copying western considered as defeat
+    - diplomatic and military focus to economic focus
+      - books translated, foreign language study, up-to-date world affairs coverage
+      - legations in numerous countries
+      - Li Hongzhang, wanted to modernize eco to reflect strength in guns and ships
+        - active role in starting different stuff
+          - steam navigation company, coal mines, telegraph network, cotton spinning factory and weaving mill
+          - railraod track
+    - **Prevented growth**
+      - bureacratic control prevented reinvestment of profits
+        - no self-sustaining growth
+      - unequal treaties
+        - low tariffs
+          - can't compete with established foreign manufacturers
+      - communication infrastructure issue
+        - railroads and telegraphs may create unemployment or distrub graves
+      - No local project support
+        - poor felt like being taxed to pay for projects that would not benefit them but for elite
+  - Population growth and People's livelihood
+    - 1700 slow pop growth, after very fast
+    - villages and towns grew closer
+      - farms smaller, less forests, suplus labor, supressed wages and increased competition
+      - pros
+        - regional development and commercialization
+      - cons
+        - rebellions and difficulties between reformers and entrepreneurs
+    - farmers used more irrigation, fertilizer, and opened lands (previously marginal)
+      - new-world crops and exploited land
+      - reduced agricultural productivity and ecology
+        - deforestation -> soil erosion, silting of rivers -> floods
+        - polders or dykes on lakes -> lakes shrink / disappear
+    - Industrial manufacturing
+      - Not enough profit farming
+      - men work in sideline production at home
+      - spinning and weaving perfomed by girls
+      - conflict over rights, ethinic groups, lineages, and villages very common
+        - hard times, more female infanticide
+          - less marriable women, men less incentive to stay home
+            - join gangs or emigrate to find work elsewhere
+    - interntional order China was forced into led to deflation and recession
+    - machine powered manufacturing hurt village families
+      - machine-spinning replaced hand-spinning
+  - Chinese Diaspora
+    - internal migration
+      - made population in some regions very low
+      - new opportunities abroad
+        - intermarrying and assimilation
+    - able to enterprise better
+      - Malaysia 1819, many work there
+    - repeated persecutions in other countries
+    - countries used Chinese to profit
+      - merchants as tax farmers, some became rich
+      - **1840, anti-slavery movement**
+        - need cheap labor, many go work in those countries then
+      - many racist to Chinese as "depraved, lawless opium smokers"
+        - banned from obtaining citizenship, "impossible of assimilation, dangerous to peace and welfare"
+  - Total Humiliation
+    - Japan succeeded where China did not
+      - modern country, constitutional monarchy, imperialstic
+      - trying to provoke war with China
+    - 1894, lost to japan
+      - cession of Laiodong and Taiwan, 200 m oz of silver, **rights to open factories in China, extended to other powers**
+    - Reforms
+      - empress dowager, Guanxu as ruler for a few months to help with reforms to justify modernization
+      - Kang Youwei and Liang Qichao were leading helpers
+      - stopped becasuse undermining Manchu rule
+    - Boxer Rebellion
+      - Harmonious Fists
+      - emereged in Shandong
+      - Due to foreign missionaries
+        - **Xenophobia**
+      - seized and destroyed missionary and converts property and sometimes kill
+      - empress dowager joined the movement
+      - **Li Hongzhang had to negotiate again!**
+        - only hurt China in worse predictament
+        - more debt over 40 years + interest
+        - cancelled examination for five years
 
 ## Opening to the World
 
