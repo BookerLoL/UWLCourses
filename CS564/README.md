@@ -780,6 +780,38 @@ create trigger check_full before insert on copy
         - Fr + ((h+1) + 1) x Nr
           - +1 because btree of height h is actuall level 0 + height
           - +1 for access
+- Neo4J
+
+  - graph oriented
+  - terminology
+    - node
+      - can have properties
+    - properties (attributes)
+    - labels
+      - type information
+    - relationships
+  - supports transactions
+
+  ```neo4j
+  //Nodes
+  //label: Movie
+  CREATE (TheMatrix:Movie {title:'The Matrix',released:1999, tagline:'Welcome to the Real World'})
+  CREATE (Keanu:Person {name:'Keanu reeves'.born:1964})
+
+
+  //relationships
+  CREATE (Keanu)-[:ACTED_IN {roles:['Neo']}]->(TheMatrix)
+  CREATE (AndyW)-[:DIRECTED]->(TheMatrix)
+  CREATE (TomH)-[:ACTED_IN {roles:['Joe Fox']}]->(YouveGotMail)
+
+  //queries
+  MATCH (movie:Movie) RETURN movie
+  MATCH (person:Person) RETURN person
+  MATCH (person:Person) RETURN person.name
+  MATCH (m:Movie)<-[:ACTED_IN]-(a:Person) WHERE a.name = 'Tom Hanks' or a.name = 'Keanu Reeves' Return m.title as movie
+
+  MATCH (m:Movie)<-[:ACTED_IN]-(a:Person) WHERE a.name = 'Tom Hanks' or a.name = 'Keanu Reeves' Return m, a
+  ```
 
 ## Book
 

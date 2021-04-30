@@ -1607,7 +1607,7 @@
     - (n, m) code
       - n = m + r
     - XOR to find num bits differ, count num 1 bits
-      - hamming distance: number of bit positions differ
+      - **hamming distance**: number of bit positions differ
       - d single-bit errors to convert one into the other
   - Construct list of legal codewords
     - message can have 2^ possibilities
@@ -1615,15 +1615,114 @@
     - r check bits
       - legal codewords in possible messages: 2^m/2^n or 1/2^r
   - Depend on hamming distance
-    - detect d errors, need d + 1 code
-    - need d errors, distance 2d+1 code is required
+    - **detect d errors, need d + 1 code**
+    - to correct d errors, need distance 2d+1 code
+  - ex: code distance = 5
+    - error correction = 2d+1 = 5, d = 2
+    - error detection = d + 1 = 5, d = 4
   - Parity bit
     - number of 1 bits in codeword is even or odd
       - modulo 2 sum
       - or XOR of data bits
     - append parity bit to end of word
-    - even parity, add 0
-    - odd parity, add 1
+    - even parity
+      - ensure even number of 1's
+        - add 1 or 0 depending on situation
+    - odd parity
+      - ensure odd number of 1's
+        - add 1 or 0 depending on situation
+    - Code with single parity bit has **hamming distnace of 2 of the complete code**
+  - Lower limit
+    - design code with n bits = n = (m + r)
+    - 2^m legal messages, n illegal codewards at distance 1
+    - 2^m messages require n+1 bit patterns
+    - total number of bit pattern is 2^n
+
+- Hamming Code (Left to right of the bits)
+
+  - bits of powers of 2, include 2^0 are are check bits (r bits)
+    - bits 1, 2, 4, 8, 16
+  - remianing bits contain data (m bits)
+
+    - bits 3, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, etc
+
+  - Check bit utilization
+    - check bit used to set parity bit of collection of bits
+    - k = 11, 11 = 1 + 2 + 8
+    - k = 29, 29 = 1 + 4 + 8 + 16
+    - 8-bit binary value, 10011010, even parity
+      - 8 bits of binary data, (1, 2, 4, 8 are reserved for check bits)
+      - 1_2_3_4_5_6_7_8_9_10_11_12
+      - _\_\_\_1_\_\_0*0_1*\_\_1*0*\_1\_\_0
+      -     (1+2), (1+4), (2+4), (1+2+4), (1+8), (2+8), (1+2+8), (4+8)
+      - calculate parity bits (using the parity scheme)
+        - 1 (find all those data bits with 1+..)
+        - 2 (find all those data bits with 2+..)
+        - 4
+        - 8
+  - Error Detection process
+    - receiver initializes counter to 0 when codeword arrives
+    - examine each check bit k (k = 1, 2, 4, 8, etc) for correct parity
+    - receiver adds k to counter if incorrect parity found
+      - if counter = 0, accept codeword
+      - if counter != 0, counter contains number of incorrect bits
+      - counter sum indicates location of incorrect bit
+        - if check bits 1, 2, 8 are error, 11 is inverted bit
+      - **resolving after finding errors**
+        - once bits detected
+          - original codeword = invert the errorbits in the received code
+          - original message = all the non-check bits concatenated
+
+- Burst Error Correction using Hamming Code
+
+  - burst error correction
+    - arrange sequence of k consecutive codewords in matrix with one codeword per row
+    - transmit data one columne at a time starting with leftmost column
+    - begin transmission of next column after current column is completed
+    - reconstruct matrix of k transmitted codewords from the columns received
+    - if burst error of length k occurs, at most 1 bit in each of k codeword is affected
+      - restore block based on hamming code correct of on error per codeword
+  - example
+
+- Burst Detection
+
+  - Parity bit approach
+    - represent block to be transmitted as matrix of k rows x n bit columns
+      - compute parity bit for each column
+      - append parity bits as final row of matrix
+  - receiver checks all parity bits received
+  - block retransmission is performed for any parity bit errors detected
+
+- Using polynomial codes
+
+  - also known as Cyclic Redundancy Check (CRC)
+  - Polynomial codes represent bit strings as polynomials with coefficients of 1 and 0
+  - k-bit frame as a coefficient list for polnomial with terms x^0 ... x^k-1
+  - x^5+x^2+x^0 = 100101
+  - Polynomial arithmetic
+    - performed using modulo 2
+    - no carries for addition or borrows for subtraction
+    - ex:
+      - 10000011 + 11001010 = 01001001
+  - agree on polynomial generate G(x)
+  - high and low order bits of generator must be 1
+  - compute checksum for m-bit frame with polynomial representation M(x)
+  - frame must be longer than polynomial generator
+
+  - error detection
+    - generate check sum polynomial for frame that is divible by G(x)
+      - checksum appended to end of frame
+  - procedure to compute checksum
+    - messsage contain m bits
+    - r denote degree of G(x)
+    - append r zero bits to low order end of frame
+      - x^r M(x)
+    - divide bit string corresponding to x^r M(x) by string G(x) using modulo 2 division
+    - subtract remainder (r bits or less) from bit string corresponding to x^r M(x) using modulo 2 subtraction
+    - result represents checksummed frame used for transmission
+  - ex:
+    - m-bit msg = 1101011011
+    - generator = 10011
 
 - NEed to finish later
 
@@ -1884,3 +1983,102 @@
   - key exchange function
     - manuagel or automated
   - VPNs usually need combined function
+
+## Data Link Layer Protocols
+
+### Elementary Data Link
+
+- Elementary Data Link Protocols
+  - unrestricted simplex
+  - simplex stop-and-wait
+  - simplex protocol for a noisy channel
+- Assumption of model of communication
+  - Physical, data link, network layers are independent processes that communicate by sending messages back and forth
+  - Reliable, connection-oriented service is used for data stream transmission in one direction
+  - Protocols address problems cause dby communication errors, not by machines crashing
+  - Network layer provides only data across its interface to the data link layer
+  - model
+    - Computer
+      - OS
+        - Network
+        - Driver
+          - Link
+    - hardware, network interface card (NIC)
+      - Physical
+      - Link
+- Procedure for transmitter portion of communication model
+  - data link layer encapsulates packet from network layer by inserting header and trailer
+    - frame
+      - packet
+      - control info in header
+      - check sum in trailer
+    - Library procedures
+      - to_physical_layer, send frames
+      - from_physical_layer, receive frame
+      - transmitting hardware computes and append checksum as trailer
+- Procedure for receiver portion of the communication model
+  - receiver in wait mode
+  - receiver hardware computers checksum when frame arrives
+    - acknowledges correct/incorrect transmission
+    - frames resent until checksum is correct
+  - receiver checks control info in header
+  - receiver passes packet portion of frame to network layer
+- Protocol definitions
+  - boolean
+  - seq_nr
+  - packet
+  - frame_kind
+  - frame
+    - kind （frame header)
+    - seq (frame header)
+    - ack (frame header)
+    - info
+  - wait_for_event
+  - from_network_layer
+  - to_network_layer
+  - from_physical_layer
+  - to_physical_layer
+  - start_timer
+  - stop_timer
+  - stack_ack_timer
+  - stop_ack_timer
+  - enable_network_layer
+  - disable_network_layer
+
+### Utopia Protocol
+
+- Unrestricted Simplex Protocol
+- unidirectional data transmission
+- transmitting and receiving network layers always ready
+- processing time can be ignored
+- infinite buffer space
+- communication channel between data link layers never damages or lose frames
+
+- sender and receiver
+
+  - no seq or ack used, so no max seq needed
+  - only frame's info is used
+
+- **no flow control or error detection**
+
+### Simplex Stop and Wait
+
+- prevent sender from flooding receiver with data faster than receiver can process it
+- assume
+  - communication channel is assumed error free
+  - reciever network layer has finite responses to incoming data
+  - receiver data link layer has infinite buffer space
+- possible solutions
+  - build powerful receiver or insert delay into sender's physical layer
+    - requires dedicate hardware
+    - lose bandwidth
+  - stop and wait approach
+    - receiver provides dummy frame feedback (acknowledgement) to sender
+      - give sender permission to send next frame
+    - sender transmits frames based on acknowledgement from receiver
+- data traffic is unidirectional
+- frame transmission is bidirectional
+- must have bidirectional information transfer
+  - data flow alternation
+    - sender sends a frame followed by receiver
+- sends acknowledgement frame

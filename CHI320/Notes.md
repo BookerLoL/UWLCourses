@@ -1867,6 +1867,7 @@
     - inflation
     - closing big companies, lots of job losses
 - Party-State and Its critics
+
   - Tried to regain people's support
     - 1978, labelled rightists had label removed
       - exiled or inprisoned people released
@@ -1885,10 +1886,12 @@
     - Wei Jingshen, wanted true democracy, able to vote leaders
       - arrested
   - Student protests
+
     - Fang Lizhi, 1986
       - 150 campuses
         - wanted greater freedom, less corruption, better living conditions in dorms
     - April 1989, honoring Hu Yaobang who recently deceased
+
       - Students wanted
         - officials to disclose income and assets
         - renounce mass political campaigns
@@ -1897,10 +1900,18 @@
         - end corruption
       - Foreign supporters, Mikhail Gorbachev, Soviet Unions General Secretary
         - many supporters and in surveryed were with the movement
+
     - ultimately led to humiliation for the gov
       - brought in tanks and artillery to stop the protests
     - **Massive censorship, can't talk badly about the gov**
       - any political potential will get shut down
+      - **Tiananmen Square Massacre**
+        - June 3-4
+        - many died, tried to stop tanks from entering
+    - 1997, 2000, He Qinglian, pointed out corrupt gov
+      - censored, condemned, under surveillance
+      - pressured to leave in 2001
+
   - Tolerate growing inequalities
     - regional inequalities
       - coastal was growing
