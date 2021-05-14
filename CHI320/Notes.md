@@ -2000,23 +2000,6 @@
   - Challenges
     - **industrializatin, urbanization, declining birth rates, ageing society, development of consumer culture, wealth gap, environmental degradation**
 
-# Homework
-
-- "What do you want to do more research on?"
-  - show own interpretation of it
-    - show knowledge about that historical period of time
-- primary sources
-  - video links and other resources
-    - online museums
-    - visual source book
-- 1 page proposal
-  - topic to explore
-  - list links to primary sources
-    - the particular item
-  - embed image into proposal
-- 6 page paper
-- in class presentation
-
 # whatever
 
 - Dynasties
