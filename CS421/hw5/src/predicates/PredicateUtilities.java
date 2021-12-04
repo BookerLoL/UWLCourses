@@ -2,6 +2,7 @@ package predicates;
 
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 public final class PredicateUtilities {
 	public static <T> Collection<T> filter(Collection<? extends T> collection, Predicate<T> predicate) {

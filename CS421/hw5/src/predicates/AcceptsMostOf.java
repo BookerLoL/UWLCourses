@@ -4,11 +4,11 @@ import java.util.Collection;
 
 public class AcceptsMostOf<T> implements Predicate<Predicate<T>> {
 	private Collection<? extends T> reference;
-	
+
 	public AcceptsMostOf(Collection<? extends T> reference) {
 		this.reference = reference;
 	}
-	
+
 	@Override
 	public boolean accepts(Predicate<T> t) {
 		if (t == null) {
@@ -21,7 +21,6 @@ public class AcceptsMostOf<T> implements Predicate<Predicate<T>> {
 				count++;
 			}
 		}
-		return count < MIN_NEEDED ? false : true;
+		return count >= MIN_NEEDED;
 	}
 }
-
