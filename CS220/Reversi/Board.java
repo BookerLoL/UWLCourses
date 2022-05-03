@@ -5,7 +5,7 @@
  *
  * @author Ethan Booker
  * @version 1.0
- * @since 12/03/2021
+ *          since 12/03/2021@since 12/03/2021
  */
 public class Board implements BoardMethods {
     /**
